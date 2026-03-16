@@ -1,0 +1,39 @@
+{
+  "version": "2026-03-16",
+  "description": "按平台拆分的短视频内容规则库。当前已完成抖音规则本地化、小红书公开资料与创作中心规则百科细粒度规则库，以及视频号官方《微信视频号运营规范》与《视频号常见违规内容概览》的本地化规则库。",
+  "platforms": [
+    {
+      "platform": "douyin",
+      "status": "ready",
+      "catalog_file": "data/rule_library/douyin/catalog.json",
+      "rules_file": "data/rule_library/douyin/rules.json",
+      "source": {
+        "name": "抖音规则解读",
+        "localized_at": "2026-03-11",
+        "url": "https://aweme.snssdk.com/falcon/fe_douyin_security_react/rule/platform_norm/?enter_from=share_qrcode&hide_nav_bar=1&iid=MS4wLjABAAAAMBKji6p88_6A9AkMHMCHOLnturxSxzM4KRNKmyV9ngHjn5qvCnauXD2ozOKKrq6A&page_type=rule_explain&schema_type=11&timestamp=1773213833&u_code=42limiab882a&did=MS4wLjABAAAASx3x5XHIbJ__xzBuyA6UO1qvpfa1wwaXFsiQWeJVkq2tIOXzjk7Lv0YIA9nPb6il&ug_share_id=6f968de2110ea_1773213834354"
+      }
+    },
+    {
+      "platform": "xiaohongshu",
+      "status": "ready",
+      "catalog_file": "data/rule_library/xiaohongshu/catalog.json",
+      "rules_file": "data/rule_library/xiaohongshu/rules.json",
+      "source": {
+        "name": "小红书公开资料主题库 + 创作中心规则百科手工截图细粒度规则库",
+        "localized_at": "2026-03-16",
+        "url": "data/source_archives/xiaohongshu_creator_center_manual/processed"
+      }
+    },
+    {
+      "platform": "video_channel",
+      "status": "ready",
+      "catalog_file": "data/rule_library/video_channel/catalog.json",
+      "rules_file": "data/rule_library/video_channel/rules.json",
+      "source": {
+        "name": "微信视频号运营规范 + 视频号常见违规内容概览",
+        "localized_at": "2026-03-16",
+        "url": "https://weixin.qq.com/cgi-bin/readtemplate?lang=zh_CN&t=weixin_agreement&s=video"
+      }
+    }
+  ]
+}

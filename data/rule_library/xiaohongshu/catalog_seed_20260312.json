@@ -1,0 +1,108 @@
+{
+  "platform": "xiaohongshu",
+  "version": "2026-03-12",
+  "status": "ready",
+  "title": "小红书内容侧规则目录",
+  "scope": "短视频与笔记内容审核",
+  "source_notes": [
+    {
+      "type": "official_course_entry",
+      "title": "社区公约与广告审核规范",
+      "url": "https://xue1.xiaohongshu.com/p/t_pc/course_pc_detail/video/v_655e051ee4b023c044fec8d0"
+    },
+    {
+      "type": "public_report_of_official_update",
+      "title": "小红书发布社区公约 2.0",
+      "url": "https://finance.sina.com.cn/tech/2026-01-19/doc-inhhvmxz9883989.shtml"
+    },
+    {
+      "type": "public_report_of_official_update",
+      "title": "新规聚焦真诚分享、友好互动、有序经营",
+      "url": "https://huacheng.gz-cmc.com/pages/2026/01/20/5b9629a5d7334c4cbcba77db98424444.html"
+    },
+    {
+      "type": "public_report_of_official_governance",
+      "title": "小红书规范交易导流：不允许站外交易",
+      "url": "https://finance.sina.com.cn/tech/digi/2025-03-11/doc-inephwwi2474943.shtml"
+    },
+    {
+      "type": "public_report_of_official_governance",
+      "title": "小红书治理黑灰产与虚假营销账号",
+      "url": "https://finance.sina.com.cn/tech/digi/2025-02-19/doc-inekzcyc2957764.shtml"
+    }
+  ],
+  "categories": [
+    {
+      "rule_id": "XHS-CAT-001",
+      "title": "真诚分享：虚假人设与虚构经历",
+      "severity": "high",
+      "tags": ["persona_fabrication"]
+    },
+    {
+      "rule_id": "XHS-CAT-002",
+      "title": "真诚分享：AI 生成与深度合成标识",
+      "severity": "medium",
+      "tags": ["ai_generated_content", "rights_infringement"]
+    },
+    {
+      "rule_id": "XHS-CAT-003",
+      "title": "真诚分享：标题党与夸张误导",
+      "severity": "medium",
+      "tags": ["clickbait_content"]
+    },
+    {
+      "rule_id": "XHS-CAT-004",
+      "title": "真诚分享：高风险专业领域不实建议",
+      "severity": "high",
+      "tags": ["medical_content", "medical_claim", "financial_promise"]
+    },
+    {
+      "rule_id": "XHS-CAT-005",
+      "title": "友好互动：网暴挂人与隐私泄露",
+      "severity": "high",
+      "tags": ["rights_infringement"]
+    },
+    {
+      "rule_id": "XHS-CAT-006",
+      "title": "友好互动：未成年人保护",
+      "severity": "high",
+      "tags": ["minor_protection"]
+    },
+    {
+      "rule_id": "XHS-CAT-007",
+      "title": "友好互动：色情低俗与擦边暗示",
+      "severity": "high",
+      "tags": ["sexual_content"]
+    },
+    {
+      "rule_id": "XHS-CAT-008",
+      "title": "友好互动：炫富拜金与制造焦虑",
+      "severity": "medium",
+      "tags": ["public_ethics"]
+    },
+    {
+      "rule_id": "XHS-CAT-009",
+      "title": "有序经营：站外导流与私下交易",
+      "severity": "high",
+      "tags": ["traffic_inducement", "marketing_violation"]
+    },
+    {
+      "rule_id": "XHS-CAT-010",
+      "title": "有序经营：商业合作与身份披露",
+      "severity": "medium",
+      "tags": ["commercial_disclosure", "marketing_violation"]
+    },
+    {
+      "rule_id": "XHS-CAT-011",
+      "title": "有序经营：虚假营销、伪装素人与假测评",
+      "severity": "high",
+      "tags": ["false_review", "marketing_violation"]
+    },
+    {
+      "rule_id": "XHS-CAT-012",
+      "title": "有序经营：恶意竞争与黑灰产矩阵",
+      "severity": "medium",
+      "tags": ["duplicate_content", "marketing_violation", "rights_infringement"]
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: platform-content-audit
+    runtime: python
+    plan: free
+    buildCommand: pip install -e .
+    startCommand: uvicorn app.main:app --host 0.0.0.0 --port $PORT
+    healthCheckPath: /
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.11
+      - key: APP_ENV
+        value: production
+      - key: APP_DEBUG
+        value: false
+      - key: RULE_SOURCE_MODE
+        value: file
+      - key: DEFAULT_TARGET_PLATFORMS
+        value: douyin,xiaohongshu,video_channel

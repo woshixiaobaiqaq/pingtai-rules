@@ -1,0 +1,125 @@
+{
+  "platform": "douyin",
+  "source_name": "抖音规则解读",
+  "source_url": "https://aweme.snssdk.com/falcon/fe_douyin_security_react/rule/platform_norm/?enter_from=share_qrcode&hide_nav_bar=1&iid=MS4wLjABAAAAMBKji6p88_6A9AkMHMCHOLnturxSxzM4KRNKmyV9ngHjn5qvCnauXD2ozOKKrq6A&page_type=rule_explain&schema_type=11&timestamp=1773213833&u_code=42limiab882a&did=MS4wLjABAAAASx3x5XHIbJ__xzBuyA6UO1qvpfa1wwaXFsiQWeJVkq2tIOXzjk7Lv0YIA9nPb6il&ug_share_id=6f968de2110ea_1773213834354",
+  "localized_at": "2026-03-11",
+  "categories": [
+    {
+      "rule_id": "DY-CAT-001",
+      "commerce_id": "aJ9HAuU78pDB",
+      "title": "色情低俗",
+      "tags": ["sexual_content"],
+      "sections": ["淫秽色情", "低俗行为", "着装暴露", "低俗事物", "两性相关"]
+    },
+    {
+      "rule_id": "DY-CAT-002",
+      "commerce_id": "aJ9HZBDW5Dkb",
+      "title": "违法违规",
+      "tags": ["illegal_activity"],
+      "sections": ["扰乱市场秩序", "妨碍社会管理秩序", "侵害个人权益", "危害公共安全"]
+    },
+    {
+      "rule_id": "DY-CAT-003",
+      "commerce_id": "aJ9SAzPycZAr",
+      "title": "引人不适",
+      "tags": ["disturbing_content"],
+      "sections": ["血腥画面", "恐怖气氛", "死亡元素", "身体损伤", "感官不适", "引人厌恶"]
+    },
+    {
+      "rule_id": "DY-CAT-004",
+      "commerce_id": "aJ9SAzPyce3L",
+      "title": "营销行为",
+      "tags": ["marketing_violation"],
+      "sections": [
+        "未使用平台合作推广渠道发布营销内容",
+        "违规或夸张宣传商品功效",
+        "违规或夸张宣传商品价格",
+        "违规宣传法律服务"
+      ]
+    },
+    {
+      "rule_id": "DY-CAT-005",
+      "commerce_id": "aJ9TY6wQNpFA",
+      "title": "未成年人",
+      "tags": ["minor_protection"],
+      "sections": ["未成年人低俗", "涉及未成年人违法违规行为", "未成年人危险行为", "不当引导未成年人价值观"]
+    },
+    {
+      "rule_id": "DY-CAT-006",
+      "commerce_id": "aJ9SAzPyciup",
+      "title": "公序良俗",
+      "tags": ["public_ethics"],
+      "sections": ["不良生活示范", "过度博取关注", "有损人格尊严", "不当价值观"]
+    },
+    {
+      "rule_id": "DY-CAT-007",
+      "commerce_id": "aJ9TY6wQNyz8",
+      "title": "危险行为",
+      "tags": ["unsafe_behavior"],
+      "sections": ["易导致人身伤害", "易致人受伤的专业行为"]
+    },
+    {
+      "rule_id": "DY-CAT-008",
+      "commerce_id": "aJ9TGBjxFXK7",
+      "title": "诱导互动",
+      "tags": ["interaction_manipulation"],
+      "sections": ["诱导用户误操作以达成互动结果", "虚构产品功能骗取使用", "诅咒威胁互动", "承诺利益诱导互动"]
+    },
+    {
+      "rule_id": "DY-CAT-009",
+      "commerce_id": "aJ9TY6wQP4rc",
+      "title": "原创内容",
+      "tags": ["originality_violation"],
+      "sections": ["将站内他人原创素材直接使用并发布", "将站外非本人素材直接发布或简单加工后发布", "多账号重复发布"]
+    },
+    {
+      "rule_id": "DY-CAT-010",
+      "commerce_id": "aJ9SAzPyd9GE",
+      "title": "侵犯权益",
+      "tags": ["rights_infringement"],
+      "sections": ["侵犯人身权益的情形", "侵犯知识产权的情形", "侵犯企业合法权益的情形", "侵犯未成年权益的情形"]
+    },
+    {
+      "rule_id": "DY-CAT-011",
+      "commerce_id": "aJ8ts4fXqwj5",
+      "title": "抖音医疗健康内容",
+      "tags": ["medical_content"],
+      "sections": ["发布医疗诊疗建议请先获得相应资质认证", "存在争议的食疗养生信息", "疗效表述不严谨", "基础理论表述不准确"]
+    },
+    {
+      "rule_id": "DY-CAT-012",
+      "commerce_id": "aJBccNzBPuRG",
+      "title": "同质化（集体发布）",
+      "tags": ["duplicate_content"],
+      "sections": ["参与集体发布诱导互动类内容", "直接使用或简单拼接站内他人原创素材", "通过雷同脚本、文案推广商品"]
+    },
+    {
+      "rule_id": "DY-CAT-013",
+      "commerce_id": "aJEg7gAYxaij",
+      "title": "中长视频营销-植入体验要求",
+      "tags": ["mid_long_video_marketing"],
+      "sections": ["营销素材植入破坏情节连贯性", "营销素材制作生硬", "营销推广内容浓度过高"]
+    },
+    {
+      "rule_id": "DY-CAT-014",
+      "commerce_id": "aJHc9JjqAhGV",
+      "title": "版权内容",
+      "tags": ["copyright_violation"],
+      "sections": ["哪些行为容易侵权", "收到版权侵权提醒怎么办", "如何进行申诉", "平台二创合作计划介绍"]
+    },
+    {
+      "rule_id": "DY-CAT-015",
+      "commerce_id": "aJZtnSdEB5Xj",
+      "title": "短剧宣传推广内容规范",
+      "tags": ["short_drama_promotion"],
+      "sections": ["平台鼓励的创作内容", "平台不鼓励的创作内容", "被误判了如何申诉", "短剧常见问题"]
+    },
+    {
+      "rule_id": "DY-CAT-016",
+      "commerce_id": "aJaNbe72rerh",
+      "title": "直播相关视频规则解读",
+      "tags": ["live_stream_related"],
+      "sections": ["PK惩罚类", "诱导消费类", "低俗擦边类", "主播纠纷类", "平台秩序类"]
+    }
+  ]
+}

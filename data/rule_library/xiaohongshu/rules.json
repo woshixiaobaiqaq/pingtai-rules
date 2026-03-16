@@ -1,0 +1,4047 @@
+{
+  "rules": [
+    {
+      "platform": "xiaohongshu",
+      "rule_id": "XHS-CAT-001",
+      "title": "真诚分享：虚假人设与虚构经历",
+      "content": "内容应基于真实身份、真实经历和真实表达，禁止编造财富、职业、学历、情感和成长故事误导用户。",
+      "source_url": "https://finance.sina.com.cn/tech/2026-01-19/doc-inhhvmxz9883989.shtml",
+      "severity": "high",
+      "tags": [
+        "persona_fabrication"
+      ],
+      "keywords": [
+        "虚假人设",
+        "逆袭故事",
+        "编造经历",
+        "名校毕业",
+        "年入百万",
+        "宝妈创业"
+      ],
+      "regex_patterns": [
+        "(月入|年入)\\d+(万|w|百万)",
+        "前(大厂|投行|名企).*创业",
+        "编造.*(学历|职业|经历)"
+      ],
+      "metadata": {
+        "source_type": "public_report_of_official_update",
+        "pillar": "真诚分享",
+        "source_urls": [
+          "https://finance.sina.com.cn/tech/2026-01-19/doc-inhhvmxz9883989.shtml",
+          "https://huacheng.gz-cmc.com/pages/2026/01/20/5b9629a5d7334c4cbcba77db98424444.html"
+        ],
+        "examples": [
+          "编造财富自由和创业逆袭故事",
+          "虚构学历、职业身份吸引关注",
+          "伪造亲身经历包装内容可信度"
+        ]
+      }
+    },
+    {
+      "platform": "xiaohongshu",
+      "rule_id": "XHS-CAT-002",
+      "title": "真诚分享：AI 生成与深度合成标识",
+      "content": "使用 AI 生成、深度合成或会显著影响真实性判断的内容，应明确标识，不得利用 AI 伪造证据、形象或身份。",
+      "source_url": "https://finance.sina.com.cn/tech/2026-01-19/doc-inhhvmxz9883989.shtml",
+      "severity": "medium",
+      "tags": [
+        "ai_generated_content",
+        "rights_infringement"
+      ],
+      "keywords": [
+        "AI生成",
+        "AIGC",
+        "深度合成",
+        "AI换脸",
+        "数字人",
+        "AI配音"
+      ],
+      "regex_patterns": [
+        "AI(生成|合成|换脸)",
+        "深度合成",
+        "数字人.*口播"
+      ],
+      "metadata": {
+        "source_type": "public_report_of_official_update",
+        "pillar": "真诚分享",
+        "source_urls": [
+          "https://finance.sina.com.cn/tech/2026-01-19/doc-inhhvmxz9883989.shtml",
+          "https://huacheng.gz-cmc.com/pages/2026/01/20/5b9629a5d7334c4cbcba77db98424444.html"
+        ],
+        "examples": [
+          "AI 换脸伪装真人分享",
+          "未标识 AI 生成图片或视频",
+          "利用深度合成伪造聊天或证据"
+        ]
+      }
+    },
+    {
+      "platform": "xiaohongshu",
+      "rule_id": "XHS-CAT-003",
+      "title": "真诚分享：标题党与夸张误导",
+      "content": "禁止使用夸张标题、虚假封面、过度修饰和误导性表述骗取点击或制造错误预期。",
+      "source_url": "https://huacheng.gz-cmc.com/pages/2026/01/20/5b9629a5d7334c4cbcba77db98424444.html",
+      "severity": "medium",
+      "tags": [
+        "clickbait_content"
+      ],
+      "keywords": [
+        "震惊",
+        "一定要看完",
+        "最后一条",
+        "99%的人不知道",
+        "封面即真相",
+        "看完沉默"
+      ],
+      "regex_patterns": [
+        "\\d+%的人都不知道",
+        "一定要看完",
+        "最后一条.*颠覆认知"
+      ],
+      "metadata": {
+        "source_type": "public_report_of_official_update",
+        "pillar": "真诚分享",
+        "source_urls": [
+          "https://huacheng.gz-cmc.com/pages/2026/01/20/5b9629a5d7334c4cbcba77db98424444.html"
+        ],
+        "examples": [
+          "封面和正文不一致",
+          "用极端词汇制造猎奇点击",
+          "夸张收益和效果引导点击"
+        ]
+      }
+    },
+    {
+      "platform": "xiaohongshu",
+      "rule_id": "XHS-CAT-004",
+      "title": "真诚分享：高风险专业领域不实建议",
+      "content": "医疗、医美、投资等高风险专业领域内容不得无资质发布诊疗、功效或收益承诺，不得误导用户替代专业判断。",
+      "source_url": "https://huacheng.gz-cmc.com/pages/2026/01/20/5b9629a5d7334c4cbcba77db98424444.html",
+      "severity": "high",
+      "tags": [
+        "medical_content",
+        "medical_claim",
+        "financial_promise"
+      ],
+      "keywords": [
+        "医美避坑",
+        "诊疗方案",
+        "投资秘籍",
+        "稳赚",
+        "根治",
+        "无痛变美"
+      ],
+      "regex_patterns": [
+        "(根治|治愈|永不复发)",
+        "(稳赚|保本|翻倍收益)",
+        "推荐.*(药物|手术|医美项目)"
+      ],
+      "metadata": {
+        "source_type": "public_report_of_official_update",
+        "pillar": "真诚分享",
+        "source_urls": [
+          "https://huacheng.gz-cmc.com/pages/2026/01/20/5b9629a5d7334c4cbcba77db98424444.html"
+        ],
+        "examples": [
+          "无资质推荐医疗或医美方案",
+          "宣称投资稳赚不赔",
+          "以个人经验替代专业建议"
+        ]
+      }
+    },
+    {
+      "platform": "xiaohongshu",
+      "rule_id": "XHS-CAT-005",
+      "title": "友好互动：网暴挂人与隐私泄露",
+      "content": "禁止开盒、人肉、挂人、恶意曝光隐私、无证据指控和组织化网暴，避免伤害他人人格与安全。",
+      "source_url": "https://finance.sina.com.cn/tech/2026-01-19/doc-inhhvmxz9883989.shtml",
+      "severity": "high",
+      "tags": [
+        "rights_infringement"
+      ],
+      "keywords": [
+        "挂人",
+        "开盒",
+        "网暴",
+        "身份证",
+        "手机号",
+        "家庭住址"
+      ],
+      "regex_patterns": [
+        "身份证号|手机号|家庭住址",
+        "(挂人|开盒|网暴)",
+        "曝光.*(聊天记录|隐私)"
+      ],
+      "metadata": {
+        "source_type": "public_report_of_official_update",
+        "pillar": "友好互动",
+        "source_urls": [
+          "https://finance.sina.com.cn/tech/2026-01-19/doc-inhhvmxz9883989.shtml",
+          "https://huacheng.gz-cmc.com/pages/2026/01/20/5b9629a5d7334c4cbcba77db98424444.html"
+        ],
+        "examples": [
+          "公开他人手机号和住址",
+          "发布聊天记录进行挂人",
+          "煽动他人围攻账号或当事人"
+        ]
+      }
+    },
+    {
+      "platform": "xiaohongshu",
+      "rule_id": "XHS-CAT-006",
+      "title": "友好互动：未成年人保护",
+      "content": "禁止危害未成年人身心健康、安全和价值观的内容，包括校园霸凌、离家出走、美化辍学和不当成人化表达。",
+      "source_url": "https://finance.sina.com.cn/tech/2026-01-19/doc-inhhvmxz9883989.shtml",
+      "severity": "high",
+      "tags": [
+        "minor_protection"
+      ],
+      "keywords": [
+        "未成年人",
+        "校园霸凌",
+        "辍学",
+        "离家出走",
+        "童工",
+        "早恋怀孕"
+      ],
+      "regex_patterns": [
+        "校园霸凌|欺凌同学",
+        "辍学.*(有用|自由)",
+        "未成年.*(抽烟|喝酒|性行为)"
+      ],
+      "metadata": {
+        "source_type": "public_report_of_official_update",
+        "pillar": "友好互动",
+        "source_urls": [
+          "https://finance.sina.com.cn/tech/2026-01-19/doc-inhhvmxz9883989.shtml"
+        ],
+        "examples": [
+          "传播辍学无用论",
+          "煽动未成年人离家出走",
+          "展示未成年人危险或成人化行为"
+        ]
+      }
+    },
+    {
+      "platform": "xiaohongshu",
+      "rule_id": "XHS-CAT-007",
+      "title": "友好互动：色情低俗与擦边暗示",
+      "content": "禁止色情、低俗擦边和利用私密场景、姿态、话术制造性暗示或引流。",
+      "source_url": "https://huacheng.gz-cmc.com/pages/2026/01/20/5b9629a5d7334c4cbcba77db98424444.html",
+      "severity": "high",
+      "tags": [
+        "sexual_content"
+      ],
+      "keywords": [
+        "擦边",
+        "走光",
+        "抖胸",
+        "私密照",
+        "性暗示",
+        "招嫖"
+      ],
+      "regex_patterns": [
+        "性暗示|敏感部位",
+        "乳头|乳晕|生殖器",
+        "招嫖|性服务"
+      ],
+      "metadata": {
+        "source_type": "public_report_of_official_update",
+        "pillar": "友好互动",
+        "source_urls": [
+          "https://huacheng.gz-cmc.com/pages/2026/01/20/5b9629a5d7334c4cbcba77db98424444.html"
+        ],
+        "examples": [
+          "低俗姿态制造暧昧联想",
+          "利用私密场景擦边引流",
+          "传播色情资源或服务信息"
+        ]
+      }
+    },
+    {
+      "platform": "xiaohongshu",
+      "rule_id": "XHS-CAT-008",
+      "title": "友好互动：炫富拜金与制造焦虑",
+      "content": "禁止通过炫富、拜金、卖惨、过度攀比等内容制造焦虑，传递失衡价值导向。",
+      "source_url": "https://huacheng.gz-cmc.com/pages/2026/01/20/5b9629a5d7334c4cbcba77db98424444.html",
+      "severity": "medium",
+      "tags": [
+        "public_ethics"
+      ],
+      "keywords": [
+        "炫富",
+        "拜金",
+        "卖惨",
+        "穷人思维",
+        "月薪三千",
+        "阶层跃迁"
+      ],
+      "regex_patterns": [
+        "炫富|拜金|卖惨",
+        "(穷人|底层).*思维",
+        "不买就落后"
+      ],
+      "metadata": {
+        "source_type": "public_report_of_official_update",
+        "pillar": "友好互动",
+        "source_urls": [
+          "https://huacheng.gz-cmc.com/pages/2026/01/20/5b9629a5d7334c4cbcba77db98424444.html"
+        ],
+        "examples": [
+          "以奢侈消费制造焦虑",
+          "把消费能力当作价值判断",
+          "卖惨博同情变相营销"
+        ]
+      }
+    },
+    {
+      "platform": "xiaohongshu",
+      "rule_id": "XHS-CAT-009",
+      "title": "有序经营：站外导流与私下交易",
+      "content": "禁止通过微信、群聊、外链、二维码等方式导流站外成交，规避平台保障和交易链路。",
+      "source_url": "https://finance.sina.com.cn/tech/digi/2025-03-11/doc-inephwwi2474943.shtml",
+      "severity": "high",
+      "tags": [
+        "traffic_inducement",
+        "marketing_violation"
+      ],
+      "keywords": [
+        "加微信",
+        "私下交易",
+        "站外",
+        "进群",
+        "小窗联系",
+        "二维码"
+      ],
+      "regex_patterns": [
+        "(微信|vx|v信|二维码).*下单",
+        "私下交易|站外交易",
+        "进群.*购买"
+      ],
+      "metadata": {
+        "source_type": "public_report_of_official_governance",
+        "pillar": "有序经营",
+        "source_urls": [
+          "https://finance.sina.com.cn/tech/digi/2025-03-11/doc-inephwwi2474943.shtml"
+        ],
+        "examples": [
+          "让用户加微信购买",
+          "评论区放二维码导流",
+          "引导跳转群聊或外链完成交易"
+        ]
+      }
+    },
+    {
+      "platform": "xiaohongshu",
+      "rule_id": "XHS-CAT-010",
+      "title": "有序经营：商业合作与身份披露",
+      "content": "涉及合作推广、商单发布、经营引流的内容，应亮明合作关系和经营身份，不得伪装普通分享。",
+      "source_url": "https://xue1.xiaohongshu.com/p/t_pc/course_pc_detail/video/v_655e051ee4b023c044fec8d0",
+      "severity": "medium",
+      "tags": [
+        "commercial_disclosure",
+        "marketing_violation"
+      ],
+      "keywords": [
+        "合作",
+        "商单",
+        "广告",
+        "赞助",
+        "品牌合作",
+        "报备"
+      ],
+      "regex_patterns": [
+        "(品牌|店铺).*合作",
+        "商务合作|商单",
+        "广告.*未标识"
+      ],
+      "metadata": {
+        "source_type": "official_course_entry",
+        "pillar": "有序经营",
+        "source_urls": [
+          "https://xue1.xiaohongshu.com/p/t_pc/course_pc_detail/video/v_655e051ee4b023c044fec8d0"
+        ],
+        "examples": [
+          "商单内容伪装成自发分享",
+          "商业身份未披露",
+          "广告合作未做显著标识"
+        ]
+      }
+    },
+    {
+      "platform": "xiaohongshu",
+      "rule_id": "XHS-CAT-011",
+      "title": "有序经营：虚假营销、伪装素人与假测评",
+      "content": "禁止伪装素人、编造自用体验、虚假测评、假种草、刷量刷评和夸大产品效果的营销内容。",
+      "source_url": "https://finance.sina.com.cn/tech/digi/2025-02-19/doc-inekzcyc2957764.shtml",
+      "severity": "high",
+      "tags": [
+        "false_review",
+        "marketing_violation"
+      ],
+      "keywords": [
+        "无广",
+        "亲测有效",
+        "自用推荐",
+        "真实测评",
+        "回购十次",
+        "素人种草"
+      ],
+      "regex_patterns": [
+        "(无广|自用).*推荐",
+        "亲测.*有效",
+        "素人.*种草|真实测评"
+      ],
+      "metadata": {
+        "source_type": "public_report_of_official_governance",
+        "pillar": "有序经营",
+        "source_urls": [
+          "https://finance.sina.com.cn/tech/digi/2025-02-19/doc-inekzcyc2957764.shtml",
+          "https://huacheng.gz-cmc.com/pages/2026/01/20/5b9629a5d7334c4cbcba77db98424444.html"
+        ],
+        "examples": [
+          "伪装真实用户发广告",
+          "虚构长期自用体验",
+          "假测评和刷量刷评带货"
+        ]
+      }
+    },
+    {
+      "platform": "xiaohongshu",
+      "rule_id": "XHS-CAT-012",
+      "title": "有序经营：恶意竞争与黑灰产矩阵",
+      "content": "禁止批量养号、矩阵分发、恶意拉踩竞品、虚假投诉和其他破坏平台秩序的黑灰产经营行为。",
+      "source_url": "https://finance.sina.com.cn/tech/digi/2025-02-19/doc-inekzcyc2957764.shtml",
+      "severity": "medium",
+      "tags": [
+        "duplicate_content",
+        "marketing_violation",
+        "rights_infringement"
+      ],
+      "keywords": [
+        "矩阵号",
+        "批量发布",
+        "拉踩",
+        "恶意举报",
+        "黑灰产",
+        "同款脚本"
+      ],
+      "regex_patterns": [
+        "矩阵号|批量发布",
+        "拉踩.*竞品|诋毁.*品牌",
+        "恶意举报|虚假投诉"
+      ],
+      "metadata": {
+        "source_type": "public_report_of_official_governance",
+        "pillar": "有序经营",
+        "source_urls": [
+          "https://finance.sina.com.cn/tech/digi/2025-02-19/doc-inekzcyc2957764.shtml"
+        ],
+        "examples": [
+          "多账号批量分发同款脚本",
+          "组织化拉踩竞品",
+          "黑灰产账号养号引流"
+        ]
+      }
+    },
+    {
+      "platform": "xiaohongshu",
+      "rule_id": "XHS-MAN-001",
+      "title": "违法违规：侵犯他人权利",
+      "content": "平台坚决反对各种形式的人身伤害行为，严禁用户发布宣 扬、参与或组织危害人身安全、扰乱社会秩序的违法内容， 包括但不限于暴力行为、人口买卖、绑架拘禁、非法领养或 送养未成年人、非法弃养未成年人或无行为能力人等。 常见违规形式，包括但不限于： ·展示相关违法违规行为的具体画面及文字细节描述； 宣扬、支持、鼓吹相关违法违规行为，或传播宣扬该类 违规内容的影视作品，包括但不限于微短剧、动漫及其 相关衍生物等； ·寻求、参与或提供相关违法服务。 本条规则适用于小红书所有场景下的发布行为，包括但不限 于笔记、评论、用户资料等场景。以下示例内容并非穷举， 如果你认为还有其他风险形式或优化建议，可点击下方评价 按钮向我们反馈，感谢每一位小红薯的支持与喜爱。",
+      "source_url": null,
+      "severity": "high",
+      "tags": [
+        "xhs_manual_category_违法违规",
+        "xhs_manual_rule_侵犯他人权利"
+      ],
+      "keywords": [
+        "侵犯他人权利"
+      ],
+      "regex_patterns": [],
+      "metadata": {
+        "source_type": "creator_center_manual_capture",
+        "manual_category": "违法违规",
+        "manual_title": "侵犯他人权利",
+        "inferred_candidate_tags": [],
+        "title_source": "filename",
+        "ocr_confidence_avg": 0.9874,
+        "flags": [],
+        "source_urls": [
+          "/Users/m/亿一的AI小助理/open-codex/platform-content-audit/data/source_archives/xiaohongshu_creator_center_manual/inbox/001_违法违规/侵犯他人权利.jpg"
+        ],
+        "processed_catalog_path": "/Users/m/亿一的AI小助理/open-codex/platform-content-audit/data/source_archives/xiaohongshu_creator_center_manual/processed/processed_20260316_110434/catalog.json",
+        "image_name": "侵犯他人权利.jpg"
+      }
+    },
+    {
+      "platform": "xiaohongshu",
+      "rule_id": "XHS-MAN-002",
+      "title": "违法违规：其他违法服务",
+      "content": "诚实守信、遵守规章是每一位公民需要坚守的道德底线，同 时根据我国法律规定，参与作弊违法服务的机构和个人将面 临严重的法律制裁和社会遣责。平台禁止用户教授、提供或 寻求各类作弊违法行为。 常见形式包括：各类考试作弊、虚假证明办理、包过、医师 就诊号、溢价门票、逃避各类违规处罚、非法通信服务等作 弊违法行为。",
+      "source_url": null,
+      "severity": "high",
+      "tags": [
+        "xhs_manual_category_违法违规",
+        "xhs_manual_rule_其他违法服务"
+      ],
+      "keywords": [
+        "其他违法服务"
+      ],
+      "regex_patterns": [],
+      "metadata": {
+        "source_type": "creator_center_manual_capture",
+        "manual_category": "违法违规",
+        "manual_title": "其他违法服务",
+        "inferred_candidate_tags": [],
+        "title_source": "filename",
+        "ocr_confidence_avg": 0.9833,
+        "flags": [],
+        "source_urls": [
+          "/Users/m/亿一的AI小助理/open-codex/platform-content-audit/data/source_archives/xiaohongshu_creator_center_manual/inbox/001_违法违规/其他违法服务.jpg"
+        ],
+        "processed_catalog_path": "/Users/m/亿一的AI小助理/open-codex/platform-content-audit/data/source_archives/xiaohongshu_creator_center_manual/processed/processed_20260316_110434/catalog.json",
+        "image_name": "其他违法服务.jpg"
+      }
+    },
+    {
+      "platform": "xiaohongshu",
+      "rule_id": "XHS-MAN-003",
+      "title": "违法违规：其他违规行为",
+      "content": "为保护国家形象及利益，以下相关内容的发布需要严肃谨 慎，请小红薯们一定要多加注意： ·在国际语境下错误的将我国部分地区名称与国家名称并 列标注，确需并列时应标注“国家和地区” ）对国家官方正式、标准称呼不当调侃、恶搞的内容 对历史事件或时间节点的不完整称呼，易引发歧义和不 当感受的内容，例如：将南京大屠杀遇难同胞纪念日简 化为“南京大屠杀纪念日” ·发布内容中涉及错误的国家标志",
+      "source_url": null,
+      "severity": "high",
+      "tags": [
+        "xhs_manual_category_违法违规",
+        "xhs_manual_rule_其他违规行为"
+      ],
+      "keywords": [
+        "其他违规行为"
+      ],
+      "regex_patterns": [],
+      "metadata": {
+        "source_type": "creator_center_manual_capture",
+        "manual_category": "违法违规",
+        "manual_title": "其他违规行为",
+        "inferred_candidate_tags": [],
+        "title_source": "filename",
+        "ocr_confidence_avg": 0.9877,
+        "flags": [],
+        "source_urls": [
+          "/Users/m/亿一的AI小助理/open-codex/platform-content-audit/data/source_archives/xiaohongshu_creator_center_manual/inbox/001_违法违规/其他违规行为.jpg"
+        ],
+        "processed_catalog_path": "/Users/m/亿一的AI小助理/open-codex/platform-content-audit/data/source_archives/xiaohongshu_creator_center_manual/processed/processed_20260316_110434/catalog.json",
+        "image_name": "其他违规行为.jpg"
+      }
+    },
+    {
+      "platform": "xiaohongshu",
+      "rule_id": "XHS-MAN-004",
+      "title": "违法违规：医疗违法服务",
+      "content": "提供医疗服务的过程中，违反相关法律法规及规章制度，提 供非法医疗服务，或提供其他易引发争议及风险的医疗服 务。这些行为不仅违反了国家法律规定，也严重损害了患者 的身心健康和人身财产安全。 常见形式包括但不限于：代孕、胎儿性别鉴定、单身试管、 医疗垃圾交易、医保提现等。",
+      "source_url": null,
+      "severity": "high",
+      "tags": [
+        "xhs_manual_category_违法违规",
+        "xhs_manual_rule_医疗违法服务"
+      ],
+      "keywords": [
+        "医疗违法服务",
+        "医疗"
+      ],
+      "regex_patterns": [
+        "根治|治愈|包治"
+      ],
+      "metadata": {
+        "source_type": "creator_center_manual_capture",
+        "manual_category": "违法违规",
+        "manual_title": "医疗违法服务",
+        "inferred_candidate_tags": [
+          "medical_claim",
+          "medical_content"
+        ],
+        "title_source": "filename",
+        "ocr_confidence_avg": 0.9953,
+        "flags": [],
+        "source_urls": [
+          "/Users/m/亿一的AI小助理/open-codex/platform-content-audit/data/source_archives/xiaohongshu_creator_center_manual/inbox/001_违法违规/医疗违法服务.jpg"
+        ],
+        "processed_catalog_path": "/Users/m/亿一的AI小助理/open-codex/platform-content-audit/data/source_archives/xiaohongshu_creator_center_manual/processed/processed_20260316_110434/catalog.json",
+        "image_name": "医疗违法服务.jpg"
+      }
+    },
+    {
+      "platform": "xiaohongshu",
+      "rule_id": "XHS-MAN-005",
+      "title": "违法违规：国家及军警形象",
+      "content": "国家及军警形象应严肃公正，平台严禁发布对国家、政府机 构、军警形象进行恶搞或借以广告营销的内容，例如声称某 产品为军队机关专用等。",
+      "source_url": null,
+      "severity": "high",
+      "tags": [
+        "xhs_manual_category_违法违规",
+        "xhs_manual_rule_国家及军警形象"
+      ],
+      "keywords": [
+        "国家",
+        "军警形象"
+      ],
+      "regex_patterns": [],
+      "metadata": {
+        "source_type": "creator_center_manual_capture",
+        "manual_category": "违法违规",
+        "manual_title": "国家及军警形象",
+        "inferred_candidate_tags": [
+          "illegal_activity"
+        ],
+        "title_source": "filename",
+        "ocr_confidence_avg": 0.9938,
+        "flags": [],
+        "source_urls": [
+          "/Users/m/亿一的AI小助理/open-codex/platform-content-audit/data/source_archives/xiaohongshu_creator_center_manual/inbox/001_违法违规/国家及军警形象.jpg"
+        ],
+        "processed_catalog_path": "/Users/m/亿一的AI小助理/open-codex/platform-content-audit/data/source_archives/xiaohongshu_creator_center_manual/processed/processed_20260316_110434/catalog.json",
+        "image_name": "国家及军警形象.jpg"
+      }
+    },
+    {
+      "platform": "xiaohongshu",
+      "rule_id": "XHS-MAN-006",
+      "title": "违法违规：国家标志和象征",
+      "content": "国家标识代表着国家形象，公民应爱护尊重，不得发布损毁 或恶搞国家标识的内容。包括但不限于国旗、党旗、国徽、 党徽、国歌、人民币、党章等。 人民币作为法定流通货币，平台禁止任何形式的损毁、恶 搞、仿制人民币或将人民币制作为商品等违反人民币管理规 定的内容。",
+      "source_url": null,
+      "severity": "high",
+      "tags": [
+        "xhs_manual_category_违法违规",
+        "xhs_manual_rule_国家标志和象征"
+      ],
+      "keywords": [
+        "国家标志",
+        "象征"
+      ],
+      "regex_patterns": [],
+      "metadata": {
+        "source_type": "creator_center_manual_capture",
+        "manual_category": "违法违规",
+        "manual_title": "国家标志和象征",
+        "inferred_candidate_tags": [
+          "illegal_activity"
+        ],
+        "title_source": "filename",
+        "ocr_confidence_avg": 0.9942,
+        "flags": [],
+        "source_urls": [
+          "/Users/m/亿一的AI小助理/open-codex/platform-content-audit/data/source_archives/xiaohongshu_creator_center_manual/inbox/001_违法违规/国家标志和象征.jpg"
+        ],
+        "processed_catalog_path": "/Users/m/亿一的AI小助理/open-codex/platform-content-audit/data/source_archives/xiaohongshu_creator_center_manual/processed/processed_20260316_110434/catalog.json",
+        "image_name": "国家标志和象征.jpg"
+      }
+    },
+    {
+      "platform": "xiaohongshu",
+      "rule_id": "XHS-MAN-007",
+      "title": "违法违规：教育违法服务",
+      "content": "根据教育部最新政策，为了促进教育公平、提高教育质量和 培养全面发展的人才，平台不允许发布违反国家相关规定的 教育服务，例如：学校挂读、论文代写、考试包过、学科类 校外培训等。",
+      "source_url": null,
+      "severity": "high",
+      "tags": [
+        "xhs_manual_category_违法违规",
+        "xhs_manual_rule_教育违法服务"
+      ],
+      "keywords": [
+        "教育违法服务"
+      ],
+      "regex_patterns": [],
+      "metadata": {
+        "source_type": "creator_center_manual_capture",
+        "manual_category": "违法违规",
+        "manual_title": "教育违法服务",
+        "inferred_candidate_tags": [],
+        "title_source": "filename",
+        "ocr_confidence_avg": 0.996,
+        "flags": [],
+        "source_urls": [
+          "/Users/m/亿一的AI小助理/open-codex/platform-content-audit/data/source_archives/xiaohongshu_creator_center_manual/inbox/001_违法违规/教育违法服务.jpg"
+        ],
+        "processed_catalog_path": "/Users/m/亿一的AI小助理/open-codex/platform-content-audit/data/source_archives/xiaohongshu_creator_center_manual/processed/processed_20260316_110434/catalog.json",
+        "image_name": "教育违法服务.jpg"
+      }
+    },
+    {
+      "platform": "xiaohongshu",
+      "rule_id": "XHS-MAN-008",
+      "title": "违法违规：涉外违法服务",
+      "content": "为保障红薯们的合法权益，平台禁止未取得相关资质的个人 或机构为他人提供就业机会或就业服务。 ·为配合《中华人民共和国出境入境管理法》规定，平台 禁止发布为“三非”人员提供入境、居留或就业等相关 服务的内容。同时也禁止发布“三非”类型外籍人员在 境内的生活记录或相关内容； “三非”类型包含：非法入境、非法居留、非法就业。",
+      "source_url": null,
+      "severity": "high",
+      "tags": [
+        "xhs_manual_category_违法违规",
+        "xhs_manual_rule_涉外违法服务"
+      ],
+      "keywords": [
+        "涉外违法服务"
+      ],
+      "regex_patterns": [],
+      "metadata": {
+        "source_type": "creator_center_manual_capture",
+        "manual_category": "违法违规",
+        "manual_title": "涉外违法服务",
+        "inferred_candidate_tags": [],
+        "title_source": "filename",
+        "ocr_confidence_avg": 0.9912,
+        "flags": [],
+        "source_urls": [
+          "/Users/m/亿一的AI小助理/open-codex/platform-content-audit/data/source_archives/xiaohongshu_creator_center_manual/inbox/001_违法违规/涉外违法服务.jpg"
+        ],
+        "processed_catalog_path": "/Users/m/亿一的AI小助理/open-codex/platform-content-audit/data/source_archives/xiaohongshu_creator_center_manual/processed/processed_20260316_110434/catalog.json",
+        "image_name": "涉外违法服务.jpg"
+      }
+    },
+    {
+      "platform": "xiaohongshu",
+      "rule_id": "XHS-MAN-009",
+      "title": "违法违规：管制品及其他危险品",
+      "content": "根据相关法律法规，同时为了营造安全社区环境与保障用户 健康安全。禁止用户在平台发布违禁物品相关内容，常见如 枪支弹药、管制刀具化学品，及其他易产生伤害的危险物品 等。",
+      "source_url": null,
+      "severity": "high",
+      "tags": [
+        "xhs_manual_category_违法违规",
+        "xhs_manual_rule_管制品及其他危险品"
+      ],
+      "keywords": [
+        "管制品",
+        "其他危险品",
+        "危险品"
+      ],
+      "regex_patterns": [],
+      "metadata": {
+        "source_type": "creator_center_manual_capture",
+        "manual_category": "违法违规",
+        "manual_title": "管制品及其他危险品",
+        "inferred_candidate_tags": [
+          "illegal_activity"
+        ],
+        "title_source": "filename",
+        "ocr_confidence_avg": 0.9943,
+        "flags": [],
+        "source_urls": [
+          "/Users/m/亿一的AI小助理/open-codex/platform-content-audit/data/source_archives/xiaohongshu_creator_center_manual/inbox/001_违法违规/管制品及其他危险品.jpg"
+        ],
+        "processed_catalog_path": "/Users/m/亿一的AI小助理/open-codex/platform-content-audit/data/source_archives/xiaohongshu_creator_center_manual/processed/processed_20260316_110434/catalog.json",
+        "image_name": "管制品及其他危险品.jpg"
+      }
+    },
+    {
+      "platform": "xiaohongshu",
+      "rule_id": "XHS-MAN-010",
+      "title": "违法违规：违法违规行为",
+      "content": "为切实保障小红薯们的人身与财产安全，维护清朗健康的社 区环境，平台将对一切危害公民人身财产安全、违反国家及 地方性法律法规、破坏生态与文化遗产的行为采取严厉处置 措施。此类行为包括但不限于：妨害文物管理相关规定、违 反自然保护区条例、以及伤害珍稀野生动植物资源等。平台 对此类违规行为持零容忍态度。",
+      "source_url": null,
+      "severity": "high",
+      "tags": [
+        "xhs_manual_category_违法违规",
+        "xhs_manual_rule_违法违规行为"
+      ],
+      "keywords": [
+        "违法违规行为"
+      ],
+      "regex_patterns": [],
+      "metadata": {
+        "source_type": "creator_center_manual_capture",
+        "manual_category": "违法违规",
+        "manual_title": "违法违规行为",
+        "inferred_candidate_tags": [],
+        "title_source": "filename",
+        "ocr_confidence_avg": 0.9891,
+        "flags": [],
+        "source_urls": [
+          "/Users/m/亿一的AI小助理/open-codex/platform-content-audit/data/source_archives/xiaohongshu_creator_center_manual/inbox/001_违法违规/违法违规行为.jpg"
+        ],
+        "processed_catalog_path": "/Users/m/亿一的AI小助理/open-codex/platform-content-audit/data/source_archives/xiaohongshu_creator_center_manual/processed/processed_20260316_110434/catalog.json",
+        "image_name": "违法违规行为.jpg"
+      }
+    },
+    {
+      "platform": "xiaohongshu",
+      "rule_id": "XHS-MAN-011",
+      "title": "违法违规：违规交易",
+      "content": "为了保护红薯们的人身财产安全，平台提示大家切勿买卖或 营销国家禁止的一切产品和服务。同时，一旦平台出现此类 内容，平台也会重拳出击。 不可售卖或营销毒品相关内容； 非“有资质从业单位自建网站”的网络平台不可售卖或 营销的内容，如烟草相关制品、烟花爆竹等。",
+      "source_url": null,
+      "severity": "high",
+      "tags": [
+        "xhs_manual_category_违法违规",
+        "xhs_manual_rule_违规交易"
+      ],
+      "keywords": [
+        "违规交易"
+      ],
+      "regex_patterns": [
+        "(微信|vx|v信|二维码)"
+      ],
+      "metadata": {
+        "source_type": "creator_center_manual_capture",
+        "manual_category": "违法违规",
+        "manual_title": "违规交易",
+        "inferred_candidate_tags": [
+          "traffic_inducement"
+        ],
+        "title_source": "filename",
+        "ocr_confidence_avg": 0.9942,
+        "flags": [],
+        "source_urls": [
+          "/Users/m/亿一的AI小助理/open-codex/platform-content-audit/data/source_archives/xiaohongshu_creator_center_manual/inbox/001_违法违规/违规交易.jpg"
+        ],
+        "processed_catalog_path": "/Users/m/亿一的AI小助理/open-codex/platform-content-audit/data/source_archives/xiaohongshu_creator_center_manual/processed/processed_20260316_110434/catalog.json",
+        "image_name": "违规交易.jpg"
+      }
+    },
+    {
+      "platform": "xiaohongshu",
+      "rule_id": "XHS-MAN-012",
+      "title": "违法违规：违规出版物",
+      "content": "平台严禁传播包含血腥暴力、违禁金融、传播不良价值观、 违反公序良俗、低俗擦边等违规内容的微短剧、动漫、漫画 等作品。",
+      "source_url": null,
+      "severity": "high",
+      "tags": [
+        "xhs_manual_category_违法违规",
+        "xhs_manual_rule_违规出版物"
+      ],
+      "keywords": [
+        "违规出版物"
+      ],
+      "regex_patterns": [],
+      "metadata": {
+        "source_type": "creator_center_manual_capture",
+        "manual_category": "违法违规",
+        "manual_title": "违规出版物",
+        "inferred_candidate_tags": [
+          "illegal_activity"
+        ],
+        "title_source": "filename",
+        "ocr_confidence_avg": 0.9927,
+        "flags": [],
+        "source_urls": [
+          "/Users/m/亿一的AI小助理/open-codex/platform-content-audit/data/source_archives/xiaohongshu_creator_center_manual/inbox/001_违法违规/违规出版物.jpg"
+        ],
+        "processed_catalog_path": "/Users/m/亿一的AI小助理/open-codex/platform-content-audit/data/source_archives/xiaohongshu_creator_center_manual/processed/processed_20260316_110434/catalog.json",
+        "image_name": "违规出版物.jpg"
+      }
+    },
+    {
+      "platform": "xiaohongshu",
+      "rule_id": "XHS-MAN-013",
+      "title": "违法违规：金融违法服务",
+      "content": "为保障每一位小红薯的财产与个人信息安全，降低上当受骗 风险，平台禁止用户提供高风险金融类服务。常见形式如： 代开发票，个人性质兑换外币，借名买房，贷款、信用卡代 办等高风险金融服务。",
+      "source_url": null,
+      "severity": "high",
+      "tags": [
+        "xhs_manual_category_违法违规",
+        "xhs_manual_rule_金融违法服务"
+      ],
+      "keywords": [
+        "金融违法服务",
+        "金融"
+      ],
+      "regex_patterns": [
+        "\\d+天回本|零风险"
+      ],
+      "metadata": {
+        "source_type": "creator_center_manual_capture",
+        "manual_category": "违法违规",
+        "manual_title": "金融违法服务",
+        "inferred_candidate_tags": [
+          "financial_promise"
+        ],
+        "title_source": "filename",
+        "ocr_confidence_avg": 0.995,
+        "flags": [],
+        "source_urls": [
+          "/Users/m/亿一的AI小助理/open-codex/platform-content-audit/data/source_archives/xiaohongshu_creator_center_manual/inbox/001_违法违规/金融违法服务.jpg"
+        ],
+        "processed_catalog_path": "/Users/m/亿一的AI小助理/open-codex/platform-content-audit/data/source_archives/xiaohongshu_creator_center_manual/processed/processed_20260316_110434/catalog.json",
+        "image_name": "金融违法服务.jpg"
+      }
+    },
+    {
+      "platform": "xiaohongshu",
+      "rule_id": "XHS-MAN-014",
+      "title": "违法违规：高风险内容",
+      "content": "为了维护网络生态，保护红薯们的财产安全，规避投资纠 纷，避免上当受骗，平台温馨提示以下内容不适合在平台展 示 ·分享未获得相关部门许可的网络软件，甚至以此牟利的 内容，如非法vpn、破解版影视app、游戏外挂等； 实施发布大量虚假信息、评论、点赞、买粉等水军行 为； 分享或售卖易产生数据泄露的软件、产品或服务，如AI 换脸、大数据精准获客、窃听器等。",
+      "source_url": null,
+      "severity": "high",
+      "tags": [
+        "xhs_manual_category_违法违规",
+        "xhs_manual_rule_高风险内容"
+      ],
+      "keywords": [
+        "高风险内容"
+      ],
+      "regex_patterns": [],
+      "metadata": {
+        "source_type": "creator_center_manual_capture",
+        "manual_category": "违法违规",
+        "manual_title": "高风险内容",
+        "inferred_candidate_tags": [],
+        "title_source": "filename",
+        "ocr_confidence_avg": 0.9874,
+        "flags": [],
+        "source_urls": [
+          "/Users/m/亿一的AI小助理/open-codex/platform-content-audit/data/source_archives/xiaohongshu_creator_center_manual/inbox/001_违法违规/高风险内容.jpg"
+        ],
+        "processed_catalog_path": "/Users/m/亿一的AI小助理/open-codex/platform-content-audit/data/source_archives/xiaohongshu_creator_center_manual/processed/processed_20260316_110434/catalog.json",
+        "image_name": "高风险内容.jpg"
+      }
+    },
+    {
+      "platform": "xiaohongshu",
+      "rule_id": "XHS-MAN-015",
+      "title": "医疗医美：医疗不实言论",
+      "content": "平台上不鼓励发布对医疗/健康建议的博眼球夸大宣传、虚 假/刻意手段凸显效果或不具有普适性的医疗效果夸大描述 内容，医疗/健康建议包括但不限于产品、服务、理念、经 验等。该类内容多为缺少科学依据认证，易误导他人。为确 保医疗健康科普内容的科学、严谨、专业，平台倡导各位小 红薯做到以下几点： ·在涉及医疗健康基础理论的内容时要表述准确、最好提 供科学的数据支持和理论知识论证 多分享符合权威中西理论或者国家权威机构认可发布的 膳食原则和健康理念，避免提供存在争议或易误导用户 的食疗养生信息 对饮食运动、保健品等带来的健康效果进行客观真实表 述，避免效果夸大或者小概率的效果对用户产生误导",
+      "source_url": null,
+      "severity": "high",
+      "tags": [
+        "xhs_manual_category_医疗医美",
+        "xhs_manual_rule_医疗不实言论"
+      ],
+      "keywords": [
+        "医疗不实言论",
+        "医疗"
+      ],
+      "regex_patterns": [
+        "根治|治愈|包治"
+      ],
+      "metadata": {
+        "source_type": "creator_center_manual_capture",
+        "manual_category": "医疗医美",
+        "manual_title": "医疗不实言论",
+        "inferred_candidate_tags": [
+          "medical_claim",
+          "medical_content"
+        ],
+        "title_source": "filename",
+        "ocr_confidence_avg": 0.9882,
+        "flags": [],
+        "source_urls": [
+          "/Users/m/亿一的AI小助理/open-codex/platform-content-audit/data/source_archives/xiaohongshu_creator_center_manual/inbox/002_医疗医美/医疗不实言论.jpg"
+        ],
+        "processed_catalog_path": "/Users/m/亿一的AI小助理/open-codex/platform-content-audit/data/source_archives/xiaohongshu_creator_center_manual/processed/processed_20260316_110434/catalog.json",
+        "image_name": "医疗不实言论.jpg"
+      }
+    },
+    {
+      "platform": "xiaohongshu",
+      "rule_id": "XHS-MAN-016",
+      "title": "医疗医美：医疗医美内容分享",
+      "content": "医美医疗行业密切关联着人体健康与生命安全，身体抱 恙一定要在正规线下医院接受专业治疗，如果有刻意推 荐某某医生、医院等违规推广内容，是平台不提倡的风 险内容，薯管家会限制此类内容发布。 发布涉及医疗美有关较强专业性或高风险性内容进行分 享交互，包括但不限于整形外科手术经历分享、购买境 内外医美注射产品经历分享以及医美咨询求助行为，也 存在较高风险，请避免发布。",
+      "source_url": null,
+      "severity": "high",
+      "tags": [
+        "xhs_manual_category_医疗医美",
+        "xhs_manual_rule_医疗医美内容分享"
+      ],
+      "keywords": [
+        "医疗医美内容分享",
+        "医疗医美",
+        "医疗",
+        "医美"
+      ],
+      "regex_patterns": [
+        "根治|治愈|包治"
+      ],
+      "metadata": {
+        "source_type": "creator_center_manual_capture",
+        "manual_category": "医疗医美",
+        "manual_title": "医疗医美内容分享",
+        "inferred_candidate_tags": [
+          "medical_claim",
+          "medical_content"
+        ],
+        "title_source": "filename",
+        "ocr_confidence_avg": 0.9911,
+        "flags": [],
+        "source_urls": [
+          "/Users/m/亿一的AI小助理/open-codex/platform-content-audit/data/source_archives/xiaohongshu_creator_center_manual/inbox/002_医疗医美/医疗医美内容分享.jpg"
+        ],
+        "processed_catalog_path": "/Users/m/亿一的AI小助理/open-codex/platform-content-audit/data/source_archives/xiaohongshu_creator_center_manual/processed/processed_20260316_110434/catalog.json",
+        "image_name": "医疗医美内容分享.jpg"
+      }
+    },
+    {
+      "platform": "xiaohongshu",
+      "rule_id": "XHS-MAN-017",
+      "title": "医疗医美：医疗医美违规营销",
+      "content": "除无资质的医疗科普外，无资质的医疗美容相关营销售卖行 为也同样是不被平台允许的，例如整形外科手术、光电项 目、注射项目、医疗器械等，平台也不允许发布鼓励借贷医 美的内容。",
+      "source_url": null,
+      "severity": "high",
+      "tags": [
+        "xhs_manual_category_医疗医美",
+        "xhs_manual_rule_医疗医美违规营销"
+      ],
+      "keywords": [
+        "医疗医美违规营销",
+        "医疗医美",
+        "医疗",
+        "医美"
+      ],
+      "regex_patterns": [
+        "根治|治愈|包治"
+      ],
+      "metadata": {
+        "source_type": "creator_center_manual_capture",
+        "manual_category": "医疗医美",
+        "manual_title": "医疗医美违规营销",
+        "inferred_candidate_tags": [
+          "medical_claim",
+          "medical_content"
+        ],
+        "title_source": "filename",
+        "ocr_confidence_avg": 0.9909,
+        "flags": [],
+        "source_urls": [
+          "/Users/m/亿一的AI小助理/open-codex/platform-content-audit/data/source_archives/xiaohongshu_creator_center_manual/inbox/002_医疗医美/医疗医美违规营销.jpg"
+        ],
+        "processed_catalog_path": "/Users/m/亿一的AI小助理/open-codex/platform-content-audit/data/source_archives/xiaohongshu_creator_center_manual/processed/processed_20260316_110434/catalog.json",
+        "image_name": "医疗医美违规营销.jpg"
+      }
+    },
+    {
+      "platform": "xiaohongshu",
+      "rule_id": "XHS-MAN-018",
+      "title": "医疗医美：无医疗医美资质科普",
+      "content": "为了保护用户的健康安全和防止虚假信息的传播，未认证用 户不能发医疗相关内容。医疗相关内容需要专业的知识和经 验，未经认证的用户可能无法提供准确、可靠的信息，甚至 会误导其他用户。例如： ·未经平台认证不可发布整形外科手术、光电项目、针剂 注射等医美相关内容，常见如抽脂、隆鼻、超声刀、水 光针、未获得国内NMPA认证或仅取得国内“妆字号”等 不合规注射产品",
+      "source_url": null,
+      "severity": "high",
+      "tags": [
+        "xhs_manual_category_医疗医美",
+        "xhs_manual_rule_无医疗医美资质科普"
+      ],
+      "keywords": [
+        "无医疗医美资质科普",
+        "医疗医美",
+        "医疗",
+        "医美"
+      ],
+      "regex_patterns": [
+        "根治|治愈|包治"
+      ],
+      "metadata": {
+        "source_type": "creator_center_manual_capture",
+        "manual_category": "医疗医美",
+        "manual_title": "无医疗医美资质科普",
+        "inferred_candidate_tags": [
+          "medical_claim",
+          "medical_content"
+        ],
+        "title_source": "filename",
+        "ocr_confidence_avg": 0.9893,
+        "flags": [],
+        "source_urls": [
+          "/Users/m/亿一的AI小助理/open-codex/platform-content-audit/data/source_archives/xiaohongshu_creator_center_manual/inbox/002_医疗医美/无医疗医美资质科普.jpg"
+        ],
+        "processed_catalog_path": "/Users/m/亿一的AI小助理/open-codex/platform-content-audit/data/source_archives/xiaohongshu_creator_center_manual/processed/processed_20260316_110434/catalog.json",
+        "image_name": "无医疗医美资质科普.jpg"
+      }
+    },
+    {
+      "platform": "xiaohongshu",
+      "rule_id": "XHS-MAN-019",
+      "title": "医疗医美：管制及高风险药物",
+      "content": "·分享或传播管制药品及含有管制成分物品的使用方法、 获取渠道或相关经验 ·求购或提供管制药品及含有管制成分物品 ）求购、售卖、代买代预约高风险药品及医疗服务，如处 方药、中药、医院自制药、疫苗等 就医安全怎保障？官方信息助健康！ 1、如何寻找正规医院： ·进入【国家健康委员会-全国医疗机构查询】，输入省份 +机构名称，查询机构资质； ）需要小红薯们特别关注的是，我国医美机构根据多维度 指标分为三类：诊所、门诊部、医院。若需要开展全麻 类手术，则必须要求该机构的【诊疗科目】中包含麻醉 科，请务必术前查询； 2、如何查看医生资质： ·进入【国家健康委员会-医生执业注册信息查询】，输入 省份+机构名称+医生姓名，查询医生信息； ·请重点关注医生主要执业的机构、科室是否符合其执业 范围，备案机构是否在有效期内； 3、如何查询药物/医疗器械/化妆品合规性： ·进入【国家药品监督管理局数据查询】，选择对应分 类，输入产品的完整名称/公司名…",
+      "source_url": null,
+      "severity": "high",
+      "tags": [
+        "xhs_manual_category_医疗医美",
+        "xhs_manual_rule_管制及高风险药物"
+      ],
+      "keywords": [
+        "管制",
+        "高风险药物",
+        "药物"
+      ],
+      "regex_patterns": [
+        "根治|治愈|包治"
+      ],
+      "metadata": {
+        "source_type": "creator_center_manual_capture",
+        "manual_category": "医疗医美",
+        "manual_title": "管制及高风险药物",
+        "inferred_candidate_tags": [
+          "medical_claim",
+          "medical_content"
+        ],
+        "title_source": "filename",
+        "ocr_confidence_avg": 0.9859,
+        "flags": [],
+        "source_urls": [
+          "/Users/m/亿一的AI小助理/open-codex/platform-content-audit/data/source_archives/xiaohongshu_creator_center_manual/inbox/002_医疗医美/管制及高风险药物.jpg"
+        ],
+        "processed_catalog_path": "/Users/m/亿一的AI小助理/open-codex/platform-content-audit/data/source_archives/xiaohongshu_creator_center_manual/processed/processed_20260316_110434/catalog.json",
+        "image_name": "管制及高风险药物.jpg"
+      }
+    },
+    {
+      "platform": "xiaohongshu",
+      "rule_id": "XHS-MAN-020",
+      "title": "医疗医美：高危医疗医美行为",
+      "content": "·宣传、推广非法医疗服务，如试药、交易人体器官、组 织及血液等内容； ·宣传、分享或提供未经国家批准、存在高风险或明令禁 止的医疗医美操作及相关产品； ·宣扬、分享未经医学证实，或缺少临床数据验证的治疗 方法及物品； ·分享在诊疗科目不含“医疗美容科”的机构体验医美产 品或项目的经历，或提供缺乏相关资质的医疗医美相关 服务。例如在美容院、工作室、小诊所中开展创伤性或 侵入性医美项目，上门代打（注射）等。 就医安全怎保障？官方信息助健康！ 1、如何寻找正规医院： ·进入【国家健康委员会-全国医疗机构查询】，输入省份 +机构名称，查询机构资质； 需要小红薯们特别关注的是，我国医美机构根据多维度 指标分为三类：诊所、门诊部、医院。若需要开展全麻 类手术，则必须要求该机构的【诊疗科目】中包含麻醉 科，请务必术前查询； 2、如何查看医生资质： ·进入【国家健康委员会-医生执业注册信息查询】，输入 省份+机构名称+医生姓名，查询医生信息；…",
+      "source_url": null,
+      "severity": "high",
+      "tags": [
+        "xhs_manual_category_医疗医美",
+        "xhs_manual_rule_高危医疗医美行为"
+      ],
+      "keywords": [
+        "高危医疗医美行为",
+        "医疗医美",
+        "医疗",
+        "医美",
+        "高危"
+      ],
+      "regex_patterns": [
+        "根治|治愈|包治"
+      ],
+      "metadata": {
+        "source_type": "creator_center_manual_capture",
+        "manual_category": "医疗医美",
+        "manual_title": "高危医疗医美行为",
+        "inferred_candidate_tags": [
+          "medical_claim",
+          "medical_content"
+        ],
+        "title_source": "filename",
+        "ocr_confidence_avg": 0.9851,
+        "flags": [],
+        "source_urls": [
+          "/Users/m/亿一的AI小助理/open-codex/platform-content-audit/data/source_archives/xiaohongshu_creator_center_manual/inbox/002_医疗医美/高危医疗医美行为.jpg"
+        ],
+        "processed_catalog_path": "/Users/m/亿一的AI小助理/open-codex/platform-content-audit/data/source_archives/xiaohongshu_creator_center_manual/processed/processed_20260316_110434/catalog.json",
+        "image_name": "高危医疗医美行为.jpg"
+      }
+    },
+    {
+      "platform": "xiaohongshu",
+      "rule_id": "XHS-MAN-021",
+      "title": "风险行为：交易类风险",
+      "content": "提供或寻求高风险物品/服务的内容，如：实名制账号、 游戏账号、充值点卡、购物卡、网站会员、优惠券、回 收名酒酒瓶、海外代购、明星周边、二次元周边等； ·涉及通过超低价、虚假的商品信息诱导他人直接转账或 点击虚假链接的行为。",
+      "source_url": null,
+      "severity": "high",
+      "tags": [
+        "xhs_manual_category_风险行为",
+        "xhs_manual_rule_交易类风险"
+      ],
+      "keywords": [
+        "交易类风险"
+      ],
+      "regex_patterns": [
+        "(微信|vx|v信|二维码)"
+      ],
+      "metadata": {
+        "source_type": "creator_center_manual_capture",
+        "manual_category": "风险行为",
+        "manual_title": "交易类风险",
+        "inferred_candidate_tags": [
+          "traffic_inducement"
+        ],
+        "title_source": "filename",
+        "ocr_confidence_avg": 0.9885,
+        "flags": [],
+        "source_urls": [
+          "/Users/m/亿一的AI小助理/open-codex/platform-content-audit/data/source_archives/xiaohongshu_creator_center_manual/inbox/003_风险行为/交易类风险.jpg"
+        ],
+        "processed_catalog_path": "/Users/m/亿一的AI小助理/open-codex/platform-content-audit/data/source_archives/xiaohongshu_creator_center_manual/processed/processed_20260316_110434/catalog.json",
+        "image_name": "交易类风险.jpg"
+      }
+    },
+    {
+      "platform": "xiaohongshu",
+      "rule_id": "XHS-MAN-022",
+      "title": "风险行为：其他风险内容",
+      "content": "诈骗、赌博及偷盗都是严重威胁公民人身财产安全的行为， 平台会将相关内容予以严厉处罚，保障小红薯们的人身权益 和财产权益。 ·赌博：发布赌博场景、为博彩平台引流等赌博相关的违 法犯罪行为； 偷盗：讲述盗窃或他人盗窃的违法犯罪经历或展示赃物 成果，或对盗窃行为的美化解释； 传销：通过持续不断地发布看似轻松简单但是可以快速 获利的内容来吸引其他用户进行传销活动从而实现年 利。",
+      "source_url": null,
+      "severity": "high",
+      "tags": [
+        "xhs_manual_category_风险行为",
+        "xhs_manual_rule_其他风险内容"
+      ],
+      "keywords": [
+        "其他风险内容"
+      ],
+      "regex_patterns": [],
+      "metadata": {
+        "source_type": "creator_center_manual_capture",
+        "manual_category": "风险行为",
+        "manual_title": "其他风险内容",
+        "inferred_candidate_tags": [],
+        "title_source": "filename",
+        "ocr_confidence_avg": 0.9848,
+        "flags": [],
+        "source_urls": [
+          "/Users/m/亿一的AI小助理/open-codex/platform-content-audit/data/source_archives/xiaohongshu_creator_center_manual/inbox/003_风险行为/其他风险内容.jpg"
+        ],
+        "processed_catalog_path": "/Users/m/亿一的AI小助理/open-codex/platform-content-audit/data/source_archives/xiaohongshu_creator_center_manual/processed/processed_20260316_110434/catalog.json",
+        "image_name": "其他风险内容.jpg"
+      }
+    },
+    {
+      "platform": "xiaohongshu",
+      "rule_id": "XHS-MAN-023",
+      "title": "风险行为：出入危险地带",
+      "content": "前往含有一定安全隐患的地带打卡拍照或开展娱乐活 动，如悬崖边缘、结冰湖面、高速路段、隧道涵洞等地 带； ·前往已明文禁止游览的地区观光打卡，如尚未辟为参观 游览区的长城段落、未开展旅游活动的自然保护区等。 小红书建议在分享游玩经历时，尽量采取以下做法： ·出游前充分了解当地相关管理规定，不盲目跟风前往人 迹罕至或风险系数较高的地方； ）游玩时注意周围环境中的警示标识，时刻保持风险意 识，不做危险动作，远离危险地带； 在已经设有明确安全标识的专业拍照区域、景区等安全 地点进行拍摄时，请在发布笔记时主动标注拍摄场所性 质，例如“车辆封闭路段安全拍摄”、“景区安全观景 台拍摄”等，以帮助他人明确辨识拍摄环境的安全性； ·参与高风险运动项目时，做好防护措施，并在发布此类 内容时，进行风险警示标识。 本条规则适用于小红书所有场景下的发布行为，包括但不限 于笔记、评论、用户资料等场景。以下示例内容并非穷举， 如果你认为还有其他风险形式或优…",
+      "source_url": null,
+      "severity": "high",
+      "tags": [
+        "xhs_manual_category_风险行为",
+        "xhs_manual_rule_出入危险地带"
+      ],
+      "keywords": [
+        "出入危险地带"
+      ],
+      "regex_patterns": [],
+      "metadata": {
+        "source_type": "creator_center_manual_capture",
+        "manual_category": "风险行为",
+        "manual_title": "出入危险地带",
+        "inferred_candidate_tags": [
+          "unsafe_behavior"
+        ],
+        "title_source": "filename",
+        "ocr_confidence_avg": 0.9871,
+        "flags": [],
+        "source_urls": [
+          "/Users/m/亿一的AI小助理/open-codex/platform-content-audit/data/source_archives/xiaohongshu_creator_center_manual/inbox/003_风险行为/出入危险地带.jpg"
+        ],
+        "processed_catalog_path": "/Users/m/亿一的AI小助理/open-codex/platform-content-audit/data/source_archives/xiaohongshu_creator_center_manual/processed/processed_20260316_110434/catalog.json",
+        "image_name": "出入危险地带.jpg"
+      }
+    },
+    {
+      "platform": "xiaohongshu",
+      "rule_id": "XHS-MAN-024",
+      "title": "风险行为：危害公共安全",
+      "content": "·违反公共安全的高危行为 （1）在易燃易爆区域附近点燃明火，如加油站旁、树林中 吸烟、燃放烟花爆竹等 （2）乘坐电梯时打闹、嬉戏，或携带易燃易爆和毒性物品 乘坐电梯，如驾驶电动车进入电梯等 ·违反道路交通安全规则的行为 （1）展示不遵守交通法规的行为，如违规占道、单手开车/ 骑行、闯红灯、超速行驶等 （2）展示不规范的驾驶行为，如在驾驶过程中使用手机、 不规范驾驶/骑行动作等 （3）未经公安交通管理部门允许，擅自改装车辆外观与动 力结构，违反相关安全技术标准，如加装尾翼、破解限速、 安装雨棚等 本条规则适用于小红书所有场景下的发布行为，包括但不限 于笔记、评论、用户资料等场景。以下示例内容并非穷举， 如果你认为还有其他风险形式或优化建议，可点击下方评价 按钮向我们反馈，感谢每一位小红薯的支持与喜爱。",
+      "source_url": null,
+      "severity": "high",
+      "tags": [
+        "xhs_manual_category_风险行为",
+        "xhs_manual_rule_危害公共安全"
+      ],
+      "keywords": [
+        "危害公共安全"
+      ],
+      "regex_patterns": [],
+      "metadata": {
+        "source_type": "creator_center_manual_capture",
+        "manual_category": "风险行为",
+        "manual_title": "危害公共安全",
+        "inferred_candidate_tags": [
+          "unsafe_behavior"
+        ],
+        "title_source": "filename",
+        "ocr_confidence_avg": 0.9893,
+        "flags": [],
+        "source_urls": [
+          "/Users/m/亿一的AI小助理/open-codex/platform-content-audit/data/source_archives/xiaohongshu_creator_center_manual/inbox/003_风险行为/危害公共安全.jpg"
+        ],
+        "processed_catalog_path": "/Users/m/亿一的AI小助理/open-codex/platform-content-audit/data/source_archives/xiaohongshu_creator_center_manual/processed/processed_20260316_110434/catalog.json",
+        "image_name": "危害公共安全.jpg"
+      }
+    },
+    {
+      "platform": "xiaohongshu",
+      "rule_id": "XHS-MAN-025",
+      "title": "风险行为：招聘兼职类风险",
+      "content": "·发布可能存在生命安全威胁或财物损失风险的求助求推 荐内容，如：推荐工作等； 涉及诈骗网赚、诈骗兼职项目等网络诈骗或疑似的内 容。",
+      "source_url": null,
+      "severity": "high",
+      "tags": [
+        "xhs_manual_category_风险行为",
+        "xhs_manual_rule_招聘兼职类风险"
+      ],
+      "keywords": [
+        "招聘兼职类风险",
+        "兼职"
+      ],
+      "regex_patterns": [],
+      "metadata": {
+        "source_type": "creator_center_manual_capture",
+        "manual_category": "风险行为",
+        "manual_title": "招聘兼职类风险",
+        "inferred_candidate_tags": [],
+        "title_source": "filename",
+        "ocr_confidence_avg": 0.9872,
+        "flags": [],
+        "source_urls": [
+          "/Users/m/亿一的AI小助理/open-codex/platform-content-audit/data/source_archives/xiaohongshu_creator_center_manual/inbox/003_风险行为/招聘兼职类风险.jpg"
+        ],
+        "processed_catalog_path": "/Users/m/亿一的AI小助理/open-codex/platform-content-audit/data/source_archives/xiaohongshu_creator_center_manual/processed/processed_20260316_110434/catalog.json",
+        "image_name": "招聘兼职类风险.jpg"
+      }
+    },
+    {
+      "platform": "xiaohongshu",
+      "rule_id": "XHS-MAN-026",
+      "title": "风险行为：理财金融类风险",
+      "content": "分享股票、投资方案等带有风险投资性质的内容，或利 用盈利诱导他人，导流至第三方平台的内容； 涉及以高回报、高收入为头通过非正规渠道进行金融 活动的行为。",
+      "source_url": null,
+      "severity": "high",
+      "tags": [
+        "xhs_manual_category_风险行为",
+        "xhs_manual_rule_理财金融类风险"
+      ],
+      "keywords": [
+        "理财金融类风险",
+        "理财",
+        "金融"
+      ],
+      "regex_patterns": [
+        "\\d+天回本|零风险"
+      ],
+      "metadata": {
+        "source_type": "creator_center_manual_capture",
+        "manual_category": "风险行为",
+        "manual_title": "理财金融类风险",
+        "inferred_candidate_tags": [
+          "financial_promise"
+        ],
+        "title_source": "filename",
+        "ocr_confidence_avg": 0.9811,
+        "flags": [],
+        "source_urls": [
+          "/Users/m/亿一的AI小助理/open-codex/platform-content-audit/data/source_archives/xiaohongshu_creator_center_manual/inbox/003_风险行为/理财金融类风险.jpg"
+        ],
+        "processed_catalog_path": "/Users/m/亿一的AI小助理/open-codex/platform-content-audit/data/source_archives/xiaohongshu_creator_center_manual/processed/processed_20260316_110434/catalog.json",
+        "image_name": "理财金融类风险.jpg"
+      }
+    },
+    {
+      "platform": "xiaohongshu",
+      "rule_id": "XHS-MAN-027",
+      "title": "风险行为：自我伤害",
+      "content": "公开谈论心理健康、自我伤害、饮食失调等易给观看者带来 压抑、悲伤等情绪的话题，可能会对某些用户造成风险，加 重其心理压力与负担。创作相关主题的内容时，请充分考虑 对其他用户的负面影响，尤其是心智尚不成熟的未成年人， 以及可能对这些内容敏感的用户。 小红书严禁传播危害用户自身或他人人身安全的内容，始终 将每位用户的安全与健康放在首位，请一同维护美好红薯 地。 如有需要，可拨打全国24小时心理援助热线： 010-82951332。 为了保护和支持你的观众与其他用户，请勿展示以下危险内 容： ·宣扬、美化自我伤害行为，表达自身持有相关意愿，或 诱导、挑他人进行自我伤害； 展示或详述自我伤害画面、伤者形象； 涉及如何自我伤害的指导性内容（包括如何隐瞒）； 介绍、参与威胁自身健康的游戏、挑战任务或相关引导 性内容； 展示缺乏足够背景信息的他人遗书、信件或相关救援内 容。",
+      "source_url": null,
+      "severity": "high",
+      "tags": [
+        "xhs_manual_category_风险行为",
+        "xhs_manual_rule_自我伤害"
+      ],
+      "keywords": [
+        "自我伤害"
+      ],
+      "regex_patterns": [],
+      "metadata": {
+        "source_type": "creator_center_manual_capture",
+        "manual_category": "风险行为",
+        "manual_title": "自我伤害",
+        "inferred_candidate_tags": [
+          "unsafe_behavior"
+        ],
+        "title_source": "filename",
+        "ocr_confidence_avg": 0.9892,
+        "flags": [],
+        "source_urls": [
+          "/Users/m/亿一的AI小助理/open-codex/platform-content-audit/data/source_archives/xiaohongshu_creator_center_manual/inbox/003_风险行为/自我伤害.jpg"
+        ],
+        "processed_catalog_path": "/Users/m/亿一的AI小助理/open-codex/platform-content-audit/data/source_archives/xiaohongshu_creator_center_manual/processed/processed_20260316_110434/catalog.json",
+        "image_name": "自我伤害.jpg"
+      }
+    },
+    {
+      "platform": "xiaohongshu",
+      "rule_id": "XHS-MAN-028",
+      "title": "风险行为：虚假活动类诈骗风险",
+      "content": "通过免费送、无偿送、付邮送等利益诱导方式套取个人 隐私信息，并以此进行诈骗。",
+      "source_url": null,
+      "severity": "high",
+      "tags": [
+        "xhs_manual_category_风险行为",
+        "xhs_manual_rule_虚假活动类诈骗风险"
+      ],
+      "keywords": [
+        "虚假活动类诈骗风险",
+        "诈骗",
+        "虚假活动"
+      ],
+      "regex_patterns": [],
+      "metadata": {
+        "source_type": "creator_center_manual_capture",
+        "manual_category": "风险行为",
+        "manual_title": "虚假活动类诈骗风险",
+        "inferred_candidate_tags": [],
+        "title_source": "filename",
+        "ocr_confidence_avg": 0.9914,
+        "flags": [],
+        "source_urls": [
+          "/Users/m/亿一的AI小助理/open-codex/platform-content-audit/data/source_archives/xiaohongshu_creator_center_manual/inbox/003_风险行为/虚假活动类诈骗风险.jpg"
+        ],
+        "processed_catalog_path": "/Users/m/亿一的AI小助理/open-codex/platform-content-audit/data/source_archives/xiaohongshu_creator_center_manual/processed/processed_20260316_110434/catalog.json",
+        "image_name": "虚假活动类诈骗风险.jpg"
+      }
+    },
+    {
+      "platform": "xiaohongshu",
+      "rule_id": "XHS-MAN-029",
+      "title": "风险行为：虚构身份类诈骗风险",
+      "content": "通过互联网虚构信息，利用网络交友的名义或以其他变 相方式进行诈骗； 通过仿冒他人、品牌、组织或营造虚假人设、身份，发 布欺骗性内容或实施欺骗。",
+      "source_url": null,
+      "severity": "high",
+      "tags": [
+        "xhs_manual_category_风险行为",
+        "xhs_manual_rule_虚构身份类诈骗风险"
+      ],
+      "keywords": [
+        "虚构身份类诈骗风险",
+        "诈骗",
+        "虚构身份"
+      ],
+      "regex_patterns": [],
+      "metadata": {
+        "source_type": "creator_center_manual_capture",
+        "manual_category": "风险行为",
+        "manual_title": "虚构身份类诈骗风险",
+        "inferred_candidate_tags": [],
+        "title_source": "filename",
+        "ocr_confidence_avg": 0.9903,
+        "flags": [],
+        "source_urls": [
+          "/Users/m/亿一的AI小助理/open-codex/platform-content-audit/data/source_archives/xiaohongshu_creator_center_manual/inbox/003_风险行为/虚构身份类诈骗风险.jpg"
+        ],
+        "processed_catalog_path": "/Users/m/亿一的AI小助理/open-codex/platform-content-audit/data/source_archives/xiaohongshu_creator_center_manual/processed/processed_20260316_110434/catalog.json",
+        "image_name": "虚构身份类诈骗风险.jpg"
+      }
+    },
+    {
+      "platform": "xiaohongshu",
+      "rule_id": "XHS-MAN-030",
+      "title": "平台秩序：不真诚互动",
+      "content": "为了维护真实、友善的交流环境，保障每一位用户的体验， 我们恳请大家在互动中恪守社区规范。我们理解大家积极交 流的意愿，但通过非正常手段刷互动、针对他人进行骚扰或 攻击、频繁发布广告信息等行为，会破坏社区氛围，伤害其 他用户。平台对此类行为始终保持关注。我们真诚鼓励大家 进行真诚、友善的互动，专注分享有价值的内容，共同营造 一个清朗、温暖的网络家园。 不真诚互动指账号与其它账号之间存在互动频次异常的行 为，如： 通过各类手段寻求或购买粉丝、点赞等互动服务，易造 成隐私泄露和财产损失 通过不真实的手段互关、互赞、互评等，易影响他人流 量",
+      "source_url": null,
+      "severity": "high",
+      "tags": [
+        "xhs_manual_category_平台秩序",
+        "xhs_manual_rule_不真诚互动"
+      ],
+      "keywords": [
+        "不真诚互动"
+      ],
+      "regex_patterns": [],
+      "metadata": {
+        "source_type": "creator_center_manual_capture",
+        "manual_category": "平台秩序",
+        "manual_title": "不真诚互动",
+        "inferred_candidate_tags": [],
+        "title_source": "filename",
+        "ocr_confidence_avg": 0.9908,
+        "flags": [],
+        "source_urls": [
+          "/Users/m/亿一的AI小助理/open-codex/platform-content-audit/data/source_archives/xiaohongshu_creator_center_manual/inbox/004_平台秩序/不真诚互动.jpg"
+        ],
+        "processed_catalog_path": "/Users/m/亿一的AI小助理/open-codex/platform-content-audit/data/source_archives/xiaohongshu_creator_center_manual/processed/processed_20260316_110434/catalog.json",
+        "image_name": "不真诚互动.jpg"
+      }
+    },
+    {
+      "platform": "xiaohongshu",
+      "rule_id": "XHS-MAN-031",
+      "title": "平台秩序：养号做号",
+      "content": "为维护社区环境健康，保障广大用户的内容体验，平台将严 厉打击以下恶意养号和恶意引流行为，包括但不限于： 恶意养号 ·批量发布低质养号内容； 恶意引流 利用虚假凄惨内容、虚假人设博取流量的行为； 批量发布争议内容、影视剧资源并以此引流营销的内 容； 批量发布小说、收益诱导、色情低俗资源（如露骨文字/ 图片/视频）以及其他违反《网络安全法》的引流信息。 小红书将持续提升对异常行为的识别能力，包括但不限于关 注、互动、发文等历史所有行为。让我们共同守护真实、健 康的内容生态！",
+      "source_url": null,
+      "severity": "high",
+      "tags": [
+        "xhs_manual_category_平台秩序",
+        "xhs_manual_rule_养号做号"
+      ],
+      "keywords": [
+        "养号做号",
+        "养号",
+        "做号"
+      ],
+      "regex_patterns": [],
+      "metadata": {
+        "source_type": "creator_center_manual_capture",
+        "manual_category": "平台秩序",
+        "manual_title": "养号做号",
+        "inferred_candidate_tags": [
+          "duplicate_content",
+          "marketing_violation"
+        ],
+        "title_source": "filename",
+        "ocr_confidence_avg": 0.9882,
+        "flags": [],
+        "source_urls": [
+          "/Users/m/亿一的AI小助理/open-codex/platform-content-audit/data/source_archives/xiaohongshu_creator_center_manual/inbox/004_平台秩序/养号做号.jpg"
+        ],
+        "processed_catalog_path": "/Users/m/亿一的AI小助理/open-codex/platform-content-audit/data/source_archives/xiaohongshu_creator_center_manual/processed/processed_20260316_110434/catalog.json",
+        "image_name": "养号做号.jpg"
+      }
+    },
+    {
+      "platform": "xiaohongshu",
+      "rule_id": "XHS-MAN-032",
+      "title": "平台秩序：引导至站外的导流行为",
+      "content": "由于第三方平台上产生的违规行为平台无法制止或管控，因 此导流至其他第三方平台可能存在潜在风险，也不被小红薯 们信赖，同时，在公共平台发布联系方式也容易受到打扰。 平台不建议大家直接展示其他平台账号或具体联系方式，如 手机号、二维码，或站外网址链接、小程序码等。若有交流 沟通、买卖交易等需求，薯管家建议使用平台功能如私信、 薯店等。",
+      "source_url": null,
+      "severity": "high",
+      "tags": [
+        "xhs_manual_category_平台秩序",
+        "xhs_manual_rule_引导至站外的导流行为"
+      ],
+      "keywords": [
+        "引导至站外的导流行为",
+        "引导",
+        "站外",
+        "导流"
+      ],
+      "regex_patterns": [
+        "(微信|vx|v信|二维码)"
+      ],
+      "metadata": {
+        "source_type": "creator_center_manual_capture",
+        "manual_category": "平台秩序",
+        "manual_title": "引导至站外的导流行为",
+        "inferred_candidate_tags": [
+          "traffic_inducement"
+        ],
+        "title_source": "filename",
+        "ocr_confidence_avg": 0.9922,
+        "flags": [],
+        "source_urls": [
+          "/Users/m/亿一的AI小助理/open-codex/platform-content-audit/data/source_archives/xiaohongshu_creator_center_manual/inbox/004_平台秩序/引导至站外的导流行为.jpg"
+        ],
+        "processed_catalog_path": "/Users/m/亿一的AI小助理/open-codex/platform-content-audit/data/source_archives/xiaohongshu_creator_center_manual/processed/processed_20260316_110434/catalog.json",
+        "image_name": "引导至站外的导流行为.jpg"
+      }
+    },
+    {
+      "platform": "xiaohongshu",
+      "rule_id": "XHS-MAN-033",
+      "title": "平台秩序：恶意骚扰",
+      "content": "为了维护真实、友善的交流环境，保障每一位用户的体验， 我们恳请大家在互动中恪守社区规范。我们理解大家积极交 流的意愿，但通过非正常手段刷互动、针对他人进行骚扰或 攻击、频繁发布广告信息等行为，会破坏社区氛围，伤害其 他用户。平台对此类行为始终保持关注。我们真诚鼓励大家 进行真诚、友善的互动，专注分享有价值的内容，共同营造 一个清朗、温暖的网络家园。 不友善互动表现形式：存在对他人进行言语或行为骚扰的不 文明行为，包括但不限于： ·要求与他人产生过度亲密行为，诱导他人不当穿着，展 示隐私等 公开鼓励或引导他人建立有公序良俗的情感关系 使用隐晦表达或恶意描述对他人身体部位做出低俗评价 对贴身衣物等敏感服饰进行不当讨论、无端调侃、低俗 评价 ·使用侮辱性言辞定义他人身份，无故猜测他人性经历",
+      "source_url": null,
+      "severity": "high",
+      "tags": [
+        "xhs_manual_category_平台秩序",
+        "xhs_manual_rule_恶意骚扰"
+      ],
+      "keywords": [
+        "恶意骚扰"
+      ],
+      "regex_patterns": [],
+      "metadata": {
+        "source_type": "creator_center_manual_capture",
+        "manual_category": "平台秩序",
+        "manual_title": "恶意骚扰",
+        "inferred_candidate_tags": [
+          "rights_infringement"
+        ],
+        "title_source": "filename",
+        "ocr_confidence_avg": 0.9896,
+        "flags": [],
+        "source_urls": [
+          "/Users/m/亿一的AI小助理/open-codex/platform-content-audit/data/source_archives/xiaohongshu_creator_center_manual/inbox/004_平台秩序/恶意骚扰.jpg"
+        ],
+        "processed_catalog_path": "/Users/m/亿一的AI小助理/open-codex/platform-content-audit/data/source_archives/xiaohongshu_creator_center_manual/processed/processed_20260316_110434/catalog.json",
+        "image_name": "恶意骚扰.jpg"
+      }
+    },
+    {
+      "platform": "xiaohongshu",
+      "rule_id": "XHS-MAN-034",
+      "title": "平台秩序：站外水印",
+      "content": "视频素材或图片画面中展示其他软件或平台的水印信息不仪 影响画面美观，更是存在站外导流风险，极易引起站外纠 纷，平台建议小红薯们优先选用无水印素材。",
+      "source_url": null,
+      "severity": "high",
+      "tags": [
+        "xhs_manual_category_平台秩序",
+        "xhs_manual_rule_站外水印"
+      ],
+      "keywords": [
+        "站外水印",
+        "站外"
+      ],
+      "regex_patterns": [
+        "(微信|vx|v信|二维码)"
+      ],
+      "metadata": {
+        "source_type": "creator_center_manual_capture",
+        "manual_category": "平台秩序",
+        "manual_title": "站外水印",
+        "inferred_candidate_tags": [
+          "traffic_inducement"
+        ],
+        "title_source": "filename",
+        "ocr_confidence_avg": 0.9862,
+        "flags": [],
+        "source_urls": [
+          "/Users/m/亿一的AI小助理/open-codex/platform-content-audit/data/source_archives/xiaohongshu_creator_center_manual/inbox/004_平台秩序/站外水印.jpg"
+        ],
+        "processed_catalog_path": "/Users/m/亿一的AI小助理/open-codex/platform-content-audit/data/source_archives/xiaohongshu_creator_center_manual/processed/processed_20260316_110434/catalog.json",
+        "image_name": "站外水印.jpg"
+      }
+    },
+    {
+      "platform": "xiaohongshu",
+      "rule_id": "XHS-MAN-035",
+      "title": "平台秩序：网暴攻击",
+      "content": "为了维护真实、友善的交流环境，保障每一位用户的体验， 我们恳请大家在互动中恪守社区规范。我们理解大家积极交 流的意愿，但通过非正常手段刷互动、针对他人进行骚扰或 攻击、频繁发布广告信息等行为，会破坏社区氛围，伤害其 他用户。平台对此类行为始终保持关注。我们真诚鼓励大家 进行真诚、友善的互动，专注分享有价值的内容，共同营造 一个清朗、温暖的网络家园。 不友善互动表现形式：在他人笔记的互动区发布不文明、不 友善或低俗的内容，给他人带来困扰或不适，包括但不限 攻击他人：发表诅咒、威胁或极端负面评价 贬低个人特质：攻击、歧视或嘲讽他人的容貌、性格、 学历等个人特质 煽动群体对立：因观点不一致发表贬低其他群体、激化 矛盾的伤害性言论",
+      "source_url": null,
+      "severity": "high",
+      "tags": [
+        "xhs_manual_category_平台秩序",
+        "xhs_manual_rule_网暴攻击"
+      ],
+      "keywords": [
+        "网暴攻击",
+        "网暴",
+        "攻击"
+      ],
+      "regex_patterns": [],
+      "metadata": {
+        "source_type": "creator_center_manual_capture",
+        "manual_category": "平台秩序",
+        "manual_title": "网暴攻击",
+        "inferred_candidate_tags": [
+          "rights_infringement"
+        ],
+        "title_source": "filename",
+        "ocr_confidence_avg": 0.9897,
+        "flags": [],
+        "source_urls": [
+          "/Users/m/亿一的AI小助理/open-codex/platform-content-audit/data/source_archives/xiaohongshu_creator_center_manual/inbox/004_平台秩序/网暴攻击.jpg"
+        ],
+        "processed_catalog_path": "/Users/m/亿一的AI小助理/open-codex/platform-content-audit/data/source_archives/xiaohongshu_creator_center_manual/processed/processed_20260316_110434/catalog.json",
+        "image_name": "网暴攻击.jpg"
+      }
+    },
+    {
+      "platform": "xiaohongshu",
+      "rule_id": "XHS-MAN-036",
+      "title": "平台秩序：账号买卖",
+      "content": "发布存在账号交易意图和行为的内容严重扰乱平台秩序，平 台严令禁止发布第三方联系方式或诱导话术引导他人进行账 号买卖的行为。 本条规则适用于小红书所有场景下的发布行为，包括但不限 于笔记、评论、用户资料等场景。以上示例内容并非穷举， 如果你认为还有其他风险形式或优化建议，可点击下方评价 按钮向我们反馈，感谢每一位小红薯的支持与喜爱。",
+      "source_url": null,
+      "severity": "high",
+      "tags": [
+        "xhs_manual_category_平台秩序",
+        "xhs_manual_rule_账号买卖"
+      ],
+      "keywords": [
+        "账号买卖"
+      ],
+      "regex_patterns": [],
+      "metadata": {
+        "source_type": "creator_center_manual_capture",
+        "manual_category": "平台秩序",
+        "manual_title": "账号买卖",
+        "inferred_candidate_tags": [],
+        "title_source": "filename",
+        "ocr_confidence_avg": 0.9936,
+        "flags": [],
+        "source_urls": [
+          "/Users/m/亿一的AI小助理/open-codex/platform-content-audit/data/source_archives/xiaohongshu_creator_center_manual/inbox/004_平台秩序/账号买卖.jpg"
+        ],
+        "processed_catalog_path": "/Users/m/亿一的AI小助理/open-codex/platform-content-audit/data/source_archives/xiaohongshu_creator_center_manual/processed/processed_20260316_110434/catalog.json",
+        "image_name": "账号买卖.jpg"
+      }
+    },
+    {
+      "platform": "xiaohongshu",
+      "rule_id": "XHS-MAN-037",
+      "title": "平台秩序：频发广告",
+      "content": "不当营销互动主要表现形式：存在频发营销内容打扰他人的 行为，包括但不限于： ·直接营销：直接展示商品与价格、发布带联系方式、二 维码以及外部优惠链接的内容 引导交易：以各种理由引导他人添加个人联系方式，或 诱导其关注其他账号、加入外部群组 套路推广：以“测评”、“种草”为名推广产品，但内 容缺乏真实依据，或通过编造故事等方式对产品/服务进 行变相宣传 如果你确实有商业合作需求，建议先前往蒲公英平台申请成 为小红薯的商家→蒲公英平台 如果你已经是持有有效资质的商家，建议你申请平台的【私 信通】获得合规导流功能 申请方式（详见案例图）： ·登录专业号后台→咨询服务→获客工具 ·个人主页左上角三-专业号-私信工具-去使用-私信通",
+      "source_url": null,
+      "severity": "high",
+      "tags": [
+        "xhs_manual_category_平台秩序",
+        "xhs_manual_rule_频发广告"
+      ],
+      "keywords": [
+        "频发广告"
+      ],
+      "regex_patterns": [],
+      "metadata": {
+        "source_type": "creator_center_manual_capture",
+        "manual_category": "平台秩序",
+        "manual_title": "频发广告",
+        "inferred_candidate_tags": [
+          "duplicate_content",
+          "marketing_violation"
+        ],
+        "title_source": "filename",
+        "ocr_confidence_avg": 0.9865,
+        "flags": [],
+        "source_urls": [
+          "/Users/m/亿一的AI小助理/open-codex/platform-content-audit/data/source_archives/xiaohongshu_creator_center_manual/inbox/004_平台秩序/频发广告.jpg"
+        ],
+        "processed_catalog_path": "/Users/m/亿一的AI小助理/open-codex/platform-content-audit/data/source_archives/xiaohongshu_creator_center_manual/processed/processed_20260316_110434/catalog.json",
+        "image_name": "频发广告.jpg"
+      }
+    },
+    {
+      "platform": "xiaohongshu",
+      "rule_id": "XHS-MAN-038",
+      "title": "平台秩序：风险互动行为",
+      "content": "网络社交需谨慎，进行线下邀约或邀请他人进入第三方平 台，均有可能威胁到人身财产安全，是平台不提倡的行为。 ·发布可能含有财产损失风险的社交内容，如利用羊毛 或陪玩陪聊等方式邀请他人进入第三方平台的行为 发布可能带有人身安全风险的社交内容，邀约陌生人组 团去危险地带游玩、推荐医疗医美治疗方案等行为",
+      "source_url": null,
+      "severity": "high",
+      "tags": [
+        "xhs_manual_category_平台秩序",
+        "xhs_manual_rule_风险互动行为"
+      ],
+      "keywords": [
+        "风险互动行为"
+      ],
+      "regex_patterns": [],
+      "metadata": {
+        "source_type": "creator_center_manual_capture",
+        "manual_category": "平台秩序",
+        "manual_title": "风险互动行为",
+        "inferred_candidate_tags": [],
+        "title_source": "filename",
+        "ocr_confidence_avg": 0.9873,
+        "flags": [],
+        "source_urls": [
+          "/Users/m/亿一的AI小助理/open-codex/platform-content-audit/data/source_archives/xiaohongshu_creator_center_manual/inbox/004_平台秩序/风险互动行为.jpg"
+        ],
+        "processed_catalog_path": "/Users/m/亿一的AI小助理/open-codex/platform-content-audit/data/source_archives/xiaohongshu_creator_center_manual/processed/processed_20260316_110434/catalog.json",
+        "image_name": "风险互动行为.jpg"
+      }
+    },
+    {
+      "platform": "xiaohongshu",
+      "rule_id": "XHS-MAN-039",
+      "title": "内容质量：不良画风演绎",
+      "content": "小红书作为一个积极分享优质内容的网络社区，一直致力于 营造健康、友好、积极向上的社区氛围。不诚实、不轻松、 不真实、不优质的画风内容易使观看者感到不适，因此平台 会减少此类内容展示。 部分作者认知和审美水平有限，缺乏创作深度内容的能力， 需要依赖表面的头获取流量，常见形式如恶趣味、极端言 行、恶搞扮丑等，这些都是平台不鼓励的画风呈现，发布高 质量、有价值的内容才能吸引用户真实的反馈和互动。",
+      "source_url": null,
+      "severity": "medium",
+      "tags": [
+        "xhs_manual_category_内容质量",
+        "xhs_manual_rule_不良画风演绎"
+      ],
+      "keywords": [
+        "不良画风演绎"
+      ],
+      "regex_patterns": [],
+      "metadata": {
+        "source_type": "creator_center_manual_capture",
+        "manual_category": "内容质量",
+        "manual_title": "不良画风演绎",
+        "inferred_candidate_tags": [],
+        "title_source": "filename",
+        "ocr_confidence_avg": 0.9935,
+        "flags": [],
+        "source_urls": [
+          "/Users/m/亿一的AI小助理/open-codex/platform-content-audit/data/source_archives/xiaohongshu_creator_center_manual/inbox/005_内容质量/不良画风演绎.jpg"
+        ],
+        "processed_catalog_path": "/Users/m/亿一的AI小助理/open-codex/platform-content-audit/data/source_archives/xiaohongshu_creator_center_manual/processed/processed_20260316_110434/catalog.json",
+        "image_name": "不良画风演绎.jpg"
+      }
+    },
+    {
+      "platform": "xiaohongshu",
+      "rule_id": "XHS-MAN-040",
+      "title": "内容质量：剧情演绎",
+      "content": "目前网络上流行着各类自制剧情类内容，为了避免产生误 导，请各位小红薯们在发布内容时主动标识出”剧情演 绎“属性，平台也会提醒其他小红薯们注意辨别。",
+      "source_url": null,
+      "severity": "medium",
+      "tags": [
+        "xhs_manual_category_内容质量",
+        "xhs_manual_rule_剧情演绎"
+      ],
+      "keywords": [
+        "剧情演绎"
+      ],
+      "regex_patterns": [],
+      "metadata": {
+        "source_type": "creator_center_manual_capture",
+        "manual_category": "内容质量",
+        "manual_title": "剧情演绎",
+        "inferred_candidate_tags": [
+          "clickbait_content",
+          "interaction_manipulation"
+        ],
+        "title_source": "filename",
+        "ocr_confidence_avg": 0.9878,
+        "flags": [],
+        "source_urls": [
+          "/Users/m/亿一的AI小助理/open-codex/platform-content-audit/data/source_archives/xiaohongshu_creator_center_manual/inbox/005_内容质量/剧情演绎.jpg"
+        ],
+        "processed_catalog_path": "/Users/m/亿一的AI小助理/open-codex/platform-content-audit/data/source_archives/xiaohongshu_creator_center_manual/processed/processed_20260316_110434/catalog.json",
+        "image_name": "剧情演绎.jpg"
+      }
+    },
+    {
+      "platform": "xiaohongshu",
+      "rule_id": "XHS-MAN-041",
+      "title": "内容质量：博眼球编故事",
+      "content": "小红书作为一个积极分享优质内容的网络社区，一直致力于 营造健康、友好、积极向上的社区氛围，同时不建议发布依 赖表面的头获取流量的内容。不公平地获取流量和诱导关 注容易引发其他小红薯们的反感。发布高质量、有价值的内 容才能吸引用户真实的反馈和互动。 本条规则适用于小红书所有场景下的发布行为，包括但不限 于笔记、评论、用户资料等场景。以上示例内容并非穷举， 如果你认为还有其他风险形式或优化建议，可点击下方评价 按钮向我们反馈，感谢每一位小红薯的支持与喜爱。 编造夸张的亲身经历（如奇遭遇、家庭矛盾、尴尬故 事等）博取关注，或利用这类故事推销商品/服务，内容 套路相似。 采用用夸张的标题/封面，狗血剧情，刻意突出内容离奇 程度来刺激观众情绪、引发讨论。 利用身份造假、人设突变、扮演负面角色等欺骗他人。",
+      "source_url": null,
+      "severity": "medium",
+      "tags": [
+        "xhs_manual_category_内容质量",
+        "xhs_manual_rule_博眼球编故事"
+      ],
+      "keywords": [
+        "博眼球编故事",
+        "博眼球"
+      ],
+      "regex_patterns": [],
+      "metadata": {
+        "source_type": "creator_center_manual_capture",
+        "manual_category": "内容质量",
+        "manual_title": "博眼球编故事",
+        "inferred_candidate_tags": [
+          "persona_fabrication"
+        ],
+        "title_source": "filename",
+        "ocr_confidence_avg": 0.9919,
+        "flags": [],
+        "source_urls": [
+          "/Users/m/亿一的AI小助理/open-codex/platform-content-audit/data/source_archives/xiaohongshu_creator_center_manual/inbox/005_内容质量/博眼球编故事.jpg"
+        ],
+        "processed_catalog_path": "/Users/m/亿一的AI小助理/open-codex/platform-content-audit/data/source_archives/xiaohongshu_creator_center_manual/processed/processed_20260316_110434/catalog.json",
+        "image_name": "博眼球编故事.jpg"
+      }
+    },
+    {
+      "platform": "xiaohongshu",
+      "rule_id": "XHS-MAN-042",
+      "title": "内容质量：封面标题低差",
+      "content": "平台不鼓励在笔记首图、封面、标题等位置，使用两性内涵 的、超出常理的、过度夸张的或与笔记内容完全不符等头 来吸引眼球。标题党不但破坏了站内的生态环境，不公平地 获取流量和点击，而且容易引发其他小红薯们的反感。",
+      "source_url": null,
+      "severity": "medium",
+      "tags": [
+        "xhs_manual_category_内容质量",
+        "xhs_manual_rule_封面标题低差"
+      ],
+      "keywords": [
+        "封面标题低差",
+        "标题低差"
+      ],
+      "regex_patterns": [],
+      "metadata": {
+        "source_type": "creator_center_manual_capture",
+        "manual_category": "内容质量",
+        "manual_title": "封面标题低差",
+        "inferred_candidate_tags": [
+          "clickbait_content",
+          "interaction_manipulation"
+        ],
+        "title_source": "filename",
+        "ocr_confidence_avg": 0.9922,
+        "flags": [],
+        "source_urls": [
+          "/Users/m/亿一的AI小助理/open-codex/platform-content-audit/data/source_archives/xiaohongshu_creator_center_manual/inbox/005_内容质量/封面标题低差.jpg"
+        ],
+        "processed_catalog_path": "/Users/m/亿一的AI小助理/open-codex/platform-content-audit/data/source_archives/xiaohongshu_creator_center_manual/processed/processed_20260316_110434/catalog.json",
+        "image_name": "封面标题低差.jpg"
+      }
+    },
+    {
+      "platform": "xiaohongshu",
+      "rule_id": "XHS-MAN-043",
+      "title": "内容质量：引人不适",
+      "content": "平台对易引发重度感官不适的场景会进行管控，通常以严重 的感官刺激和视觉冲击为主，突出表现为群聚密集、恐怖 奇、血暴力、痛感激等内容，发布该内容可能会给其他小 红薯们带来不好的体验。 不适内容如：排泄物、分泌物、血腥疤痕、引发密集恐惧的 组织、软体动物（如蛇、虫）等。 以下几个场景都是平台不欢迎的类型，请避免发布哦~",
+      "source_url": null,
+      "severity": "medium",
+      "tags": [
+        "xhs_manual_category_内容质量",
+        "xhs_manual_rule_引人不适"
+      ],
+      "keywords": [
+        "引人不适"
+      ],
+      "regex_patterns": [],
+      "metadata": {
+        "source_type": "creator_center_manual_capture",
+        "manual_category": "内容质量",
+        "manual_title": "引人不适",
+        "inferred_candidate_tags": [
+          "disturbing_content"
+        ],
+        "title_source": "filename",
+        "ocr_confidence_avg": 0.9841,
+        "flags": [],
+        "source_urls": [
+          "/Users/m/亿一的AI小助理/open-codex/platform-content-audit/data/source_archives/xiaohongshu_creator_center_manual/inbox/005_内容质量/引人不适.jpg"
+        ],
+        "processed_catalog_path": "/Users/m/亿一的AI小助理/open-codex/platform-content-audit/data/source_archives/xiaohongshu_creator_center_manual/processed/processed_20260316_110434/catalog.json",
+        "image_name": "引人不适.jpg"
+      }
+    },
+    {
+      "platform": "xiaohongshu",
+      "rule_id": "XHS-MAN-044",
+      "title": "内容质量：引流技巧",
+      "content": "小红书平台内存在大量以爆款攻略养号做号为头，实则是 以变现为根本目的实施免费教学或导流的内容，此类低质内 容不仅影响消费者观感体验，且严重违反了平台秩序属于红 线行为，平台不鼓励此类引流内容发布。 常见的不当引流行为或方式有哪些？ ）利用第三方工具进行刷量、刷粉或利用技术手段规避平 台的审查机制 通过不真诚的手段来分享、爆料小红书平台相关的信息 分享/教授/传播一些非真诚的起号方法、技巧 批量发布同质化内容进行模板套用或采用低成本创作的 形式来博取流量关注",
+      "source_url": null,
+      "severity": "medium",
+      "tags": [
+        "xhs_manual_category_内容质量",
+        "xhs_manual_rule_引流技巧"
+      ],
+      "keywords": [
+        "引流技巧"
+      ],
+      "regex_patterns": [],
+      "metadata": {
+        "source_type": "creator_center_manual_capture",
+        "manual_category": "内容质量",
+        "manual_title": "引流技巧",
+        "inferred_candidate_tags": [],
+        "title_source": "filename",
+        "ocr_confidence_avg": 0.9917,
+        "flags": [],
+        "source_urls": [
+          "/Users/m/亿一的AI小助理/open-codex/platform-content-audit/data/source_archives/xiaohongshu_creator_center_manual/inbox/005_内容质量/引流技巧.jpg"
+        ],
+        "processed_catalog_path": "/Users/m/亿一的AI小助理/open-codex/platform-content-audit/data/source_archives/xiaohongshu_creator_center_manual/processed/processed_20260316_110434/catalog.json",
+        "image_name": "引流技巧.jpg"
+      }
+    },
+    {
+      "platform": "xiaohongshu",
+      "rule_id": "XHS-MAN-045",
+      "title": "内容质量：无资质转载新闻",
+      "content": "为了保护小红薯们不被错误信息误导，在平台发布或转载时 政类新闻时，需要先进行资质认证，且需要表明资讯来源 （转载资讯需标明来源，自行拍摄及编写的资讯需注明相关 时间地点等信息），平台禁止发布未经授权或证实的不实信 息。",
+      "source_url": null,
+      "severity": "medium",
+      "tags": [
+        "xhs_manual_category_内容质量",
+        "xhs_manual_rule_无资质转载新闻"
+      ],
+      "keywords": [
+        "无资质转载新闻"
+      ],
+      "regex_patterns": [],
+      "metadata": {
+        "source_type": "creator_center_manual_capture",
+        "manual_category": "内容质量",
+        "manual_title": "无资质转载新闻",
+        "inferred_candidate_tags": [
+          "originality_violation"
+        ],
+        "title_source": "filename",
+        "ocr_confidence_avg": 0.99,
+        "flags": [],
+        "source_urls": [
+          "/Users/m/亿一的AI小助理/open-codex/platform-content-audit/data/source_archives/xiaohongshu_creator_center_manual/inbox/005_内容质量/无资质转载新闻.jpg"
+        ],
+        "processed_catalog_path": "/Users/m/亿一的AI小助理/open-codex/platform-content-audit/data/source_archives/xiaohongshu_creator_center_manual/processed/processed_20260316_110434/catalog.json",
+        "image_name": "无资质转载新闻.jpg"
+      }
+    },
+    {
+      "platform": "xiaohongshu",
+      "rule_id": "XHS-MAN-046",
+      "title": "内容质量：画面质量不佳",
+      "content": "·笔记的视频和图文出现大量黑屏、卡顿、图裂、模糊不 清、无法显示图片主体信息等内容 ）笔记的音频内容存在长时间无声、不连贯、戛然而止等 异常现象，或者出现音频解说与画面不一致的问题 笔记内容出现了模板化、单一化或缺乏实用性的低价值 内容，无额外的有效信息输出 请广大小红薯们避免采用这些方式进行创作。低质的画面 会影响小红薯们作品的播放质量，请小红薯们在创作或者上 传的过程中仔细检查源文件格式和质量之后再进行发布。",
+      "source_url": null,
+      "severity": "medium",
+      "tags": [
+        "xhs_manual_category_内容质量",
+        "xhs_manual_rule_画面质量不佳"
+      ],
+      "keywords": [
+        "画面质量不佳"
+      ],
+      "regex_patterns": [],
+      "metadata": {
+        "source_type": "creator_center_manual_capture",
+        "manual_category": "内容质量",
+        "manual_title": "画面质量不佳",
+        "inferred_candidate_tags": [],
+        "title_source": "filename",
+        "ocr_confidence_avg": 0.987,
+        "flags": [],
+        "source_urls": [
+          "/Users/m/亿一的AI小助理/open-codex/platform-content-audit/data/source_archives/xiaohongshu_creator_center_manual/inbox/005_内容质量/画面质量不佳.jpg"
+        ],
+        "processed_catalog_path": "/Users/m/亿一的AI小助理/open-codex/platform-content-audit/data/source_archives/xiaohongshu_creator_center_manual/processed/processed_20260316_110434/catalog.json",
+        "image_name": "画面质量不佳.jpg"
+      }
+    },
+    {
+      "platform": "xiaohongshu",
+      "rule_id": "XHS-MAN-047",
+      "title": "内容质量：虚假谣言",
+      "content": "谣是指在没有事实依据的情况下，发布凭空杜撰的不实言 论，直接或间接地误导其他用户。而这样的谣言内容通常会 危害到他人身心或社会稳定，平台也会限制此类内容传播。",
+      "source_url": null,
+      "severity": "medium",
+      "tags": [
+        "xhs_manual_category_内容质量",
+        "xhs_manual_rule_虚假谣言"
+      ],
+      "keywords": [
+        "虚假谣言"
+      ],
+      "regex_patterns": [],
+      "metadata": {
+        "source_type": "creator_center_manual_capture",
+        "manual_category": "内容质量",
+        "manual_title": "虚假谣言",
+        "inferred_candidate_tags": [],
+        "title_source": "filename",
+        "ocr_confidence_avg": 0.9935,
+        "flags": [],
+        "source_urls": [
+          "/Users/m/亿一的AI小助理/open-codex/platform-content-audit/data/source_archives/xiaohongshu_creator_center_manual/inbox/005_内容质量/虚假谣言.jpg"
+        ],
+        "processed_catalog_path": "/Users/m/亿一的AI小助理/open-codex/platform-content-audit/data/source_archives/xiaohongshu_creator_center_manual/processed/processed_20260316_110434/catalog.json",
+        "image_name": "虚假谣言.jpg"
+      }
+    },
+    {
+      "platform": "xiaohongshu",
+      "rule_id": "XHS-MAN-048",
+      "title": "内容质量：虚构内容",
+      "content": "利用AI技术生成的社会新闻、图像、音频等内容缺乏现实基 础，因此具有较强的迷惑性和误导性，同时，涉及到名人的 肖像、声音的二次创作改编内容还可能会产生肖像、版权等 方面的风险。我们倡议让AI辅助思考而非替代真实表达，鼓 励创作有温度、有深度的原创作品。唯有真诚分享，才能共 同营造清朗、可信的网络环境。 常见违规点> ·AI冒充他人 存在利用AI技术伪造知名人物、军警人物、普通人物的形 象/声音/言论，并冒充是本人发布的行为 ·AI博眼球 存在利用AIGC技术制作并发布血腥或低俗画面、魔改影视剧 等不真实内容，并以此博眼球、赚流量。 ·AI营销推广 存在利用AI来生成广告，推广营销各种产品或服务的内容， 引导他人购买下单等 本条规则适用于小红书所有场景下的发布行为，包括但不限 于笔记、评论、用户资料等场景。以上示例内容并非穷举， 如果你认为还有其他风险形式或优化建议，可点击下方评价 按钮向我们反馈，感谢每一位小红薯的支持与喜爱。",
+      "source_url": null,
+      "severity": "medium",
+      "tags": [
+        "xhs_manual_category_内容质量",
+        "xhs_manual_rule_虚构内容"
+      ],
+      "keywords": [
+        "虚构内容"
+      ],
+      "regex_patterns": [],
+      "metadata": {
+        "source_type": "creator_center_manual_capture",
+        "manual_category": "内容质量",
+        "manual_title": "虚构内容",
+        "inferred_candidate_tags": [
+          "persona_fabrication"
+        ],
+        "title_source": "filename",
+        "ocr_confidence_avg": 0.9819,
+        "flags": [],
+        "source_urls": [
+          "/Users/m/亿一的AI小助理/open-codex/platform-content-audit/data/source_archives/xiaohongshu_creator_center_manual/inbox/005_内容质量/虚构内容.jpg"
+        ],
+        "processed_catalog_path": "/Users/m/亿一的AI小助理/open-codex/platform-content-audit/data/source_archives/xiaohongshu_creator_center_manual/processed/processed_20260316_110434/catalog.json",
+        "image_name": "虚构内容.jpg"
+      }
+    },
+    {
+      "platform": "xiaohongshu",
+      "rule_id": "XHS-MAN-049",
+      "title": "内容质量：血腥暴力画面",
+      "content": "在笔记中发布含有血腥画面的内容，包括但不限于未打码的 灾害、打斗、伤亡现场、游戏中涉及血腥暴力的内容，可能 会影响小红薯们的观感，因此平台提议小红薯们在发布该类 内容时注意打码哦。",
+      "source_url": null,
+      "severity": "medium",
+      "tags": [
+        "xhs_manual_category_内容质量",
+        "xhs_manual_rule_血腥暴力画面"
+      ],
+      "keywords": [
+        "血腥暴力画面"
+      ],
+      "regex_patterns": [],
+      "metadata": {
+        "source_type": "creator_center_manual_capture",
+        "manual_category": "内容质量",
+        "manual_title": "血腥暴力画面",
+        "inferred_candidate_tags": [
+          "disturbing_content"
+        ],
+        "title_source": "filename",
+        "ocr_confidence_avg": 0.9859,
+        "flags": [],
+        "source_urls": [
+          "/Users/m/亿一的AI小助理/open-codex/platform-content-audit/data/source_archives/xiaohongshu_creator_center_manual/inbox/005_内容质量/血腥暴力画面.jpg"
+        ],
+        "processed_catalog_path": "/Users/m/亿一的AI小助理/open-codex/platform-content-audit/data/source_archives/xiaohongshu_creator_center_manual/processed/processed_20260316_110434/catalog.json",
+        "image_name": "血腥暴力画面.jpg"
+      }
+    },
+    {
+      "platform": "xiaohongshu",
+      "rule_id": "XHS-MAN-050",
+      "title": "内容质量：诱导互动",
+      "content": "平台鼓励真诚分享、真诚互动，利用利益或悬念诱导小红薯 们进行点赞、评论、关注等互动的行为会伤害到小红薯们感 情哦！常见的诱导互动行为有以下形式： ·使用各种利益交换为条件，诱导用户进行点赞、评论、 关注等互动的行为。 ·在发布的笔记内容中以惊喜、悬念、欺骗等方式诱导其 他用户进行点赞、评论等笔记互动的行为。 发布主体为玄学好运/祝福祈愿/正能量/玄学好运预测等 祝福内容，引导用户进行互动。 ·发布不具备讨论价值或无意义的诱导跟风话题。",
+      "source_url": null,
+      "severity": "medium",
+      "tags": [
+        "xhs_manual_category_内容质量",
+        "xhs_manual_rule_诱导互动"
+      ],
+      "keywords": [
+        "诱导互动"
+      ],
+      "regex_patterns": [],
+      "metadata": {
+        "source_type": "creator_center_manual_capture",
+        "manual_category": "内容质量",
+        "manual_title": "诱导互动",
+        "inferred_candidate_tags": [
+          "clickbait_content",
+          "interaction_manipulation"
+        ],
+        "title_source": "filename",
+        "ocr_confidence_avg": 0.986,
+        "flags": [],
+        "source_urls": [
+          "/Users/m/亿一的AI小助理/open-codex/platform-content-audit/data/source_archives/xiaohongshu_creator_center_manual/inbox/005_内容质量/诱导互动.jpg"
+        ],
+        "processed_catalog_path": "/Users/m/亿一的AI小助理/open-codex/platform-content-audit/data/source_archives/xiaohongshu_creator_center_manual/processed/processed_20260316_110434/catalog.json",
+        "image_name": "诱导互动.jpg"
+      }
+    },
+    {
+      "platform": "xiaohongshu",
+      "rule_id": "XHS-MAN-051",
+      "title": "内容质量：违反大众认知",
+      "content": "为了维护民族团结和民族感情，并将我国的优秀传统文化长 久地传承下去，对于违反大众认知及公序良俗的内容将会被 平台处置。 ·涉及歪曲低毁我国优秀历史事件、人物、传统美德、习 俗文化、非物质文化遗产等内容； 涉及美化中外历史上的负面事件、人物、习俗文化等内 容； 涉及在笔记中发布与大众普遍认知不符的内容，如：得 癌症是好事、念数字可以缓解疾病症状、招桃花等无科 学依据的内容。",
+      "source_url": null,
+      "severity": "medium",
+      "tags": [
+        "xhs_manual_category_内容质量",
+        "xhs_manual_rule_违反大众认知"
+      ],
+      "keywords": [
+        "违反大众认知"
+      ],
+      "regex_patterns": [],
+      "metadata": {
+        "source_type": "creator_center_manual_capture",
+        "manual_category": "内容质量",
+        "manual_title": "违反大众认知",
+        "inferred_candidate_tags": [],
+        "title_source": "filename",
+        "ocr_confidence_avg": 0.9886,
+        "flags": [],
+        "source_urls": [
+          "/Users/m/亿一的AI小助理/open-codex/platform-content-audit/data/source_archives/xiaohongshu_creator_center_manual/inbox/005_内容质量/违反大众认知.jpg"
+        ],
+        "processed_catalog_path": "/Users/m/亿一的AI小助理/open-codex/platform-content-audit/data/source_archives/xiaohongshu_creator_center_manual/processed/processed_20260316_110434/catalog.json",
+        "image_name": "违反大众认知.jpg"
+      }
+    },
+    {
+      "platform": "xiaohongshu",
+      "rule_id": "XHS-MAN-052",
+      "title": "商业秩序：虚假测评",
+      "content": "真诚分享、友好互动是平台运营的基本准则，高质量的作品 创作才是在平台长久发展的基石，然而小红书发现站内存在 横向测评黑灰产水军，常用手段往往为谎称有内幕、黑料、 避雷、信息差等，以此作为头，在站内孵化数以千计的测 评账号，批量发布虚假或极低质的横向评测笔记，实施引 流；把用户引流到微信后，再推荐给黑灰产合作的下游机 构。此类横向测评笔记中的信息和评价并无事实依据，且往 往故意抹黑没有与横测黑灰产团伙合作的商家或机构，小红 书将持续打击此类黑灰产账号，维护社区秩序，保障用户、 品牌、商家的合法权益。常见行业如：医美、考研、留学、 瑜伽、月子中心等。",
+      "source_url": null,
+      "severity": "high",
+      "tags": [
+        "xhs_manual_category_商业秩序",
+        "xhs_manual_rule_虚假测评"
+      ],
+      "keywords": [
+        "虚假测评"
+      ],
+      "regex_patterns": [],
+      "metadata": {
+        "source_type": "creator_center_manual_capture",
+        "manual_category": "商业秩序",
+        "manual_title": "虚假测评",
+        "inferred_candidate_tags": [
+          "false_review"
+        ],
+        "title_source": "ocr_header",
+        "ocr_confidence_avg": 0.9901,
+        "flags": [
+          "generic_filename"
+        ],
+        "source_urls": [
+          "/Users/m/亿一的AI小助理/open-codex/platform-content-audit/data/source_archives/xiaohongshu_creator_center_manual/inbox/006_商业秩序/screenshot_20260316_093912.jpg"
+        ],
+        "processed_catalog_path": "/Users/m/亿一的AI小助理/open-codex/platform-content-audit/data/source_archives/xiaohongshu_creator_center_manual/processed/processed_20260316_110434/catalog.json",
+        "image_name": "screenshot_20260316_093912.jpg"
+      }
+    },
+    {
+      "platform": "xiaohongshu",
+      "rule_id": "XHS-MAN-053",
+      "title": "商业秩序：虚假低质营销",
+      "content": "低成本的营销方式薯薯同样也不支持使用哦，建议大家分享 实拍图和真实的种草心得，给其他用户提供切实有效的经验 笔记中使用的营销素材涉及搬运他人作品 账号下多篇笔记呈现同质化营销内容",
+      "source_url": null,
+      "severity": "high",
+      "tags": [
+        "xhs_manual_category_商业秩序",
+        "xhs_manual_rule_虚假低质营销"
+      ],
+      "keywords": [
+        "虚假低质营销"
+      ],
+      "regex_patterns": [
+        "100%|全网第?一|全网最低"
+      ],
+      "metadata": {
+        "source_type": "creator_center_manual_capture",
+        "manual_category": "商业秩序",
+        "manual_title": "虚假低质营销",
+        "inferred_candidate_tags": [
+          "marketing_violation"
+        ],
+        "title_source": "ocr_header",
+        "ocr_confidence_avg": 0.986,
+        "flags": [
+          "generic_filename"
+        ],
+        "source_urls": [
+          "/Users/m/亿一的AI小助理/open-codex/platform-content-audit/data/source_archives/xiaohongshu_creator_center_manual/inbox/006_商业秩序/screenshot_20260316_093916.jpg"
+        ],
+        "processed_catalog_path": "/Users/m/亿一的AI小助理/open-codex/platform-content-audit/data/source_archives/xiaohongshu_creator_center_manual/processed/processed_20260316_110434/catalog.json",
+        "image_name": "screenshot_20260316_093916.jpg"
+      }
+    },
+    {
+      "platform": "xiaohongshu",
+      "rule_id": "XHS-MAN-054",
+      "title": "商业秩序：高风险行业营销",
+      "content": "综合考量法律要求、平台售卖风险性、商品危害性等多维度 因素，平台暂不支持部分行业/产品在平台上开展营销宣传 活动。",
+      "source_url": null,
+      "severity": "high",
+      "tags": [
+        "xhs_manual_category_商业秩序",
+        "xhs_manual_rule_高风险行业营销"
+      ],
+      "keywords": [
+        "高风险行业营销"
+      ],
+      "regex_patterns": [],
+      "metadata": {
+        "source_type": "creator_center_manual_capture",
+        "manual_category": "商业秩序",
+        "manual_title": "高风险行业营销",
+        "inferred_candidate_tags": [],
+        "title_source": "ocr_header",
+        "ocr_confidence_avg": 0.9878,
+        "flags": [
+          "generic_filename"
+        ],
+        "source_urls": [
+          "/Users/m/亿一的AI小助理/open-codex/platform-content-audit/data/source_archives/xiaohongshu_creator_center_manual/inbox/006_商业秩序/screenshot_20260316_093920.jpg"
+        ],
+        "processed_catalog_path": "/Users/m/亿一的AI小助理/open-codex/platform-content-audit/data/source_archives/xiaohongshu_creator_center_manual/processed/processed_20260316_110434/catalog.json",
+        "image_name": "screenshot_20260316_093920.jpg"
+      }
+    },
+    {
+      "platform": "xiaohongshu",
+      "rule_id": "XHS-MAN-055",
+      "title": "商业秩序：高风险行业营销（2）",
+      "content": "未经平台认证，不可营销医疗健康、教育教学、金融保险、 房产交易、婚恋交友等专业性较强的行业。法律法规中要求 必须取得特定资质才能够从事相关行业，请小红薯提供相关 资质，获得平台认证后再进行营销推广行为。 相关行业认证所需材料请参考→《专业号行业规则》 相关行业认证流程请参考→《专业号认证审核指南》 相关行业课程可查看→特殊行业闭坑指南 认证链接>立即认证",
+      "source_url": null,
+      "severity": "high",
+      "tags": [
+        "xhs_manual_category_商业秩序",
+        "xhs_manual_rule_高风险行业营销-2"
+      ],
+      "keywords": [
+        "高风险行业营销"
+      ],
+      "regex_patterns": [],
+      "metadata": {
+        "source_type": "creator_center_manual_capture",
+        "manual_category": "商业秩序",
+        "manual_title": "高风险行业营销（2）",
+        "inferred_candidate_tags": [],
+        "title_source": "ocr_header",
+        "ocr_confidence_avg": 0.9843,
+        "flags": [
+          "generic_filename"
+        ],
+        "source_urls": [
+          "/Users/m/亿一的AI小助理/open-codex/platform-content-audit/data/source_archives/xiaohongshu_creator_center_manual/inbox/006_商业秩序/screenshot_20260316_093923.jpg"
+        ],
+        "processed_catalog_path": "/Users/m/亿一的AI小助理/open-codex/platform-content-audit/data/source_archives/xiaohongshu_creator_center_manual/processed/processed_20260316_110434/catalog.json",
+        "image_name": "screenshot_20260316_093923.jpg"
+      }
+    },
+    {
+      "platform": "xiaohongshu",
+      "rule_id": "XHS-MAN-056",
+      "title": "商业秩序：招募虚假体验写手",
+      "content": "招募普通用户代写、代发虚假产品使用体验",
+      "source_url": null,
+      "severity": "high",
+      "tags": [
+        "xhs_manual_category_商业秩序",
+        "xhs_manual_rule_招募虚假体验写手"
+      ],
+      "keywords": [
+        "招募虚假体验写手"
+      ],
+      "regex_patterns": [],
+      "metadata": {
+        "source_type": "creator_center_manual_capture",
+        "manual_category": "商业秩序",
+        "manual_title": "招募虚假体验写手",
+        "inferred_candidate_tags": [],
+        "title_source": "ocr_header",
+        "ocr_confidence_avg": 0.9819,
+        "flags": [
+          "generic_filename"
+        ],
+        "source_urls": [
+          "/Users/m/亿一的AI小助理/open-codex/platform-content-audit/data/source_archives/xiaohongshu_creator_center_manual/inbox/006_商业秩序/screenshot_20260316_093927.jpg"
+        ],
+        "processed_catalog_path": "/Users/m/亿一的AI小助理/open-codex/platform-content-audit/data/source_archives/xiaohongshu_creator_center_manual/processed/processed_20260316_110434/catalog.json",
+        "image_name": "screenshot_20260316_093927.jpg"
+      }
+    },
+    {
+      "platform": "xiaohongshu",
+      "rule_id": "XHS-MAN-057",
+      "title": "商业秩序：招募虚假体验写手（2）",
+      "content": "发布虚假种草体验的内容，刻意放大或夸张描述产品/服务 的效果及优点，影响其他用户对产品/服务内容的判断与理 解，误导消费决策。",
+      "source_url": null,
+      "severity": "high",
+      "tags": [
+        "xhs_manual_category_商业秩序",
+        "xhs_manual_rule_招募虚假体验写手-2"
+      ],
+      "keywords": [
+        "招募虚假体验写手"
+      ],
+      "regex_patterns": [],
+      "metadata": {
+        "source_type": "creator_center_manual_capture",
+        "manual_category": "商业秩序",
+        "manual_title": "招募虚假体验写手（2）",
+        "inferred_candidate_tags": [],
+        "title_source": "ocr_header",
+        "ocr_confidence_avg": 0.9833,
+        "flags": [
+          "generic_filename"
+        ],
+        "source_urls": [
+          "/Users/m/亿一的AI小助理/open-codex/platform-content-audit/data/source_archives/xiaohongshu_creator_center_manual/inbox/006_商业秩序/screenshot_20260316_093929.jpg"
+        ],
+        "processed_catalog_path": "/Users/m/亿一的AI小助理/open-codex/platform-content-audit/data/source_archives/xiaohongshu_creator_center_manual/processed/processed_20260316_110434/catalog.json",
+        "image_name": "screenshot_20260316_093929.jpg"
+      }
+    },
+    {
+      "platform": "xiaohongshu",
+      "rule_id": "XHS-MAN-058",
+      "title": "商业秩序：低质营销",
+      "content": "缺少真情实感的宣传内容是无法打动小红薯们的，平台建议 可以在宣传自家商品或活动的同时，多多增加一些真诚分享 的内容，这样才能够获得更多小红薯的青。 不鼓励的内容形式有： 笔记封面或标题使用情绪化用语进行产品/服务的营销推 ·笔记封面或标题借助公众人物热度、社会热点事件营销 推广 以题文不符的炒作手段吸引流量 利用搬运素材进行低质推广 直接推广特定品牌的产品/服务，且账号下批量发布同质 化内容",
+      "source_url": null,
+      "severity": "high",
+      "tags": [
+        "xhs_manual_category_商业秩序",
+        "xhs_manual_rule_低质营销"
+      ],
+      "keywords": [
+        "低质营销"
+      ],
+      "regex_patterns": [
+        "100%|全网第?一|全网最低"
+      ],
+      "metadata": {
+        "source_type": "creator_center_manual_capture",
+        "manual_category": "商业秩序",
+        "manual_title": "低质营销",
+        "inferred_candidate_tags": [
+          "marketing_violation"
+        ],
+        "title_source": "filename",
+        "ocr_confidence_avg": 0.9894,
+        "flags": [],
+        "source_urls": [
+          "/Users/m/亿一的AI小助理/open-codex/platform-content-audit/data/source_archives/xiaohongshu_creator_center_manual/inbox/006_商业秩序/低质营销.jpg"
+        ],
+        "processed_catalog_path": "/Users/m/亿一的AI小助理/open-codex/platform-content-audit/data/source_archives/xiaohongshu_creator_center_manual/processed/processed_20260316_110434/catalog.json",
+        "image_name": "低质营销.jpg"
+      }
+    },
+    {
+      "platform": "xiaohongshu",
+      "rule_id": "XHS-MAN-059",
+      "title": "商业秩序：合集测评",
+      "content": "此类内容通常以合集的方式展示，首页通常为非实拍的合集 图，通过对同类商品的不合理排序，对比突出想要推广的商 品 平台建议真实客观地评价各个商品的优缺点，为其他小红薯 提供切实有效的建议",
+      "source_url": null,
+      "severity": "high",
+      "tags": [
+        "xhs_manual_category_商业秩序",
+        "xhs_manual_rule_合集测评"
+      ],
+      "keywords": [
+        "合集测评"
+      ],
+      "regex_patterns": [],
+      "metadata": {
+        "source_type": "creator_center_manual_capture",
+        "manual_category": "商业秩序",
+        "manual_title": "合集测评",
+        "inferred_candidate_tags": [
+          "false_review"
+        ],
+        "title_source": "filename",
+        "ocr_confidence_avg": 0.9934,
+        "flags": [],
+        "source_urls": [
+          "/Users/m/亿一的AI小助理/open-codex/platform-content-audit/data/source_archives/xiaohongshu_creator_center_manual/inbox/006_商业秩序/合集测评.jpg"
+        ],
+        "processed_catalog_path": "/Users/m/亿一的AI小助理/open-codex/platform-content-audit/data/source_archives/xiaohongshu_creator_center_manual/processed/processed_20260316_110434/catalog.json",
+        "image_name": "合集测评.jpg"
+      }
+    },
+    {
+      "platform": "xiaohongshu",
+      "rule_id": "XHS-MAN-060",
+      "title": "商业秩序：夸大宣传",
+      "content": "夸大宣传主要管控以下几点： 使用绝对化用语形容产品/服务效果、过度保证产品效果 通过P图的方式过度渲染产品/服务效果，常见于祛斑产品、 美白产品的宣传素材中 利用特殊案例宣传产品/服务效果，如某网课机构老师宣传 某某用户学习了自己的课程后取得了国考第一的成绩，这种 特殊案例中体现的产品/服务效果不适合投射在大众人群中",
+      "source_url": null,
+      "severity": "high",
+      "tags": [
+        "xhs_manual_category_商业秩序",
+        "xhs_manual_rule_夸大宣传"
+      ],
+      "keywords": [
+        "夸大宣传"
+      ],
+      "regex_patterns": [
+        "100%|全网第?一|全网最低"
+      ],
+      "metadata": {
+        "source_type": "creator_center_manual_capture",
+        "manual_category": "商业秩序",
+        "manual_title": "夸大宣传",
+        "inferred_candidate_tags": [
+          "marketing_violation"
+        ],
+        "title_source": "filename",
+        "ocr_confidence_avg": 0.9869,
+        "flags": [],
+        "source_urls": [
+          "/Users/m/亿一的AI小助理/open-codex/platform-content-audit/data/source_archives/xiaohongshu_creator_center_manual/inbox/006_商业秩序/夸大宣传.jpg"
+        ],
+        "processed_catalog_path": "/Users/m/亿一的AI小助理/open-codex/platform-content-audit/data/source_archives/xiaohongshu_creator_center_manual/processed/processed_20260316_110434/catalog.json",
+        "image_name": "夸大宣传.jpg"
+      }
+    },
+    {
+      "platform": "xiaohongshu",
+      "rule_id": "XHS-MAN-061",
+      "title": "商业秩序：婚恋行业不规范",
+      "content": "为维护行业健康发展、保障用户权益。小红薯们在进行专业 行业的科普或营销时，都要积极的进行合规资质认证，同时 要确保广告宣传、案例展示、服务流程等信息真实可靠，杜 绝虚假承诺与夸大误导。小红书作为一个多元化的信息平 台，需要平衡商业生态与公共利益，让我们从源头遏制行业 乱象，共同打造可信、安全、可持续的服务环境。 婚恋行业常见违规点： 1.无资质营销：未取得婚恋行业的相应营销资质，而在平台 开展相关经营活动，提供婚恋交友服务。 ·有效资质如：婚恋相关（婚介所、婚恋平台、婚恋交友 等）相应的专业号-企业/个体户/机构、聚光认证、kos认 证、蓝v认证 ·点击立即认证 2、虚假宣传/服务：婚恋行业认证商家提供在平台上虚假宣 传或未兑现承诺的产品/服务 ·存在未履行承诺的内容，如：未按约定介绍对象或提前 终止服务 ·存在身份不一致的内容，如：机构冒充个人发帖或虚构 多重身份 ·存在信息不真实的内容，如：盗用他人照片、AI生成假 形象、…",
+      "source_url": null,
+      "severity": "high",
+      "tags": [
+        "xhs_manual_category_商业秩序",
+        "xhs_manual_rule_婚恋行业不规范"
+      ],
+      "keywords": [
+        "婚恋行业不规范"
+      ],
+      "regex_patterns": [],
+      "metadata": {
+        "source_type": "creator_center_manual_capture",
+        "manual_category": "商业秩序",
+        "manual_title": "婚恋行业不规范",
+        "inferred_candidate_tags": [],
+        "title_source": "filename",
+        "ocr_confidence_avg": 0.9922,
+        "flags": [],
+        "source_urls": [
+          "/Users/m/亿一的AI小助理/open-codex/platform-content-audit/data/source_archives/xiaohongshu_creator_center_manual/inbox/006_商业秩序/婚恋行业不规范.jpg"
+        ],
+        "processed_catalog_path": "/Users/m/亿一的AI小助理/open-codex/platform-content-audit/data/source_archives/xiaohongshu_creator_center_manual/processed/processed_20260316_110434/catalog.json",
+        "image_name": "婚恋行业不规范.jpg"
+      }
+    },
+    {
+      "platform": "xiaohongshu",
+      "rule_id": "XHS-MAN-062",
+      "title": "商业秩序：学历语言行业不规范",
+      "content": "学历语言是少儿至成人教育板块不可或缺的一部分，我们提 醒你在提供语言教育行业服务时须具备相关资质，同时避免 虚假承诺和夸大宣传的行为。在签订服务合同时，确保提供 的服务真实可靠。我们呼吁平台各服务机构诚信经营，共同 维护行业良好生态，营造安全可靠的服务环境。 1、无资质营销：商家未取得有效资质提供学历语言行业相 关服务，有效资质如→ ·学历语言行业通用资质：专业号-机构-学校 院校招生有效资质：专业号-企业/个体户-学历教育中心/ 职业教育平台、以上专业号旗下的企业员工认证 升学/学科辅导有效资质：专业号-企业/个体户-学历教育 中心/兴趣培训、以上专业号旗下的企业员工认证 ）早教有效资质：专业号-企业-早教、以上专业号旗下的企 业员工认证 ·语言教育有效资质：专业号-企业/个体户-语言留学/语言 教育中心、以上专业号旗下的企业员工认证 ）售卖教育书籍、推广线上教育课程有效资质：专业号-企 业/个体户-教辅工具/文化出版/书刊…",
+      "source_url": null,
+      "severity": "high",
+      "tags": [
+        "xhs_manual_category_商业秩序",
+        "xhs_manual_rule_学历语言行业不规范"
+      ],
+      "keywords": [
+        "学历语言行业不规范"
+      ],
+      "regex_patterns": [],
+      "metadata": {
+        "source_type": "creator_center_manual_capture",
+        "manual_category": "商业秩序",
+        "manual_title": "学历语言行业不规范",
+        "inferred_candidate_tags": [],
+        "title_source": "filename",
+        "ocr_confidence_avg": 0.9887,
+        "flags": [],
+        "source_urls": [
+          "/Users/m/亿一的AI小助理/open-codex/platform-content-audit/data/source_archives/xiaohongshu_creator_center_manual/inbox/006_商业秩序/学历语言行业不规范.jpg"
+        ],
+        "processed_catalog_path": "/Users/m/亿一的AI小助理/open-codex/platform-content-audit/data/source_archives/xiaohongshu_creator_center_manual/processed/processed_20260316_110434/catalog.json",
+        "image_name": "学历语言行业不规范.jpg"
+      }
+    },
+    {
+      "platform": "xiaohongshu",
+      "rule_id": "XHS-MAN-063",
+      "title": "商业秩序：房地产行业不规范",
+      "content": "为进一步落实相关法律法规要求，打击虚假房源、黑中介等 行业乱象，保障用户利益与平台秩序，平台要求房地产经营 类账号需完成相应资质认证后，方可发布房源信息等房地产 行业营销推广内容。同时要确保广告宣传、案例展示、服务 流程等信息真实可靠，杜绝虚假承诺与夸大误导。小红书作 为一个多元化的信息平台，需要平衡商业生态与公共利益， 让我们从源头遏制行业乱象，共同打造可信、安全、可持续 的服务环境。 常见违规行为如下> 1、无资质营销：未取得房地产行业的相应营销资质，而在 平台开展相关经营活动，提供租房/卖房服务。 ·有效资质如：房地产行业相关（中介公司、销售代理、 开发商、物管公司）的专业号-企业/机构、以及受企业号 邀请的kos。 ·专业号：企业-房地产-房地产销售代理、企业-房地产-房 地中介公司、企业-房地产-物业管理公司、企业-房地产 房地产开发商 ·KOS：房地产-房地产销售代理、房地产-房地中介公司、 房地产-物业管理公司、…",
+      "source_url": null,
+      "severity": "high",
+      "tags": [
+        "xhs_manual_category_商业秩序",
+        "xhs_manual_rule_房地产行业不规范"
+      ],
+      "keywords": [
+        "房地产行业不规范"
+      ],
+      "regex_patterns": [],
+      "metadata": {
+        "source_type": "creator_center_manual_capture",
+        "manual_category": "商业秩序",
+        "manual_title": "房地产行业不规范",
+        "inferred_candidate_tags": [],
+        "title_source": "filename",
+        "ocr_confidence_avg": 0.9908,
+        "flags": [],
+        "source_urls": [
+          "/Users/m/亿一的AI小助理/open-codex/platform-content-audit/data/source_archives/xiaohongshu_creator_center_manual/inbox/006_商业秩序/房地产行业不规范.jpg"
+        ],
+        "processed_catalog_path": "/Users/m/亿一的AI小助理/open-codex/platform-content-audit/data/source_archives/xiaohongshu_creator_center_manual/processed/processed_20260316_110434/catalog.json",
+        "image_name": "房地产行业不规范.jpg"
+      }
+    },
+    {
+      "platform": "xiaohongshu",
+      "rule_id": "XHS-MAN-064",
+      "title": "商业秩序：文旅行业不规范",
+      "content": "文化旅游行业关于游客体验与文化传播，为维护行业健康发 展、保障用户权益，小红薯们在进行专业行业的科普或营销 时，都要积极的进行合规资质认证，同时要确保广告宣传、 案例展示、服务流程等信息真实可靠，杜绝虚假承诺与夸大 误导。小红书作为一个多元化的信息平台，需要平衡商业生 态与公共利益，让我们从源头遏制行业乱象，共同打造可 信、安全、可持续的服务环境。 1、禁止售卖：商家以'代抢票'、‘内部渠道'等名义，诱骗消 费者通过非正规途径购买博物馆、公园等文博场所的门票 2、无资质营销：未取得文化旅游行业的相应营销资质，而 在平台开展相关经营活动，比如代订酒店、发攻略拉客等未 取得文化旅游行业的相应营销资质，而在平台开展相关经营 活动，比如代订酒店、发攻略拉客等 ·有效商家资质如：文旅相关（票务代理公司、旅游信息 中心、旅行社、博物馆、研学、旅游相关公共场所等） 专业号-企业/个体户/机构认证以及受专业号邀请的kos认 证 ·有效个人资质…",
+      "source_url": null,
+      "severity": "high",
+      "tags": [
+        "xhs_manual_category_商业秩序",
+        "xhs_manual_rule_文旅行业不规范"
+      ],
+      "keywords": [
+        "文旅行业不规范"
+      ],
+      "regex_patterns": [],
+      "metadata": {
+        "source_type": "creator_center_manual_capture",
+        "manual_category": "商业秩序",
+        "manual_title": "文旅行业不规范",
+        "inferred_candidate_tags": [],
+        "title_source": "filename",
+        "ocr_confidence_avg": 0.9911,
+        "flags": [],
+        "source_urls": [
+          "/Users/m/亿一的AI小助理/open-codex/platform-content-audit/data/source_archives/xiaohongshu_creator_center_manual/inbox/006_商业秩序/文旅行业不规范.jpg"
+        ],
+        "processed_catalog_path": "/Users/m/亿一的AI小助理/open-codex/platform-content-audit/data/source_archives/xiaohongshu_creator_center_manual/processed/processed_20260316_110434/catalog.json",
+        "image_name": "文旅行业不规范.jpg"
+      }
+    },
+    {
+      "platform": "xiaohongshu",
+      "rule_id": "XHS-MAN-065",
+      "title": "商业秩序：母婴行业不规范",
+      "content": "创作者在分享母婴行业相关内容时易关联提供存在争议及风 险的医疗服务，包括但不限于：代孕、胎儿性别鉴定、单身 试管、医疗垃圾交易、医保提现等。这些服务行为不仅违反 了国家法律规定，也严重损害了患者的身心健康和人身财产 安全。我们呼吁各组织机构及个人避免在平台上发布母婴行 业违规内容，共同维护良好的生态秩序和清朗环境。 1、母婴违法服务 ·存在代孕推广与招募行为：包括直接发广告（价格、机 构）、暗示诱导、编故事引导私下联系，以及用暗语 （如“招房子”）高薪招募代孕人员等行为。 ·存在试管服务的违规广告宣传：包括直接发布机构信 息、价格套餐，以及编造虚假个人经历诱导私下联系 （如提供机构信息、承诺选性别）等行为。 ·存在提供或宣传胎儿性别鉴定、亲子鉴定、非法办理婴 儿出生证或户口的内容：如直接打广告或暗示后引导私 下交易等行为 2、违规宣传 ·分享非法送养/领养/弃养孩子、代孕/试管经历或精卵子 交易信息：包括发布“卖孩子”、“送养…",
+      "source_url": null,
+      "severity": "high",
+      "tags": [
+        "xhs_manual_category_商业秩序",
+        "xhs_manual_rule_母婴行业不规范"
+      ],
+      "keywords": [
+        "母婴行业不规范"
+      ],
+      "regex_patterns": [],
+      "metadata": {
+        "source_type": "creator_center_manual_capture",
+        "manual_category": "商业秩序",
+        "manual_title": "母婴行业不规范",
+        "inferred_candidate_tags": [],
+        "title_source": "filename",
+        "ocr_confidence_avg": 0.9946,
+        "flags": [],
+        "source_urls": [
+          "/Users/m/亿一的AI小助理/open-codex/platform-content-audit/data/source_archives/xiaohongshu_creator_center_manual/inbox/006_商业秩序/母婴行业不规范.jpg"
+        ],
+        "processed_catalog_path": "/Users/m/亿一的AI小助理/open-codex/platform-content-audit/data/source_archives/xiaohongshu_creator_center_manual/processed/processed_20260316_110434/catalog.json",
+        "image_name": "母婴行业不规范.jpg"
+      }
+    },
+    {
+      "platform": "xiaohongshu",
+      "rule_id": "XHS-MAN-066",
+      "title": "商业秩序：法律行业不规范",
+      "content": "在小红书平台分享法律内容时，建议你清晰标注你的专业身 份（如具备相关资质），同时需避免提供违规服务（如特定 资质办理、社保/公积金挂靠、代开发票或规避监管方法 等）。遵守平台规则，远离行私下交易。这样做既能更好地 保护其它小红薯的财产安全，也能维护你自身的专业形象和 可信度。我们期待与你共创一个良好的生态服务环境。 本条规则适用于小红书所有场景下的发布行为，包括但不限 于笔记、评论、用户资料等场景。以上示例内容并非穷举， 如果你认为还有其他风险形式或优化建议，可点击下方评价 按钮向我们反馈，感谢每一位小红薯的支持与喜爱。",
+      "source_url": null,
+      "severity": "high",
+      "tags": [
+        "xhs_manual_category_商业秩序",
+        "xhs_manual_rule_法律行业不规范"
+      ],
+      "keywords": [
+        "法律行业不规范"
+      ],
+      "regex_patterns": [],
+      "metadata": {
+        "source_type": "creator_center_manual_capture",
+        "manual_category": "商业秩序",
+        "manual_title": "法律行业不规范",
+        "inferred_candidate_tags": [],
+        "title_source": "filename",
+        "ocr_confidence_avg": 0.9886,
+        "flags": [],
+        "source_urls": [
+          "/Users/m/亿一的AI小助理/open-codex/platform-content-audit/data/source_archives/xiaohongshu_creator_center_manual/inbox/006_商业秩序/法律行业不规范.jpg"
+        ],
+        "processed_catalog_path": "/Users/m/亿一的AI小助理/open-codex/platform-content-audit/data/source_archives/xiaohongshu_creator_center_manual/processed/processed_20260316_110434/catalog.json",
+        "image_name": "法律行业不规范.jpg"
+      }
+    },
+    {
+      "platform": "xiaohongshu",
+      "rule_id": "XHS-MAN-067",
+      "title": "商业秩序：珠宝文玩作业不规范",
+      "content": "珠宝文玩行业关乎用户的购物体验与商家诚信，我们提醒你 避免提供违反法律法规、平台规则或社会公德的商品。同时 需避免虚假承诺和夸大宣传的行为。在签订服务合同时，确 保提供的服务真实可靠。我们呼吁平台各机构诚信经营，共 同营造安全可靠的服务环境。 ·无资质营销：商家未取得有效资质推广珠宝文玩行业商 品 有效资质开通路径→ 路径一：小红书app搜索“小红书开店”，即可享受免费入 驻快速开启经营。 路径二：小红书app左上角点击展示侧边栏－一创作者中心 一一开通店铺。 ·禁止售卖：商家在平台以隐蔽的方式提供违反法律法 规、平台规则或社会公德的珠宝商品。 ·交易导流：珠宝商家进行营销售卖或相关营销推广时， 引导用户去其他平台交易，包括不限于提供二维码、微 信、手机号、小程序、链接等联系信息 ·夸大宣传：珠宝商家在营销过程中，使用价格低廉类话 术宣传商品。 本条规则适用于小红书所有场景下的发布行为，包括但不限 于笔记、评论、用户资料等场景…",
+      "source_url": null,
+      "severity": "high",
+      "tags": [
+        "xhs_manual_category_商业秩序",
+        "xhs_manual_rule_珠宝文玩作业不规范"
+      ],
+      "keywords": [
+        "珠宝文玩作业不规范"
+      ],
+      "regex_patterns": [],
+      "metadata": {
+        "source_type": "creator_center_manual_capture",
+        "manual_category": "商业秩序",
+        "manual_title": "珠宝文玩作业不规范",
+        "inferred_candidate_tags": [],
+        "title_source": "filename",
+        "ocr_confidence_avg": 0.9876,
+        "flags": [],
+        "source_urls": [
+          "/Users/m/亿一的AI小助理/open-codex/platform-content-audit/data/source_archives/xiaohongshu_creator_center_manual/inbox/006_商业秩序/珠宝文玩作业不规范.jpg"
+        ],
+        "processed_catalog_path": "/Users/m/亿一的AI小助理/open-codex/platform-content-audit/data/source_archives/xiaohongshu_creator_center_manual/processed/processed_20260316_110434/catalog.json",
+        "image_name": "珠宝文玩作业不规范.jpg"
+      }
+    },
+    {
+      "platform": "xiaohongshu",
+      "rule_id": "XHS-MAN-068",
+      "title": "商业秩序：留学移民行业不规范",
+      "content": "为维护行业健康发展、保障用户权益。小红薯们在进行专业 行业的科普或营销时，都要积极的进行合规资质认证，同时 要确保广告宣传、案例展示、政策解读等信息真实可靠，杜 绝虚假承诺与夸大误导。小红书作为一个多元化的信息平 台，需要平衡商业生态与公共利益，让我们从源头遏制行业 乱象，共同打造可信、安全、可持续的服务环境。 常见违规点： 1、无资质营销：未取得留学/移民行业的相应营销资质，而 在平台开展相关经营活动，提供留学/移民服务。有效资质 如下> ·留学行业 （1）专业号-机构-学校、专业号-企业-语言留学/留学教育 平台、专业号-个体户-语言留学/留学教育平台 （2）聚光认证-出国留学 （3）kos-语言留学/留学教育平台/出国留学 ·移民行业 （1）专业号-机构-境外机构、专业号-企业-中介公司、专业 号-个体户--中介公司 （2）聚光认证-出国服务（除出国留学） （3）kos--出国服务（除出国留学）／中介公司 ·认证问题请参…",
+      "source_url": null,
+      "severity": "high",
+      "tags": [
+        "xhs_manual_category_商业秩序",
+        "xhs_manual_rule_留学移民行业不规范"
+      ],
+      "keywords": [
+        "留学移民行业不规范"
+      ],
+      "regex_patterns": [],
+      "metadata": {
+        "source_type": "creator_center_manual_capture",
+        "manual_category": "商业秩序",
+        "manual_title": "留学移民行业不规范",
+        "inferred_candidate_tags": [],
+        "title_source": "filename",
+        "ocr_confidence_avg": 0.9872,
+        "flags": [],
+        "source_urls": [
+          "/Users/m/亿一的AI小助理/open-codex/platform-content-audit/data/source_archives/xiaohongshu_creator_center_manual/inbox/006_商业秩序/留学移民行业不规范.jpg"
+        ],
+        "processed_catalog_path": "/Users/m/亿一的AI小助理/open-codex/platform-content-audit/data/source_archives/xiaohongshu_creator_center_manual/processed/processed_20260316_110434/catalog.json",
+        "image_name": "留学移民行业不规范.jpg"
+      }
+    },
+    {
+      "platform": "xiaohongshu",
+      "rule_id": "XHS-MAN-069",
+      "title": "商业秩序：矩阵号营销",
+      "content": "为维护良好的社区生态，保障广大用户的合法权益，小红书 严格打击黑灰产矩阵号等违法违规行为。平台允许有矩阵 号，但拒绝同质化矩阵，提倡差异化运营此类账号，打造美 好的社区环境。针对通过矩阵号高频发布同质化内容进行恶 意营销的行为，平台将全部封禁，包括但不限于伪素人、留 学、考研、考公、通信、情感挽回、文职培训、虚拟资料 等。",
+      "source_url": null,
+      "severity": "high",
+      "tags": [
+        "xhs_manual_category_商业秩序",
+        "xhs_manual_rule_矩阵号营销"
+      ],
+      "keywords": [
+        "矩阵号营销",
+        "矩阵号"
+      ],
+      "regex_patterns": [],
+      "metadata": {
+        "source_type": "creator_center_manual_capture",
+        "manual_category": "商业秩序",
+        "manual_title": "矩阵号营销",
+        "inferred_candidate_tags": [
+          "duplicate_content",
+          "marketing_violation"
+        ],
+        "title_source": "filename",
+        "ocr_confidence_avg": 0.987,
+        "flags": [],
+        "source_urls": [
+          "/Users/m/亿一的AI小助理/open-codex/platform-content-audit/data/source_archives/xiaohongshu_creator_center_manual/inbox/006_商业秩序/矩阵号营销.jpg"
+        ],
+        "processed_catalog_path": "/Users/m/亿一的AI小助理/open-codex/platform-content-audit/data/source_archives/xiaohongshu_creator_center_manual/processed/processed_20260316_110434/catalog.json",
+        "image_name": "矩阵号营销.jpg"
+      }
+    },
+    {
+      "platform": "xiaohongshu",
+      "rule_id": "XHS-MAN-070",
+      "title": "商业秩序：虚假宣传",
+      "content": "虚假呈现或描述产品功效，如通过P图美化使用效果、 以“绝对有效”等承诺保证产品效果等，混淆用户对产 品功效的感知 伪装真实消费者体验的视角分享、推荐自家产品/服务， 误导其他用户对产品效果、服务质量的判断 利用社会专业身份，打造人设进行营销售卖",
+      "source_url": null,
+      "severity": "high",
+      "tags": [
+        "xhs_manual_category_商业秩序",
+        "xhs_manual_rule_虚假宣传"
+      ],
+      "keywords": [
+        "虚假宣传"
+      ],
+      "regex_patterns": [
+        "100%|全网第?一|全网最低"
+      ],
+      "metadata": {
+        "source_type": "creator_center_manual_capture",
+        "manual_category": "商业秩序",
+        "manual_title": "虚假宣传",
+        "inferred_candidate_tags": [
+          "marketing_violation"
+        ],
+        "title_source": "filename",
+        "ocr_confidence_avg": 0.9877,
+        "flags": [],
+        "source_urls": [
+          "/Users/m/亿一的AI小助理/open-codex/platform-content-audit/data/source_archives/xiaohongshu_creator_center_manual/inbox/006_商业秩序/虚假宣传.jpg"
+        ],
+        "processed_catalog_path": "/Users/m/亿一的AI小助理/open-codex/platform-content-audit/data/source_archives/xiaohongshu_creator_center_manual/processed/processed_20260316_110434/catalog.json",
+        "image_name": "虚假宣传.jpg"
+      }
+    },
+    {
+      "platform": "xiaohongshu",
+      "rule_id": "XHS-MAN-071",
+      "title": "商业秩序：虚假测评（2）",
+      "content": "真诚分享、友好互动是小红书的基本准则，高质量创作是长 久发展的基石。平台发现，部分黑灰产团伙通过谎称“内 幕”“黑料”“避雷”“信息差”等头，批量孵化横测账 号，发布大量虚假或低质横向评测笔记引流用户至微信，进 而转介给下游黑灰产机构。此类评测内容缺乏事实依据，常 恶意抹黑未与其合作的商家。小红书将持续严厉打击此类黑 灰产账号及行为，维护社区秩序，保障用户、品牌及商家的 合法权益。常见涉及行业包括医美、考研、留学、瑜伽、月 子中心等。",
+      "source_url": null,
+      "severity": "high",
+      "tags": [
+        "xhs_manual_category_商业秩序",
+        "xhs_manual_rule_虚假测评-2"
+      ],
+      "keywords": [
+        "虚假测评"
+      ],
+      "regex_patterns": [],
+      "metadata": {
+        "source_type": "creator_center_manual_capture",
+        "manual_category": "商业秩序",
+        "manual_title": "虚假测评（2）",
+        "inferred_candidate_tags": [
+          "false_review"
+        ],
+        "title_source": "filename",
+        "ocr_confidence_avg": 0.9908,
+        "flags": [],
+        "source_urls": [
+          "/Users/m/亿一的AI小助理/open-codex/platform-content-audit/data/source_archives/xiaohongshu_creator_center_manual/inbox/006_商业秩序/虚假测评.jpg"
+        ],
+        "processed_catalog_path": "/Users/m/亿一的AI小助理/open-codex/platform-content-audit/data/source_archives/xiaohongshu_creator_center_manual/processed/processed_20260316_110434/catalog.json",
+        "image_name": "虚假测评.jpg"
+      }
+    },
+    {
+      "platform": "xiaohongshu",
+      "rule_id": "XHS-MAN-072",
+      "title": "商业秩序：虚假营销",
+      "content": "可能存在发布虚假产品测评的问题，如以合集的方式 对同类产品进行不合理排序、利用非实拍抠图合集进 行虚假评价、利用商品真假对比测评间接推广假货等 可能存在利用资源分享等方式引导用户前往第三方平 台的问题，如创业教学、小说推文、影视资料等 3.可能存在假冒专家或权威机构推广产品/服务的问 题，如以专家名义科普小妙招、以权威机构为背景夹 带推广产品/服务等 可能存在使用绝对化、保证性用语或过度美化使用效 果的图片素材，夸大宣传产品/服务功效的问题 可能存在虚构人设或经历的问题，如编造前后行为矛 盾、人设不一的故事吸引流量，继而推广产品/服务 等 可能存在构建互动话题推广产品/服务的问题，如利 用博眼球素材引流进行铺垫营销、与他人问答式打配 合推广特定产品/服务等",
+      "source_url": null,
+      "severity": "high",
+      "tags": [
+        "xhs_manual_category_商业秩序",
+        "xhs_manual_rule_虚假营销"
+      ],
+      "keywords": [
+        "虚假营销"
+      ],
+      "regex_patterns": [
+        "100%|全网第?一|全网最低"
+      ],
+      "metadata": {
+        "source_type": "creator_center_manual_capture",
+        "manual_category": "商业秩序",
+        "manual_title": "虚假营销",
+        "inferred_candidate_tags": [
+          "marketing_violation"
+        ],
+        "title_source": "filename",
+        "ocr_confidence_avg": 0.9878,
+        "flags": [],
+        "source_urls": [
+          "/Users/m/亿一的AI小助理/open-codex/platform-content-audit/data/source_archives/xiaohongshu_creator_center_manual/inbox/006_商业秩序/虚假营销.jpg"
+        ],
+        "processed_catalog_path": "/Users/m/亿一的AI小助理/open-codex/platform-content-audit/data/source_archives/xiaohongshu_creator_center_manual/processed/processed_20260316_110434/catalog.json",
+        "image_name": "虚假营销.jpg"
+      }
+    },
+    {
+      "platform": "xiaohongshu",
+      "rule_id": "XHS-MAN-073",
+      "title": "商业秩序：虚构体验或人设",
+      "content": "平台在审核新发笔记时，也会综合参考账号下的其他信息， 若发现新发内容与既往信息不符，可能会影响笔记的曝光及 账号的功能 年龄矛盾：前后笔记分别表面自己30岁、25岁 人设矛盾：商家伪装成消费者身份发布虚假心得 虚假内容不仅难以赢得人心，还容易引发反感，甚至损害品 牌形象。消费者越来越注重真诚和透明，过度依赖套路只会 适得其反。平台建议商家专注于提供商品/服务的真实价 值，与消费者建立长期信任，这才是赢得市场的关键。",
+      "source_url": null,
+      "severity": "high",
+      "tags": [
+        "xhs_manual_category_商业秩序",
+        "xhs_manual_rule_虚构体验或人设"
+      ],
+      "keywords": [
+        "虚构体验或人设"
+      ],
+      "regex_patterns": [],
+      "metadata": {
+        "source_type": "creator_center_manual_capture",
+        "manual_category": "商业秩序",
+        "manual_title": "虚构体验或人设",
+        "inferred_candidate_tags": [
+          "persona_fabrication"
+        ],
+        "title_source": "filename",
+        "ocr_confidence_avg": 0.9891,
+        "flags": [],
+        "source_urls": [
+          "/Users/m/亿一的AI小助理/open-codex/platform-content-audit/data/source_archives/xiaohongshu_creator_center_manual/inbox/006_商业秩序/虚构体验或人设.jpg"
+        ],
+        "processed_catalog_path": "/Users/m/亿一的AI小助理/open-codex/platform-content-audit/data/source_archives/xiaohongshu_creator_center_manual/processed/processed_20260316_110434/catalog.json",
+        "image_name": "虚构体验或人设.jpg"
+      }
+    },
+    {
+      "platform": "xiaohongshu",
+      "rule_id": "XHS-MAN-074",
+      "title": "商业秩序：金融行业不规范",
+      "content": "为了我们共同的健康网络金融环境，保障大家的权益，我们 建议你在分享银行、证券、基金等相关内容时，自觉遵守国 家法规和平台规范。在创作和互动中避免在无资质情况下提 供个股分析、收益承诺或冒充专业人士，也不要推广非法集 资、传销活动或发布违规借贷/高利贷信息。金融信息关系 大家的财产安全，不规范的内容可能带来风险，需要我们共 同防范。让我们同心协力，规范信息发布，一起营造一个可 信赖、更美好的金融信息家园，守护好我们每个人的“钱袋 子”！ 本条规则适用于小红书所有场景下的发布行为，包括但不限 于笔记、评论、用户资料等场景。以上示例内容并非穷举， 如果你认为还有其他风险形式或优化建议，可点击下方评价 按钮向我们反馈，感谢每一位小红薯的支持与喜爱。",
+      "source_url": null,
+      "severity": "high",
+      "tags": [
+        "xhs_manual_category_商业秩序",
+        "xhs_manual_rule_金融行业不规范"
+      ],
+      "keywords": [
+        "金融行业不规范",
+        "金融"
+      ],
+      "regex_patterns": [
+        "\\d+天回本|零风险"
+      ],
+      "metadata": {
+        "source_type": "creator_center_manual_capture",
+        "manual_category": "商业秩序",
+        "manual_title": "金融行业不规范",
+        "inferred_candidate_tags": [
+          "financial_promise"
+        ],
+        "title_source": "filename",
+        "ocr_confidence_avg": 0.9881,
+        "flags": [],
+        "source_urls": [
+          "/Users/m/亿一的AI小助理/open-codex/platform-content-audit/data/source_archives/xiaohongshu_creator_center_manual/inbox/006_商业秩序/金融行业不规范.jpg"
+        ],
+        "processed_catalog_path": "/Users/m/亿一的AI小助理/open-codex/platform-content-audit/data/source_archives/xiaohongshu_creator_center_manual/processed/processed_20260316_110434/catalog.json",
+        "image_name": "金融行业不规范.jpg"
+      }
+    },
+    {
+      "platform": "xiaohongshu",
+      "rule_id": "XHS-MAN-075",
+      "title": "原创保护：冒充他人",
+      "content": "冒充知名人物或创作者，伪装他人身份并搬运他人作品的行 为，是平台严厉打击的。无论是采用间接误导他人的方式， 还是直接使用第一人称仿冒他人的行为，在结果上都是误导 用户的。",
+      "source_url": null,
+      "severity": "medium",
+      "tags": [
+        "xhs_manual_category_原创保护",
+        "xhs_manual_rule_冒充他人"
+      ],
+      "keywords": [
+        "冒充他人",
+        "冒充"
+      ],
+      "regex_patterns": [],
+      "metadata": {
+        "source_type": "creator_center_manual_capture",
+        "manual_category": "原创保护",
+        "manual_title": "冒充他人",
+        "inferred_candidate_tags": [
+          "persona_fabrication"
+        ],
+        "title_source": "filename",
+        "ocr_confidence_avg": 0.9952,
+        "flags": [],
+        "source_urls": [
+          "/Users/m/亿一的AI小助理/open-codex/platform-content-audit/data/source_archives/xiaohongshu_creator_center_manual/inbox/007_原创保护/冒充他人.jpg"
+        ],
+        "processed_catalog_path": "/Users/m/亿一的AI小助理/open-codex/platform-content-audit/data/source_archives/xiaohongshu_creator_center_manual/processed/processed_20260316_110434/catalog.json",
+        "image_name": "冒充他人.jpg"
+      }
+    },
+    {
+      "platform": "xiaohongshu",
+      "rule_id": "XHS-MAN-076",
+      "title": "原创保护：搬运他人创作",
+      "content": "非原创作品指未经原创作者授权而创作/复制的作品，缺少 独创性，且存在以下任一情形： 1.直接复制 ·文字、图像、音频、视频等素材未经修改或仅做微小调 整（如替换标点、调整语序）即发布。 ·示例：全文照搬其他平台或本平台作者发布内容，完全 一致。 2.改编搬运 ·对他人作品进行局部修改（如更换人物名称、调整章节 顺序、使用简单特效处理），但未形成新的独创性表 达，核心内容不改变。 ·示例：将小说剧情主线、人物关系复刻至新作品，仅修 改故事背景设定；对他人作品添加模版性质的背景音 乐、滤镜、边框、特效；对画面进行放大、剪裁、镜像 翻转、一句话解说等，缺少自身创作内容。 3.未授权使用 ·使用受版权保护的素材（如影视剧截图、音乐片段、插 画）未获得原作者许可，且超出合理引用范围。 ·示例：在解说视频中连续使用超过xx秒的版权电影片 段。 薯管家指南→ 不建议： ·平台不建议创作者将他人素材，直接发布或简单加工后 发布。 ·平台不建议…",
+      "source_url": null,
+      "severity": "medium",
+      "tags": [
+        "xhs_manual_category_原创保护",
+        "xhs_manual_rule_搬运他人创作"
+      ],
+      "keywords": [
+        "搬运他人创作",
+        "搬运"
+      ],
+      "regex_patterns": [],
+      "metadata": {
+        "source_type": "creator_center_manual_capture",
+        "manual_category": "原创保护",
+        "manual_title": "搬运他人创作",
+        "inferred_candidate_tags": [
+          "originality_violation"
+        ],
+        "title_source": "filename",
+        "ocr_confidence_avg": 0.9953,
+        "flags": [],
+        "source_urls": [
+          "/Users/m/亿一的AI小助理/open-codex/platform-content-audit/data/source_archives/xiaohongshu_creator_center_manual/inbox/007_原创保护/搬运他人创作.jpg"
+        ],
+        "processed_catalog_path": "/Users/m/亿一的AI小助理/open-codex/platform-content-audit/data/source_archives/xiaohongshu_creator_center_manual/processed/processed_20260316_110434/catalog.json",
+        "image_name": "搬运他人创作.jpg"
+      }
+    },
+    {
+      "platform": "xiaohongshu",
+      "rule_id": "XHS-MAN-077",
+      "title": "涉未成年：不当使用未成年人形象",
+      "content": "为了保证未成年的合法权益以及身心健康，平台坚决抵制利 用未成年人形象进行不当营销或玩梗行为。 ·营销代言不适宜未成年人的品类，如美妆产品、游戏、 含酒精饮品等 利用未成年形象出镜，以口播、第一视角、第一人称口 吻等形式进行产品/服务的介绍或推广等直接营销推广行 为 分享、展示以未成年人形象做出过度成人化行为的表情 包",
+      "source_url": null,
+      "severity": "high",
+      "tags": [
+        "xhs_manual_category_涉未成年",
+        "xhs_manual_rule_不当使用未成年人形象"
+      ],
+      "keywords": [
+        "不当使用未成年人形象",
+        "未成年"
+      ],
+      "regex_patterns": [],
+      "metadata": {
+        "source_type": "creator_center_manual_capture",
+        "manual_category": "涉未成年",
+        "manual_title": "不当使用未成年人形象",
+        "inferred_candidate_tags": [
+          "minor_protection"
+        ],
+        "title_source": "filename",
+        "ocr_confidence_avg": 0.9879,
+        "flags": [],
+        "source_urls": [
+          "/Users/m/亿一的AI小助理/open-codex/platform-content-audit/data/source_archives/xiaohongshu_creator_center_manual/inbox/008_涉未成年/不当使用未成年人形象.jpg"
+        ],
+        "processed_catalog_path": "/Users/m/亿一的AI小助理/open-codex/platform-content-audit/data/source_archives/xiaohongshu_creator_center_manual/processed/processed_20260316_110434/catalog.json",
+        "image_name": "不当使用未成年人形象.jpg"
+      }
+    },
+    {
+      "platform": "xiaohongshu",
+      "rule_id": "XHS-MAN-078",
+      "title": "涉未成年：不良导向作品",
+      "content": "为维护未成年人良好网络环境，引导教育未成年树立正确价 值观，平台不支持发布以下内容： ）创作、分享、传播涉及血腥暴力、色情低俗、违法违 规、不良价值观等不适合未成年观看的作品。具体创作 形式，包括但不限于：歪曲和恶搞儿童熟悉的卡通人物 形象、创作含不良导向的剧情剧本、绘画制作不良导向 的画面等 ）利用未成年人形象演绎含有不良价值观或不当言行的小 剧场、情景剧 刻意发起导向不佳的话题讨论，如讨论与异性交友经 历、如何违纪违规等",
+      "source_url": null,
+      "severity": "high",
+      "tags": [
+        "xhs_manual_category_涉未成年",
+        "xhs_manual_rule_不良导向作品"
+      ],
+      "keywords": [
+        "不良导向作品"
+      ],
+      "regex_patterns": [],
+      "metadata": {
+        "source_type": "creator_center_manual_capture",
+        "manual_category": "涉未成年",
+        "manual_title": "不良导向作品",
+        "inferred_candidate_tags": [],
+        "title_source": "filename",
+        "ocr_confidence_avg": 0.9833,
+        "flags": [],
+        "source_urls": [
+          "/Users/m/亿一的AI小助理/open-codex/platform-content-audit/data/source_archives/xiaohongshu_creator_center_manual/inbox/008_涉未成年/不良导向作品.jpg"
+        ],
+        "processed_catalog_path": "/Users/m/亿一的AI小助理/open-codex/platform-content-audit/data/source_archives/xiaohongshu_creator_center_manual/processed/processed_20260316_110434/catalog.json",
+        "image_name": "不良导向作品.jpg"
+      }
+    },
+    {
+      "platform": "xiaohongshu",
+      "rule_id": "XHS-MAN-079",
+      "title": "涉未成年：未成年不当言行",
+      "content": "为维护未成年人良好网络环境，引导教育未成年树立正确价 值观，保护未成年人身心健康发展，平台坚决禁止任何侵犯 未成年合法权益、对未成年造成不良影响的行为。 ·涉未成年攻击骚扰他人的内容，如辱骂、侮辱、恶意引 战、故意骚扰等 ）涉未成年暴力行为，如打架斗殴、威胁欺凌他人、虐待 动物等 损害自身或他人身体健康行为的内容，例如：暴饮暴 食、楼顶跑酷、在禁止水域游泳、玩明火等 未成年人使用不文明用语或包含不文明用语的表情包， 攻击抹黑、侮辱漫骂他人 发布、宣扬抄作业、抄答案、代写代抄、考试作弊等行 为 ·发布、宣扬逃学、旷课等违反校纪校规的行为 发布漠视生命，轻视自我的内容",
+      "source_url": null,
+      "severity": "high",
+      "tags": [
+        "xhs_manual_category_涉未成年",
+        "xhs_manual_rule_未成年不当言行"
+      ],
+      "keywords": [
+        "未成年不当言行",
+        "未成年"
+      ],
+      "regex_patterns": [],
+      "metadata": {
+        "source_type": "creator_center_manual_capture",
+        "manual_category": "涉未成年",
+        "manual_title": "未成年不当言行",
+        "inferred_candidate_tags": [
+          "minor_protection"
+        ],
+        "title_source": "filename",
+        "ocr_confidence_avg": 0.9794,
+        "flags": [],
+        "source_urls": [
+          "/Users/m/亿一的AI小助理/open-codex/platform-content-audit/data/source_archives/xiaohongshu_creator_center_manual/inbox/008_涉未成年/未成年不当言行.jpg"
+        ],
+        "processed_catalog_path": "/Users/m/亿一的AI小助理/open-codex/platform-content-audit/data/source_archives/xiaohongshu_creator_center_manual/processed/processed_20260316_110434/catalog.json",
+        "image_name": "未成年不当言行.jpg"
+      }
+    },
+    {
+      "platform": "xiaohongshu",
+      "rule_id": "XHS-MAN-080",
+      "title": "涉未成年：未成年早婚早孕",
+      "content": "未成年人还正处在身体发育和三观培养的阶段，为了保护未 成年人的身心健康，平台不提倡宣扬未成年人早婚早孕的内 容。",
+      "source_url": null,
+      "severity": "high",
+      "tags": [
+        "xhs_manual_category_涉未成年",
+        "xhs_manual_rule_未成年早婚早孕"
+      ],
+      "keywords": [
+        "未成年早婚早孕",
+        "未成年",
+        "早婚",
+        "早孕"
+      ],
+      "regex_patterns": [],
+      "metadata": {
+        "source_type": "creator_center_manual_capture",
+        "manual_category": "涉未成年",
+        "manual_title": "未成年早婚早孕",
+        "inferred_candidate_tags": [
+          "minor_protection"
+        ],
+        "title_source": "filename",
+        "ocr_confidence_avg": 0.983,
+        "flags": [],
+        "source_urls": [
+          "/Users/m/亿一的AI小助理/open-codex/platform-content-audit/data/source_archives/xiaohongshu_creator_center_manual/inbox/008_涉未成年/未成年早婚早孕.jpg"
+        ],
+        "processed_catalog_path": "/Users/m/亿一的AI小助理/open-codex/platform-content-audit/data/source_archives/xiaohongshu_creator_center_manual/processed/processed_20260316_110434/catalog.json",
+        "image_name": "未成年早婚早孕.jpg"
+      }
+    },
+    {
+      "platform": "xiaohongshu",
+      "rule_id": "XHS-MAN-081",
+      "title": "涉未成年：未成年违法犯罪",
+      "content": "为了保护未成年人的隐私和身心健康，避免未成年人模仿， 涉及发布未成年人的违法犯罪行为，或对未成年人实施违法 犯罪行为的内容，平台都会禁止哦！",
+      "source_url": null,
+      "severity": "high",
+      "tags": [
+        "xhs_manual_category_涉未成年",
+        "xhs_manual_rule_未成年违法犯罪"
+      ],
+      "keywords": [
+        "未成年违法犯罪",
+        "未成年",
+        "违法犯罪"
+      ],
+      "regex_patterns": [],
+      "metadata": {
+        "source_type": "creator_center_manual_capture",
+        "manual_category": "涉未成年",
+        "manual_title": "未成年违法犯罪",
+        "inferred_candidate_tags": [
+          "minor_protection"
+        ],
+        "title_source": "filename",
+        "ocr_confidence_avg": 0.9866,
+        "flags": [],
+        "source_urls": [
+          "/Users/m/亿一的AI小助理/open-codex/platform-content-audit/data/source_archives/xiaohongshu_creator_center_manual/inbox/008_涉未成年/未成年违法犯罪.jpg"
+        ],
+        "processed_catalog_path": "/Users/m/亿一的AI小助理/open-codex/platform-content-audit/data/source_archives/xiaohongshu_creator_center_manual/processed/processed_20260316_110434/catalog.json",
+        "image_name": "未成年违法犯罪.jpg"
+      }
+    },
+    {
+      "platform": "xiaohongshu",
+      "rule_id": "XHS-MAN-082",
+      "title": "涉未成年：涉未成年性侵害",
+      "content": "对未成年人进行性侵害、性骚扰是违法犯罪行为，平台坚决 抵制侵害未成年人的内容！ ·描述、宣传、正常化或美化恋童癖或性侵未成年人的内 容 向未成年人发送色情信息，或要求未成年人提供其隐私 照片等内容",
+      "source_url": null,
+      "severity": "high",
+      "tags": [
+        "xhs_manual_category_涉未成年",
+        "xhs_manual_rule_涉未成年性侵害"
+      ],
+      "keywords": [
+        "涉未成年性侵害",
+        "未成年",
+        "性侵害"
+      ],
+      "regex_patterns": [],
+      "metadata": {
+        "source_type": "creator_center_manual_capture",
+        "manual_category": "涉未成年",
+        "manual_title": "涉未成年性侵害",
+        "inferred_candidate_tags": [
+          "minor_protection"
+        ],
+        "title_source": "filename",
+        "ocr_confidence_avg": 0.9899,
+        "flags": [],
+        "source_urls": [
+          "/Users/m/亿一的AI小助理/open-codex/platform-content-audit/data/source_archives/xiaohongshu_creator_center_manual/inbox/008_涉未成年/涉未成年性侵害.jpg"
+        ],
+        "processed_catalog_path": "/Users/m/亿一的AI小助理/open-codex/platform-content-audit/data/source_archives/xiaohongshu_creator_center_manual/processed/processed_20260316_110434/catalog.json",
+        "image_name": "涉未成年性侵害.jpg"
+      }
+    },
+    {
+      "platform": "xiaohongshu",
+      "rule_id": "XHS-MAN-083",
+      "title": "涉未成年：涉未成年风险行为",
+      "content": "为了保护未成年人的人身财产安全，交友互动等行为应在安 全熟悉的场景下进行，平台提示：网络交友有风险！ 涉及未成年财物赠予、线下接触等易引发人身或财产安 全风险的内容 宣扬不当价值观的高风险网络社交行为，如体罚惩罚未 成年等 其他可能会引发线下人身财产安全风险的内容",
+      "source_url": null,
+      "severity": "high",
+      "tags": [
+        "xhs_manual_category_涉未成年",
+        "xhs_manual_rule_涉未成年风险行为"
+      ],
+      "keywords": [
+        "涉未成年风险行为",
+        "未成年"
+      ],
+      "regex_patterns": [],
+      "metadata": {
+        "source_type": "creator_center_manual_capture",
+        "manual_category": "涉未成年",
+        "manual_title": "涉未成年风险行为",
+        "inferred_candidate_tags": [
+          "minor_protection"
+        ],
+        "title_source": "filename",
+        "ocr_confidence_avg": 0.9923,
+        "flags": [],
+        "source_urls": [
+          "/Users/m/亿一的AI小助理/open-codex/platform-content-audit/data/source_archives/xiaohongshu_creator_center_manual/inbox/008_涉未成年/涉未成年风险行为.jpg"
+        ],
+        "processed_catalog_path": "/Users/m/亿一的AI小助理/open-codex/platform-content-audit/data/source_archives/xiaohongshu_creator_center_manual/processed/processed_20260316_110434/catalog.json",
+        "image_name": "涉未成年风险行为.jpg"
+      }
+    },
+    {
+      "platform": "xiaohongshu",
+      "rule_id": "XHS-MAN-084",
+      "title": "涉未成年：过度成人化",
+      "content": "为了保护未成年人身心健康成长与人身财产安全，平台不建 议发布未成年过度成人化的内容。 ）展示、支持、宣扬未成年人早恋行为，或寻求可能存在 恋爱风险的交友行为，如找哥哥，找妹妹、找CP等 展示、描述、宣扬未成年人抽烟、喝酒、化妆、出入营 业性娱乐场所（如歌舞厅、网吧、足疗保健、ktv）等行 为 展示、支持、宣扬未成年人开展医疗美容项目",
+      "source_url": null,
+      "severity": "high",
+      "tags": [
+        "xhs_manual_category_涉未成年",
+        "xhs_manual_rule_过度成人化"
+      ],
+      "keywords": [
+        "过度成人化",
+        "成人化"
+      ],
+      "regex_patterns": [],
+      "metadata": {
+        "source_type": "creator_center_manual_capture",
+        "manual_category": "涉未成年",
+        "manual_title": "过度成人化",
+        "inferred_candidate_tags": [],
+        "title_source": "filename",
+        "ocr_confidence_avg": 0.9825,
+        "flags": [],
+        "source_urls": [
+          "/Users/m/亿一的AI小助理/open-codex/platform-content-audit/data/source_archives/xiaohongshu_creator_center_manual/inbox/008_涉未成年/过度成人化.jpg"
+        ],
+        "processed_catalog_path": "/Users/m/亿一的AI小助理/open-codex/platform-content-audit/data/source_archives/xiaohongshu_creator_center_manual/processed/processed_20260316_110434/catalog.json",
+        "image_name": "过度成人化.jpg"
+      }
+    },
+    {
+      "platform": "xiaohongshu",
+      "rule_id": "XHS-MAN-085",
+      "title": "涉未成年：违反防沉迷规定",
+      "content": "为了保护未成年人身心健康发展，引导教育未成年树立正确 价值观，平台坚决抵制可能对未成年人造成不良影响的行 为。 传播或教授规避未成年人系统监管的内容，如提供故意 规避防沉迷、青少年模式的方法攻略 向未成年提供游戏账号买卖、租赁等服务 ）未成年提供或寻求陪玩陪聊、代练代打等不利于未成年 健康成长的内容",
+      "source_url": null,
+      "severity": "high",
+      "tags": [
+        "xhs_manual_category_涉未成年",
+        "xhs_manual_rule_违反防沉迷规定"
+      ],
+      "keywords": [
+        "违反防沉迷规定"
+      ],
+      "regex_patterns": [],
+      "metadata": {
+        "source_type": "creator_center_manual_capture",
+        "manual_category": "涉未成年",
+        "manual_title": "违反防沉迷规定",
+        "inferred_candidate_tags": [
+          "minor_protection"
+        ],
+        "title_source": "filename",
+        "ocr_confidence_avg": 0.9892,
+        "flags": [],
+        "source_urls": [
+          "/Users/m/亿一的AI小助理/open-codex/platform-content-audit/data/source_archives/xiaohongshu_creator_center_manual/inbox/008_涉未成年/违反防沉迷规定.jpg"
+        ],
+        "processed_catalog_path": "/Users/m/亿一的AI小助理/open-codex/platform-content-audit/data/source_archives/xiaohongshu_creator_center_manual/processed/processed_20260316_110434/catalog.json",
+        "image_name": "违反防沉迷规定.jpg"
+      }
+    },
+    {
+      "platform": "xiaohongshu",
+      "rule_id": "XHS-MAN-086",
+      "title": "社区氛围：互动风险提示",
+      "content": "平台倡导真诚分享、友好互动的社区氛围，鼓励基于真实生 活、兴趣爱好等内容展开的交友行为，坚决打击虚假活动、 虚假身份、情感诈骗、色情诱导等内容，建设真实、健康、 可持续的互动交友生态。 同时，平台持续提醒用户保持警惕，不轻信他人，增强安全 意识，共同维护平台秩序，维护个人人格尊严，保障人身财 产安全。 1、站外互动/邀约 ·引导他人前往其他平台或聊天工具沟通 ·缺少公开活动信息、场所地点等背景介绍，邀请或寻求 与他人线下见面 2、意图不明交友行为 ·发布无实质内容的互动话题 ·缺少兴趣爱好、生活经历、观点看法等内容的讨论或交 流，一味发布求交友信息 ·以外貌、性别、身材、穿着等个人特征或身份作为交友 条件 3、高风险交友信息 ·发布暗示性关系、性需求的聊天交友内容 ·交友过程中以借款、投资邀请、创业合作等名义进行财 务往来 ·交友过程中索要个人隐私信息，包括但不限于个人证件 信息、联系方式、隐私照片等 小红书建议参与交友活动或…",
+      "source_url": null,
+      "severity": "high",
+      "tags": [
+        "xhs_manual_category_社区氛围",
+        "xhs_manual_rule_互动风险提示"
+      ],
+      "keywords": [
+        "互动风险提示"
+      ],
+      "regex_patterns": [],
+      "metadata": {
+        "source_type": "creator_center_manual_capture",
+        "manual_category": "社区氛围",
+        "manual_title": "互动风险提示",
+        "inferred_candidate_tags": [],
+        "title_source": "filename",
+        "ocr_confidence_avg": 0.992,
+        "flags": [],
+        "source_urls": [
+          "/Users/m/亿一的AI小助理/open-codex/platform-content-audit/data/source_archives/xiaohongshu_creator_center_manual/inbox/009_社区氛围/互动风险提示.jpg"
+        ],
+        "processed_catalog_path": "/Users/m/亿一的AI小助理/open-codex/platform-content-audit/data/source_archives/xiaohongshu_creator_center_manual/processed/processed_20260316_110434/catalog.json",
+        "image_name": "互动风险提示.jpg"
+      }
+    },
+    {
+      "platform": "xiaohongshu",
+      "rule_id": "XHS-MAN-087",
+      "title": "社区氛围：攻击他人",
+      "content": "为维护友好互动的社区氛围，小红书严厉禁止传播散布攻击 骚扰他人，或影响社区氛围的内容。如果遇到他人的不友善 对待，建议对违规行为进行举报。 ·发布攻击、低毁、谩骂、侮辱等贬损他人的内容： 发布污言秽语、蔑称、人格/人品侮辱词、诅咒威胁等内 容攻击他人或群体 发布具有煽动性质或挑起各种群体对立的内容 提供发布负向投稿、代骂人等不友善的服务",
+      "source_url": null,
+      "severity": "high",
+      "tags": [
+        "xhs_manual_category_社区氛围",
+        "xhs_manual_rule_攻击他人"
+      ],
+      "keywords": [
+        "攻击他人",
+        "攻击"
+      ],
+      "regex_patterns": [],
+      "metadata": {
+        "source_type": "creator_center_manual_capture",
+        "manual_category": "社区氛围",
+        "manual_title": "攻击他人",
+        "inferred_candidate_tags": [
+          "rights_infringement"
+        ],
+        "title_source": "filename",
+        "ocr_confidence_avg": 0.9747,
+        "flags": [],
+        "source_urls": [
+          "/Users/m/亿一的AI小助理/open-codex/platform-content-audit/data/source_archives/xiaohongshu_creator_center_manual/inbox/009_社区氛围/攻击他人.jpg"
+        ],
+        "processed_catalog_path": "/Users/m/亿一的AI小助理/open-codex/platform-content-audit/data/source_archives/xiaohongshu_creator_center_manual/processed/processed_20260316_110434/catalog.json",
+        "image_name": "攻击他人.jpg"
+      }
+    },
+    {
+      "platform": "xiaohongshu",
+      "rule_id": "XHS-MAN-088",
+      "title": "社区氛围：曝光他人网络信息",
+      "content": "·无事实依据违规传播他人网络信息，包括但不限于用户 名、昵称、店铺名称、公司名称等可定位到具体人员或 机构的内容。 本条规则适用于小红书所有场景下的发布行为，包括但不限 于笔记、评论、用户资料等场景。以上示例内容并非穷举， 如果你认为还有其他风险形式或优化建议，可点击下方评价 按钮向我们反馈，感谢每一位小红薯的支持与喜爱。",
+      "source_url": null,
+      "severity": "high",
+      "tags": [
+        "xhs_manual_category_社区氛围",
+        "xhs_manual_rule_曝光他人网络信息"
+      ],
+      "keywords": [
+        "曝光他人网络信息"
+      ],
+      "regex_patterns": [],
+      "metadata": {
+        "source_type": "creator_center_manual_capture",
+        "manual_category": "社区氛围",
+        "manual_title": "曝光他人网络信息",
+        "inferred_candidate_tags": [
+          "rights_infringement"
+        ],
+        "title_source": "filename",
+        "ocr_confidence_avg": 0.9856,
+        "flags": [],
+        "source_urls": [
+          "/Users/m/亿一的AI小助理/open-codex/platform-content-audit/data/source_archives/xiaohongshu_creator_center_manual/inbox/009_社区氛围/曝光他人网络信息.jpg"
+        ],
+        "processed_catalog_path": "/Users/m/亿一的AI小助理/open-codex/platform-content-audit/data/source_archives/xiaohongshu_creator_center_manual/processed/processed_20260316_110434/catalog.json",
+        "image_name": "曝光他人网络信息.jpg"
+      }
+    },
+    {
+      "platform": "xiaohongshu",
+      "rule_id": "XHS-MAN-089",
+      "title": "社区氛围：有损互动氛围",
+      "content": "发布有损社区互动氛围的内容，例如： 利用头刻意引导他人点赞互动的内容 频繁对他人发布表意不明或重复度极高的内容",
+      "source_url": null,
+      "severity": "high",
+      "tags": [
+        "xhs_manual_category_社区氛围",
+        "xhs_manual_rule_有损互动氛围"
+      ],
+      "keywords": [
+        "有损互动氛围"
+      ],
+      "regex_patterns": [],
+      "metadata": {
+        "source_type": "creator_center_manual_capture",
+        "manual_category": "社区氛围",
+        "manual_title": "有损互动氛围",
+        "inferred_candidate_tags": [],
+        "title_source": "filename",
+        "ocr_confidence_avg": 0.9846,
+        "flags": [],
+        "source_urls": [
+          "/Users/m/亿一的AI小助理/open-codex/platform-content-audit/data/source_archives/xiaohongshu_creator_center_manual/inbox/009_社区氛围/有损互动氛围.jpg"
+        ],
+        "processed_catalog_path": "/Users/m/亿一的AI小助理/open-codex/platform-content-audit/data/source_archives/xiaohongshu_creator_center_manual/processed/processed_20260316_110434/catalog.json",
+        "image_name": "有损互动氛围.jpg"
+      }
+    },
+    {
+      "platform": "xiaohongshu",
+      "rule_id": "XHS-MAN-090",
+      "title": "社区氛围：泄露个人隐私",
+      "content": "平台严禁传播泄露个人隐私的内容： 展示个人隐私信息； 寻求或提供查询他人隐私信息、曝光他人的方式、途径 及服务； ）非合法场景下，展示他人身份、外貌等信息，开展“捞 人”、“寻人”活动; 隐私信息包括但不限于： ·个人身份信息：包括姓名、身份证号码、护照号码、社 会保障号码、驾驶证号码等； 联系方式：如家庭住址、电话号码、电子邮件地址、即 时通讯账号等； 财务信息：包括银行账号、信用卡号码、财务交易记 录、个人收入和财产状况等； ）健康信息：个人的健康状况、医疗记录、保险信息等。 本条规则适用于小红书所有场景下的发布行为，包括但不限 于笔记、评论、用户资料等场景。以上示例内容并非穷举， 如果你认为还有其他风险形式或优化建议，可点击下方评价 按钮向我们反馈，感谢每一位小红薯的支持与喜爱。",
+      "source_url": null,
+      "severity": "high",
+      "tags": [
+        "xhs_manual_category_社区氛围",
+        "xhs_manual_rule_泄露个人隐私"
+      ],
+      "keywords": [
+        "泄露个人隐私",
+        "隐私"
+      ],
+      "regex_patterns": [],
+      "metadata": {
+        "source_type": "creator_center_manual_capture",
+        "manual_category": "社区氛围",
+        "manual_title": "泄露个人隐私",
+        "inferred_candidate_tags": [
+          "rights_infringement"
+        ],
+        "title_source": "filename",
+        "ocr_confidence_avg": 0.989,
+        "flags": [],
+        "source_urls": [
+          "/Users/m/亿一的AI小助理/open-codex/platform-content-audit/data/source_archives/xiaohongshu_creator_center_manual/inbox/009_社区氛围/泄露个人隐私.jpg"
+        ],
+        "processed_catalog_path": "/Users/m/亿一的AI小助理/open-codex/platform-content-audit/data/source_archives/xiaohongshu_creator_center_manual/processed/processed_20260316_110434/catalog.json",
+        "image_name": "泄露个人隐私.jpg"
+      }
+    },
+    {
+      "platform": "xiaohongshu",
+      "rule_id": "XHS-MAN-091",
+      "title": "社区氛围：网暴服务",
+      "content": "为维护个人人格尊严与财产安全，警惕网络暴力与信息盗用 风险，平台禁止传播他人隐私信息，如账号密码、身份证 号、住址等敏感内容，严禁人肉搜索、恶意曝光及诱导网络 暴力行为，违者将依法处置。请广大用户自觉遵守，共同营 造清朗网络空间。 常见违规点，包括但不限于： 寻求/提供/展示泄漏他人隐私信息的服务； ）寻求/提供/展示恶意讨论、批评、攻击他人的投稿、喊 话或代挂人服务； ）寻求/提供/展示代骂、代吵、轰炸骚扰等服务涉及其他 违反平台规则的内容。 本条规则适用于小红书所有场景下的发布行为，包括但不限 于笔记、评论、用户资料等场景。以上示例内容并非穷举， 如果你认为还有其他风险形式或优化建议，可点击下方评价 按钮向我们反馈，感谢每一位小红薯的支持与喜爱。",
+      "source_url": null,
+      "severity": "high",
+      "tags": [
+        "xhs_manual_category_社区氛围",
+        "xhs_manual_rule_网暴服务"
+      ],
+      "keywords": [
+        "网暴服务",
+        "网暴"
+      ],
+      "regex_patterns": [],
+      "metadata": {
+        "source_type": "creator_center_manual_capture",
+        "manual_category": "社区氛围",
+        "manual_title": "网暴服务",
+        "inferred_candidate_tags": [
+          "rights_infringement"
+        ],
+        "title_source": "filename",
+        "ocr_confidence_avg": 0.9817,
+        "flags": [],
+        "source_urls": [
+          "/Users/m/亿一的AI小助理/open-codex/platform-content-audit/data/source_archives/xiaohongshu_creator_center_manual/inbox/009_社区氛围/网暴服务.jpg"
+        ],
+        "processed_catalog_path": "/Users/m/亿一的AI小助理/open-codex/platform-content-audit/data/source_archives/xiaohongshu_creator_center_manual/processed/processed_20260316_110434/catalog.json",
+        "image_name": "网暴服务.jpg"
+      }
+    },
+    {
+      "platform": "xiaohongshu",
+      "rule_id": "XHS-MAN-092",
+      "title": "社区氛围：骚扰他人",
+      "content": "发布可能引起他人反感或困扰的内容，例如： 对他人发布挑逗或性暗示言论 发布可能引起他人不适的内容，例如：恐怖、血腥暴力 的内容",
+      "source_url": null,
+      "severity": "high",
+      "tags": [
+        "xhs_manual_category_社区氛围",
+        "xhs_manual_rule_骚扰他人"
+      ],
+      "keywords": [
+        "骚扰他人"
+      ],
+      "regex_patterns": [],
+      "metadata": {
+        "source_type": "creator_center_manual_capture",
+        "manual_category": "社区氛围",
+        "manual_title": "骚扰他人",
+        "inferred_candidate_tags": [
+          "rights_infringement"
+        ],
+        "title_source": "filename",
+        "ocr_confidence_avg": 0.9878,
+        "flags": [],
+        "source_urls": [
+          "/Users/m/亿一的AI小助理/open-codex/platform-content-audit/data/source_archives/xiaohongshu_creator_center_manual/inbox/009_社区氛围/骚扰他人.jpg"
+        ],
+        "processed_catalog_path": "/Users/m/亿一的AI小助理/open-codex/platform-content-audit/data/source_archives/xiaohongshu_creator_center_manual/processed/processed_20260316_110434/catalog.json",
+        "image_name": "骚扰他人.jpg"
+      }
+    },
+    {
+      "platform": "xiaohongshu",
+      "rule_id": "XHS-MAN-093",
+      "title": "色情低俗：两性生活",
+      "content": "展示两性过于亲密的画面或相关文字表述，如热吻、舌 吻、抚摸身体等 ）交流、描述性过程、性技巧、性器官等内容，或使用相 关粗俗表述，低俗指代 ·以性癖好、性过程相关元素展开话题讨论或进行创作",
+      "source_url": null,
+      "severity": "high",
+      "tags": [
+        "xhs_manual_category_色情低俗",
+        "xhs_manual_rule_两性生活"
+      ],
+      "keywords": [
+        "两性生活",
+        "两性"
+      ],
+      "regex_patterns": [],
+      "metadata": {
+        "source_type": "creator_center_manual_capture",
+        "manual_category": "色情低俗",
+        "manual_title": "两性生活",
+        "inferred_candidate_tags": [
+          "sexual_content"
+        ],
+        "title_source": "filename",
+        "ocr_confidence_avg": 0.977,
+        "flags": [],
+        "source_urls": [
+          "/Users/m/亿一的AI小助理/open-codex/platform-content-audit/data/source_archives/xiaohongshu_creator_center_manual/inbox/010_色情低俗/两性生活.jpg"
+        ],
+        "processed_catalog_path": "/Users/m/亿一的AI小助理/open-codex/platform-content-audit/data/source_archives/xiaohongshu_creator_center_manual/processed/processed_20260316_110434/catalog.json",
+        "image_name": "两性生活.jpg"
+      }
+    },
+    {
+      "platform": "xiaohongshu",
+      "rule_id": "XHS-MAN-094",
+      "title": "色情低俗：两性用品",
+      "content": "·未持有相关资质情况下，宣传展示或售卖成人情趣/计生 用品 ·上身展示情趣用品、情趣衣物，或描述其使用细节与使 用感受",
+      "source_url": null,
+      "severity": "high",
+      "tags": [
+        "xhs_manual_category_色情低俗",
+        "xhs_manual_rule_两性用品"
+      ],
+      "keywords": [
+        "两性用品",
+        "两性"
+      ],
+      "regex_patterns": [],
+      "metadata": {
+        "source_type": "creator_center_manual_capture",
+        "manual_category": "色情低俗",
+        "manual_title": "两性用品",
+        "inferred_candidate_tags": [
+          "sexual_content"
+        ],
+        "title_source": "filename",
+        "ocr_confidence_avg": 0.9838,
+        "flags": [],
+        "source_urls": [
+          "/Users/m/亿一的AI小助理/open-codex/platform-content-audit/data/source_archives/xiaohongshu_creator_center_manual/inbox/010_色情低俗/两性用品.jpg"
+        ],
+        "processed_catalog_path": "/Users/m/亿一的AI小助理/open-codex/platform-content-audit/data/source_archives/xiaohongshu_creator_center_manual/processed/processed_20260316_110434/catalog.json",
+        "image_name": "两性用品.jpg"
+      }
+    },
+    {
+      "platform": "xiaohongshu",
+      "rule_id": "XHS-MAN-095",
+      "title": "色情低俗：低俗营销",
+      "content": "组织、宣传未经相关部门审批的成人秀展，如成人歌舞 表演、成人用品展览等 以服务人员的穿着打扮、互动接触为经营卖点，招揽潜 在用户咨询或到店消费",
+      "source_url": null,
+      "severity": "high",
+      "tags": [
+        "xhs_manual_category_色情低俗",
+        "xhs_manual_rule_低俗营销"
+      ],
+      "keywords": [
+        "低俗营销"
+      ],
+      "regex_patterns": [],
+      "metadata": {
+        "source_type": "creator_center_manual_capture",
+        "manual_category": "色情低俗",
+        "manual_title": "低俗营销",
+        "inferred_candidate_tags": [],
+        "title_source": "filename",
+        "ocr_confidence_avg": 0.9893,
+        "flags": [],
+        "source_urls": [
+          "/Users/m/亿一的AI小助理/open-codex/platform-content-audit/data/source_archives/xiaohongshu_creator_center_manual/inbox/010_色情低俗/低俗营销.jpg"
+        ],
+        "processed_catalog_path": "/Users/m/亿一的AI小助理/open-codex/platform-content-audit/data/source_archives/xiaohongshu_creator_center_manual/processed/processed_20260316_110434/catalog.json",
+        "image_name": "低俗营销.jpg"
+      }
+    },
+    {
+      "platform": "xiaohongshu",
+      "rule_id": "XHS-MAN-096",
+      "title": "色情低俗：借物调侃",
+      "content": "非医疗、科普场景下，展示、调侃动物性行为、性器 官；或玩弄动物性器官、乳头 刻意展示裸露敏感部位或过度暴露的工艺制品、画作、 雕塑、纹身等 展示与敏感部位相似度高，易引起视觉错觉或低俗联想 的物品 ·传播含有裸露、激情片段的影视、小说、动漫作品等",
+      "source_url": null,
+      "severity": "high",
+      "tags": [
+        "xhs_manual_category_色情低俗",
+        "xhs_manual_rule_借物调侃"
+      ],
+      "keywords": [
+        "借物调侃"
+      ],
+      "regex_patterns": [],
+      "metadata": {
+        "source_type": "creator_center_manual_capture",
+        "manual_category": "色情低俗",
+        "manual_title": "借物调侃",
+        "inferred_candidate_tags": [],
+        "title_source": "filename",
+        "ocr_confidence_avg": 0.9838,
+        "flags": [],
+        "source_urls": [
+          "/Users/m/亿一的AI小助理/open-codex/platform-content-audit/data/source_archives/xiaohongshu_creator_center_manual/inbox/010_色情低俗/借物调侃.jpg"
+        ],
+        "processed_catalog_path": "/Users/m/亿一的AI小助理/open-codex/platform-content-audit/data/source_archives/xiaohongshu_creator_center_manual/processed/processed_20260316_110434/catalog.json",
+        "image_name": "借物调侃.jpg"
+      }
+    },
+    {
+      "platform": "xiaohongshu",
+      "rule_id": "XHS-MAN-097",
+      "title": "色情低俗：性服务",
+      "content": "小红书禁止用户发布、传播色情、淫秽信息，或对色情、淫 秽信息资源进行引流等违法违规内容。创作时严格遵守国家 相关法律法规、符合社会公序良俗和伦理道德，以健康、积 极向上的方式为广大用户呈现更多优质、精彩的作品。 常见违规点，包括但不限于： ·发布招信息，展示诱导语言、联系方式，吸引潜在 客前来咨询和交易 介绍、宣扬可提供性服务的渠道，如展示招广告、介 绍“红灯区”、或明确指出具体场所等 在酒店、洗浴、按摩场所、KTV等场景下，暗示可提 供“私密服务”等内容 本条规则适用于小红书所有场景下的发布行为，包括但不限 于笔记、评论、用户资料等场景。以上示例内容并非穷举， 如果你认为还有其他风险形式或优化建议，可点击下方评价 按钮向我们反馈，感谢每一位小红薯的支持与喜爱。",
+      "source_url": null,
+      "severity": "high",
+      "tags": [
+        "xhs_manual_category_色情低俗",
+        "xhs_manual_rule_性服务"
+      ],
+      "keywords": [
+        "性服务"
+      ],
+      "regex_patterns": [],
+      "metadata": {
+        "source_type": "creator_center_manual_capture",
+        "manual_category": "色情低俗",
+        "manual_title": "性服务",
+        "inferred_candidate_tags": [
+          "sexual_content"
+        ],
+        "title_source": "filename",
+        "ocr_confidence_avg": 0.9874,
+        "flags": [],
+        "source_urls": [
+          "/Users/m/亿一的AI小助理/open-codex/platform-content-audit/data/source_archives/xiaohongshu_creator_center_manual/inbox/010_色情低俗/性服务.jpg"
+        ],
+        "processed_catalog_path": "/Users/m/亿一的AI小助理/open-codex/platform-content-audit/data/source_archives/xiaohongshu_creator_center_manual/processed/processed_20260316_110434/catalog.json",
+        "image_name": "性服务.jpg"
+      }
+    },
+    {
+      "platform": "xiaohongshu",
+      "rule_id": "XHS-MAN-098",
+      "title": "色情低俗：性行为相关",
+      "content": "涉及性行为、性高潮、性分泌物的音画展示或文字描 述，包括但不限于拍摄、讲解、绘画等 淫亵性模仿性行为中的动作、姿势、表情，或借用其他 物品做出相关色情动作",
+      "source_url": null,
+      "severity": "high",
+      "tags": [
+        "xhs_manual_category_色情低俗",
+        "xhs_manual_rule_性行为相关"
+      ],
+      "keywords": [
+        "性行为相关",
+        "性行为"
+      ],
+      "regex_patterns": [],
+      "metadata": {
+        "source_type": "creator_center_manual_capture",
+        "manual_category": "色情低俗",
+        "manual_title": "性行为相关",
+        "inferred_candidate_tags": [
+          "sexual_content"
+        ],
+        "title_source": "filename",
+        "ocr_confidence_avg": 0.9925,
+        "flags": [],
+        "source_urls": [
+          "/Users/m/亿一的AI小助理/open-codex/platform-content-audit/data/source_archives/xiaohongshu_creator_center_manual/inbox/010_色情低俗/性行为相关.jpg"
+        ],
+        "processed_catalog_path": "/Users/m/亿一的AI小助理/open-codex/platform-content-audit/data/source_archives/xiaohongshu_creator_center_manual/processed/processed_20260316_110434/catalog.json",
+        "image_name": "性行为相关.jpg"
+      }
+    },
+    {
+      "platform": "xiaohongshu",
+      "rule_id": "XHS-MAN-099",
+      "title": "色情低俗：拍摄角度与动作",
+      "content": "平台上的观看者可能来自不同地域、不同年龄层，有着不同 的文化背景与价值观，对性感、裸露、挑逗等内容的接受度 和敏感度不同，容易形成误解、冒犯与心理压力。 故小红书提倡“真诚分享，友好互动”的社区氛围，发布 时，请最大可能避免不必要的裸露画面、可能冒犯他人的言 语，以及含有暗示、挑逗或易引发不当联想的内容。 常见违规点，包括但不限于： ·角度：通过拍、仰拍、俯拍等方式，突出展示敏感部 位（胸部、下体、臀部、腿部、腹部、足部等) 动作：抚摸私密部位、抖胸挤胸、扭臀摆臀、模仿性动 作、易走光的张腿翘腿动作等 本条规则适用于小红书所有场景下的发布行为，包括但不限 于笔记、评论、用户资料等场景。以上示例内容并非穷举， 如果你认为还有其他风险形式或优化建议，可点击下方评价 按钮向我们反馈，感谢每一位小红薯的支持与喜爱。",
+      "source_url": null,
+      "severity": "high",
+      "tags": [
+        "xhs_manual_category_色情低俗",
+        "xhs_manual_rule_拍摄角度与动作"
+      ],
+      "keywords": [
+        "拍摄角度",
+        "动作"
+      ],
+      "regex_patterns": [],
+      "metadata": {
+        "source_type": "creator_center_manual_capture",
+        "manual_category": "色情低俗",
+        "manual_title": "拍摄角度与动作",
+        "inferred_candidate_tags": [],
+        "title_source": "filename",
+        "ocr_confidence_avg": 0.9828,
+        "flags": [],
+        "source_urls": [
+          "/Users/m/亿一的AI小助理/open-codex/platform-content-audit/data/source_archives/xiaohongshu_creator_center_manual/inbox/010_色情低俗/拍摄角度与动作.jpg"
+        ],
+        "processed_catalog_path": "/Users/m/亿一的AI小助理/open-codex/platform-content-audit/data/source_archives/xiaohongshu_creator_center_manual/processed/processed_20260316_110434/catalog.json",
+        "image_name": "拍摄角度与动作.jpg"
+      }
+    },
+    {
+      "platform": "xiaohongshu",
+      "rule_id": "XHS-MAN-100",
+      "title": "色情低俗：暴露隐私部位",
+      "content": "平台上的观看者可能来自不同地域、不同年龄层，有着不同 的文化背景与价值观，对性感、裸露、挑逗等内容的接受度 和敏感度不同，容易形成误解、冒犯与心理压力。 故小红书提倡“真诚分享，友好互动”的社区氛围，发布 时，请最大可能避免不必要的裸露画面、可能冒犯他人的言 语，以及含有暗示、挑逗或易引发不当联想的内容。 常见违规点，包括但不限于： 展示人体隐私部位裸露画面（隐私部位：生殖器官、臀部、 女性乳房) 淫亵性展示过于逼真的性器官模型、仿真类情趣用品或其他 形似性器官的物品 展示全裸或近似全裸（仅使用极少部分衣物遮挡关键部位） 的人物形象 穿着透明、薄纱等面料衣物，或湿透衣物，视觉上暴露隐私 部位 若在医疗护理、分娩哺乳、育儿日常、生理知识分享等场景 下出现隐私部位裸露画面，请对相关画面进行删减或适度遮 挡，维护出镜人隐私权益。",
+      "source_url": null,
+      "severity": "high",
+      "tags": [
+        "xhs_manual_category_色情低俗",
+        "xhs_manual_rule_暴露隐私部位"
+      ],
+      "keywords": [
+        "暴露隐私部位",
+        "隐私"
+      ],
+      "regex_patterns": [],
+      "metadata": {
+        "source_type": "creator_center_manual_capture",
+        "manual_category": "色情低俗",
+        "manual_title": "暴露隐私部位",
+        "inferred_candidate_tags": [
+          "rights_infringement"
+        ],
+        "title_source": "filename",
+        "ocr_confidence_avg": 0.989,
+        "flags": [],
+        "source_urls": [
+          "/Users/m/亿一的AI小助理/open-codex/platform-content-audit/data/source_archives/xiaohongshu_creator_center_manual/inbox/010_色情低俗/暴露隐私部位.jpg"
+        ],
+        "processed_catalog_path": "/Users/m/亿一的AI小助理/open-codex/platform-content-audit/data/source_archives/xiaohongshu_creator_center_manual/processed/processed_20260316_110434/catalog.json",
+        "image_name": "暴露隐私部位.jpg"
+      }
+    },
+    {
+      "platform": "xiaohongshu",
+      "rule_id": "XHS-MAN-101",
+      "title": "色情低俗：色情资源",
+      "content": "展示或传播描绘性行为或者露骨宣扬色情的海淫性的书 刊、文字、图片、视频、音频等信息 展示、寻求、提供色情资源或色情资源渠道的内容，如 影视作品、色情网址、ASMR色情资源等 分享或寻求“色情瓜”资源及相关渠道 通过展示、赠予、出租、售卖等形式分享能够激起、宣 泄性欲的物品或媒介，包括但不限于贴身衣物等",
+      "source_url": null,
+      "severity": "high",
+      "tags": [
+        "xhs_manual_category_色情低俗",
+        "xhs_manual_rule_色情资源"
+      ],
+      "keywords": [
+        "色情资源"
+      ],
+      "regex_patterns": [],
+      "metadata": {
+        "source_type": "creator_center_manual_capture",
+        "manual_category": "色情低俗",
+        "manual_title": "色情资源",
+        "inferred_candidate_tags": [],
+        "title_source": "filename",
+        "ocr_confidence_avg": 0.9887,
+        "flags": [],
+        "source_urls": [
+          "/Users/m/亿一的AI小助理/open-codex/platform-content-audit/data/source_archives/xiaohongshu_creator_center_manual/inbox/010_色情低俗/色情资源.jpg"
+        ],
+        "processed_catalog_path": "/Users/m/亿一的AI小助理/open-codex/platform-content-audit/data/source_archives/xiaohongshu_creator_center_manual/processed/processed_20260316_110434/catalog.json",
+        "image_name": "色情资源.jpg"
+      }
+    },
+    {
+      "platform": "xiaohongshu",
+      "rule_id": "XHS-MAN-102",
+      "title": "色情低俗：过度裸露",
+      "content": "胸、臀、背等部位或全身大面积裸露 穿着透视、裸色等易造成未着装错觉的服饰 穿着紧身衣物，隐私部位轮廓线条过于突出（如凸点、 骆驼趾等） 若在医疗护理、分娩哺乳、育儿日常、生理知识分享等场景 下出现大面积裸露画面，请对相关画面进行删减或适度遮 挡，维护出镜人隐私权益。",
+      "source_url": null,
+      "severity": "high",
+      "tags": [
+        "xhs_manual_category_色情低俗",
+        "xhs_manual_rule_过度裸露"
+      ],
+      "keywords": [
+        "过度裸露",
+        "裸露"
+      ],
+      "regex_patterns": [],
+      "metadata": {
+        "source_type": "creator_center_manual_capture",
+        "manual_category": "色情低俗",
+        "manual_title": "过度裸露",
+        "inferred_candidate_tags": [
+          "sexual_content"
+        ],
+        "title_source": "filename",
+        "ocr_confidence_avg": 0.9902,
+        "flags": [],
+        "source_urls": [
+          "/Users/m/亿一的AI小助理/open-codex/platform-content-audit/data/source_archives/xiaohongshu_creator_center_manual/inbox/010_色情低俗/过度裸露.jpg"
+        ],
+        "processed_catalog_path": "/Users/m/亿一的AI小助理/open-codex/platform-content-audit/data/source_archives/xiaohongshu_creator_center_manual/processed/processed_20260316_110434/catalog.json",
+        "image_name": "过度裸露.jpg"
+      }
+    },
+    {
+      "platform": "xiaohongshu",
+      "rule_id": "XHS-MAN-103",
+      "title": "色情低俗：陪侍服务",
+      "content": "）宣传娱乐场景可提供陪侍服务，展示相关陪侍画面，吸 引潜在用户咨询或到店消费 分享含有陪侍服务的娱乐场所消费体验，或寻求相关服 务及场所 招募娱乐场所陪侍人员，或以高薪、低门槛等内容宣传 娱乐场所工作，诱导他人参与",
+      "source_url": null,
+      "severity": "high",
+      "tags": [
+        "xhs_manual_category_色情低俗",
+        "xhs_manual_rule_陪侍服务"
+      ],
+      "keywords": [
+        "陪侍服务"
+      ],
+      "regex_patterns": [],
+      "metadata": {
+        "source_type": "creator_center_manual_capture",
+        "manual_category": "色情低俗",
+        "manual_title": "陪侍服务",
+        "inferred_candidate_tags": [
+          "sexual_content"
+        ],
+        "title_source": "filename",
+        "ocr_confidence_avg": 0.9889,
+        "flags": [],
+        "source_urls": [
+          "/Users/m/亿一的AI小助理/open-codex/platform-content-audit/data/source_archives/xiaohongshu_creator_center_manual/inbox/010_色情低俗/陪侍服务.jpg"
+        ],
+        "processed_catalog_path": "/Users/m/亿一的AI小助理/open-codex/platform-content-audit/data/source_archives/xiaohongshu_creator_center_manual/processed/processed_20260316_110434/catalog.json",
+        "image_name": "陪侍服务.jpg"
+      }
+    },
+    {
+      "platform": "xiaohongshu",
+      "rule_id": "XHS-MAN-104",
+      "title": "公序良俗：不良婚恋观",
+      "content": "宣扬或展示违背公序良俗的婚恋观、情感经历，如婚外情、 寻求包养或被包养等内容。",
+      "source_url": null,
+      "severity": "medium",
+      "tags": [
+        "xhs_manual_category_公序良俗",
+        "xhs_manual_rule_不良婚恋观"
+      ],
+      "keywords": [
+        "不良婚恋观"
+      ],
+      "regex_patterns": [],
+      "metadata": {
+        "source_type": "creator_center_manual_capture",
+        "manual_category": "公序良俗",
+        "manual_title": "不良婚恋观",
+        "inferred_candidate_tags": [
+          "public_ethics"
+        ],
+        "title_source": "filename",
+        "ocr_confidence_avg": 0.9941,
+        "flags": [],
+        "source_urls": [
+          "/Users/m/亿一的AI小助理/open-codex/platform-content-audit/data/source_archives/xiaohongshu_creator_center_manual/inbox/011_公序良俗/不良婚恋观.jpg"
+        ],
+        "processed_catalog_path": "/Users/m/亿一的AI小助理/open-codex/platform-content-audit/data/source_archives/xiaohongshu_creator_center_manual/processed/processed_20260316_110434/catalog.json",
+        "image_name": "不良婚恋观.jpg"
+      }
+    },
+    {
+      "platform": "xiaohongshu",
+      "rule_id": "XHS-MAN-105",
+      "title": "公序良俗：其他不良价值观",
+      "content": "为了保护平台秩序和氛围，也为了各位小红薯们可以获取更 加优质的内容，平台温馨提示以下内容不适合展示： ·涉及灾难事件娱乐化解读、调侃、攻击逝者，或以灾难 事件为头进行营销的内容 涉及展示暴力血腥画面，或分享残忍元素作品的内容 利用低级趣味博取他人关注，或通过“立人设”等方式 博取流量的内容 其他传递不良价值观，或易引起他人不当模仿的内容",
+      "source_url": null,
+      "severity": "medium",
+      "tags": [
+        "xhs_manual_category_公序良俗",
+        "xhs_manual_rule_其他不良价值观"
+      ],
+      "keywords": [
+        "其他不良价值观"
+      ],
+      "regex_patterns": [],
+      "metadata": {
+        "source_type": "creator_center_manual_capture",
+        "manual_category": "公序良俗",
+        "manual_title": "其他不良价值观",
+        "inferred_candidate_tags": [],
+        "title_source": "filename",
+        "ocr_confidence_avg": 0.9909,
+        "flags": [],
+        "source_urls": [
+          "/Users/m/亿一的AI小助理/open-codex/platform-content-audit/data/source_archives/xiaohongshu_creator_center_manual/inbox/011_公序良俗/其他不良价值观.jpg"
+        ],
+        "processed_catalog_path": "/Users/m/亿一的AI小助理/open-codex/platform-content-audit/data/source_archives/xiaohongshu_creator_center_manual/processed/processed_20260316_110434/catalog.json",
+        "image_name": "其他不良价值观.jpg"
+      }
+    },
+    {
+      "platform": "xiaohongshu",
+      "rule_id": "XHS-MAN-106",
+      "title": "公序良俗：历史虚无主义",
+      "content": "我国是一个拥有五千年文明历史的古老国度，有着深厚的文 化底蕴。保护和传承优秀历史与传统不仅是我们的文化责 任，也是我们的文化自信和民族自豪感的体现，因此伤害民 族感情的内容在平台是不被允许的。",
+      "source_url": null,
+      "severity": "medium",
+      "tags": [
+        "xhs_manual_category_公序良俗",
+        "xhs_manual_rule_历史虚无主义"
+      ],
+      "keywords": [
+        "历史虚无主义"
+      ],
+      "regex_patterns": [],
+      "metadata": {
+        "source_type": "creator_center_manual_capture",
+        "manual_category": "公序良俗",
+        "manual_title": "历史虚无主义",
+        "inferred_candidate_tags": [],
+        "title_source": "filename",
+        "ocr_confidence_avg": 0.971,
+        "flags": [],
+        "source_urls": [
+          "/Users/m/亿一的AI小助理/open-codex/platform-content-audit/data/source_archives/xiaohongshu_creator_center_manual/inbox/011_公序良俗/历史虚无主义.jpg"
+        ],
+        "processed_catalog_path": "/Users/m/亿一的AI小助理/open-codex/platform-content-audit/data/source_archives/xiaohongshu_creator_center_manual/processed/processed_20260316_110434/catalog.json",
+        "image_name": "历史虚无主义.jpg"
+      }
+    },
+    {
+      "platform": "xiaohongshu",
+      "rule_id": "XHS-MAN-107",
+      "title": "公序良俗：封建迷信",
+      "content": "）禁止宣传或参与利用封建迷信手段，扰乱社会秩序，危 害公共利益，损害身体健康或者骗取财物的行为，如看 相、卜卦、算命、装神弄鬼、降妖驱邪等 禁止以封建迷信功效为头（消灾挡灾、辟邪改运等） 推荐或售卖相关物品、提供相关服务等",
+      "source_url": null,
+      "severity": "medium",
+      "tags": [
+        "xhs_manual_category_公序良俗",
+        "xhs_manual_rule_封建迷信"
+      ],
+      "keywords": [
+        "封建迷信",
+        "迷信"
+      ],
+      "regex_patterns": [],
+      "metadata": {
+        "source_type": "creator_center_manual_capture",
+        "manual_category": "公序良俗",
+        "manual_title": "封建迷信",
+        "inferred_candidate_tags": [
+          "public_ethics"
+        ],
+        "title_source": "filename",
+        "ocr_confidence_avg": 0.9839,
+        "flags": [],
+        "source_urls": [
+          "/Users/m/亿一的AI小助理/open-codex/platform-content-audit/data/source_archives/xiaohongshu_creator_center_manual/inbox/011_公序良俗/封建迷信.jpg"
+        ],
+        "processed_catalog_path": "/Users/m/亿一的AI小助理/open-codex/platform-content-audit/data/source_archives/xiaohongshu_creator_center_manual/processed/processed_20260316_110434/catalog.json",
+        "image_name": "封建迷信.jpg"
+      }
+    },
+    {
+      "platform": "xiaohongshu",
+      "rule_id": "XHS-MAN-108",
+      "title": "公序良俗：拜金炫富",
+      "content": "发布宣扬刻意炫富、拜金主义、消费主义、攀比主义的内 容，如： ·使用夸张挑、无病呻吟、刻意卖惨等方式炫耀自己的 财产 刻意展示大量奢侈品、现金等 打造虚假人设，进行引流、推广，如“白手起家逆袭精 英”等",
+      "source_url": null,
+      "severity": "medium",
+      "tags": [
+        "xhs_manual_category_公序良俗",
+        "xhs_manual_rule_拜金炫富"
+      ],
+      "keywords": [
+        "拜金炫富",
+        "炫富"
+      ],
+      "regex_patterns": [],
+      "metadata": {
+        "source_type": "creator_center_manual_capture",
+        "manual_category": "公序良俗",
+        "manual_title": "拜金炫富",
+        "inferred_candidate_tags": [
+          "public_ethics"
+        ],
+        "title_source": "filename",
+        "ocr_confidence_avg": 0.9866,
+        "flags": [],
+        "source_urls": [
+          "/Users/m/亿一的AI小助理/open-codex/platform-content-audit/data/source_archives/xiaohongshu_creator_center_manual/inbox/011_公序良俗/拜金炫富.jpg"
+        ],
+        "processed_catalog_path": "/Users/m/亿一的AI小助理/open-codex/platform-content-audit/data/source_archives/xiaohongshu_creator_center_manual/processed/processed_20260316_110434/catalog.json",
+        "image_name": "拜金炫富.jpg"
+      }
+    },
+    {
+      "platform": "xiaohongshu",
+      "rule_id": "XHS-MAN-109",
+      "title": "公序良俗：损害民族与地域团结",
+      "content": "地域黑、民族黑是一种不良的心态，我们应该坚决抵制，努 力营造一个和谐、包容的社会环境。因此平台禁止发布涉及 民族仇恨、民族歧视，破坏民族团结、破坏地域团结的内 容。",
+      "source_url": null,
+      "severity": "medium",
+      "tags": [
+        "xhs_manual_category_公序良俗",
+        "xhs_manual_rule_损害民族与地域团结"
+      ],
+      "keywords": [
+        "损害民族",
+        "地域团结"
+      ],
+      "regex_patterns": [],
+      "metadata": {
+        "source_type": "creator_center_manual_capture",
+        "manual_category": "公序良俗",
+        "manual_title": "损害民族与地域团结",
+        "inferred_candidate_tags": [],
+        "title_source": "filename",
+        "ocr_confidence_avg": 0.9904,
+        "flags": [],
+        "source_urls": [
+          "/Users/m/亿一的AI小助理/open-codex/platform-content-audit/data/source_archives/xiaohongshu_creator_center_manual/inbox/011_公序良俗/损害民族与地域团结.jpg"
+        ],
+        "processed_catalog_path": "/Users/m/亿一的AI小助理/open-codex/platform-content-audit/data/source_archives/xiaohongshu_creator_center_manual/processed/processed_20260316_110434/catalog.json",
+        "image_name": "损害民族与地域团结.jpg"
+      }
+    },
+    {
+      "platform": "xiaohongshu",
+      "rule_id": "XHS-MAN-110",
+      "title": "公序良俗：种族歧视",
+      "content": "种族歧视是一种不公正的行为，不仅违背了道德和伦理标 准，也被法律明确禁止。因此，在平台上任何形式的种族歧 视都是不可接受的。请不要发布恶搞、排斥其他种族的内 容，更不要使用对其他种族的不礼貌言语。",
+      "source_url": null,
+      "severity": "medium",
+      "tags": [
+        "xhs_manual_category_公序良俗",
+        "xhs_manual_rule_种族歧视"
+      ],
+      "keywords": [
+        "种族歧视",
+        "歧视"
+      ],
+      "regex_patterns": [],
+      "metadata": {
+        "source_type": "creator_center_manual_capture",
+        "manual_category": "公序良俗",
+        "manual_title": "种族歧视",
+        "inferred_candidate_tags": [
+          "public_ethics"
+        ],
+        "title_source": "filename",
+        "ocr_confidence_avg": 0.9921,
+        "flags": [],
+        "source_urls": [
+          "/Users/m/亿一的AI小助理/open-codex/platform-content-audit/data/source_archives/xiaohongshu_creator_center_manual/inbox/011_公序良俗/种族歧视.jpg"
+        ],
+        "processed_catalog_path": "/Users/m/亿一的AI小助理/open-codex/platform-content-audit/data/source_archives/xiaohongshu_creator_center_manual/processed/processed_20260316_110434/catalog.json",
+        "image_name": "种族歧视.jpg"
+      }
+    },
+    {
+      "platform": "xiaohongshu",
+      "rule_id": "XHS-MAN-111",
+      "title": "公序良俗：追星与饭圈",
+      "content": "平台深知，无论是对真人明星还是虚拟角色的喜爱，都源于 对美好事物的真诚向往，也是当代文化中富有活力的情感联 结。平台珍视每一份基于热爱的理性表达，并始终鼓励友 善、积极、健康的互动内容。 与此同时，我们亦倡导：热爱不越界，表达有温度。当个体 的热情发展为群体间的对立，当理性的喜爱演变为失序的争 执，不仅偏离了热爱的初衷，也降低了他人在社区内的体 验。 因此，我们期待与大家共同守护讨论的善意与秩序的边界， 让每一份热爱都值得被尊重，也在彼此尊重中，让热爱走得 更远。 1.粉丝间的对立冲突 平台不提倡可能对他人造成伤害或产生不良影响的内容，如 果你认为对方的发言伤害到了你或你喜欢的人的情感，可以 对其进行举报，切勿冲动行事，将自己也卷入不理智的漩 涡。相关内容可能包括： ·对他人进行攻击、讽刺、拉踩 ·号召、引导他人进行攻击、讽刺或拉踩的内容 ·传播上述内容的截图、视频等内容 2.追星时的不当行为 平台不提倡不理性的追星行为，社区…",
+      "source_url": null,
+      "severity": "medium",
+      "tags": [
+        "xhs_manual_category_公序良俗",
+        "xhs_manual_rule_追星与饭圈"
+      ],
+      "keywords": [
+        "追星",
+        "饭圈"
+      ],
+      "regex_patterns": [],
+      "metadata": {
+        "source_type": "creator_center_manual_capture",
+        "manual_category": "公序良俗",
+        "manual_title": "追星与饭圈",
+        "inferred_candidate_tags": [
+          "public_ethics"
+        ],
+        "title_source": "filename",
+        "ocr_confidence_avg": 0.9948,
+        "flags": [],
+        "source_urls": [
+          "/Users/m/亿一的AI小助理/open-codex/platform-content-audit/data/source_archives/xiaohongshu_creator_center_manual/inbox/011_公序良俗/追星与饭圈.jpg"
+        ],
+        "processed_catalog_path": "/Users/m/亿一的AI小助理/open-codex/platform-content-audit/data/source_archives/xiaohongshu_creator_center_manual/processed/processed_20260316_110434/catalog.json",
+        "image_name": "追星与饭圈.jpg"
+      }
+    }
+  ]
+}

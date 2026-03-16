@@ -1,0 +1,21 @@
+.DS_Store
+.env
+.env.local
+.env.*.local
+.venv/
+.venv-ocr/
+__pycache__/
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+dist/
+build/
+*.egg-info/
+
+# Local runtime/output artifacts
+tmp/
+output/
+
+# Large local archives used during rule capture; not required to run the app
+data/source_archives/

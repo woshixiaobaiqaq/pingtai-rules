@@ -1,0 +1,21 @@
+services:
+  postgres:
+    image: pgvector/pgvector:pg16
+    container_name: platform-content-audit-postgres
+    environment:
+      POSTGRES_DB: platform_content_audit
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - "5432:5432"
+    volumes:
+      - platform-content-audit-pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres -d platform_content_audit"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+volumes:
+  platform-content-audit-pgdata:
+

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Platform Content Audit</title>
+    <link rel="stylesheet" href="/static/app.css?v=20260316-6" />
+  </head>
+  <body>
+    <main class="page-shell">
+      <section class="stage">
+        <header class="hero">
+          <h1>全平台规则库</h1>
+        </header>
+
+        <section class="composer">
+          <label class="sr-only" for="content-input">文章内容</label>
+          <textarea
+            id="content-input"
+            class="content-input"
+            placeholder="输入内容后，查看抖音、小红书、视频号的命中规则"
+          ></textarea>
+
+          <div class="composer-actions">
+            <div class="platforms">
+              <label class="platform-chip">
+                <input type="checkbox" value="douyin" checked />
+                <span class="platform-chip__label">
+                  <span class="platform-chip__name">抖音</span>
+                  <span class="platform-chip__count" data-platform-count="douyin">...</span>
+                </span>
+              </label>
+              <label class="platform-chip">
+                <input type="checkbox" value="xiaohongshu" checked />
+                <span class="platform-chip__label">
+                  <span class="platform-chip__name">小红书</span>
+                  <span class="platform-chip__count" data-platform-count="xiaohongshu">...</span>
+                </span>
+              </label>
+              <label class="platform-chip">
+                <input type="checkbox" value="video_channel" checked />
+                <span class="platform-chip__label">
+                  <span class="platform-chip__name">视频号</span>
+                  <span class="platform-chip__count" data-platform-count="video_channel">...</span>
+                </span>
+              </label>
+            </div>
+
+            <button id="submit-button" type="button" class="primary-button">开始检测</button>
+          </div>
+
+          <div class="library-status">
+            <strong id="rule-library-total">加载中...</strong>
+            <span id="platform-library-summary">抖音 / 小红书 / 视频号</span>
+          </div>
+
+          <p id="form-error" class="form-error" hidden></p>
+        </section>
+      </section>
+
+      <section class="results" id="results" hidden>
+        <div class="results__header">
+          <h2>平台命中结果</h2>
+        </div>
+        <div class="results-stack" id="results-stack"></div>
+      </section>
+    </main>
+
+    <template id="platform-result-template">
+      <article class="platform-card">
+        <div class="platform-card__header">
+          <div>
+            <p class="platform-card__name"></p>
+            <h3 class="platform-card__title"></h3>
+          </div>
+          <span class="platform-card__count"></span>
+        </div>
+
+        <div class="rule-list"></div>
+      </article>
+    </template>
+
+    <script src="/static/app.js?v=20260316-6" defer></script>
+  </body>
+</html>

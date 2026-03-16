@@ -1,0 +1,444 @@
+{
+  "rules": [
+    {
+      "platform": "douyin",
+      "rule_id": "DY-CAT-001",
+      "title": "色情低俗",
+      "content": "禁止传播色情、淫秽和低俗擦边内容，严肃科普场景以平台规则为准。",
+      "source_url": "https://aweme.snssdk.com/falcon/fe_douyin_security_react/rule/platform_norm/?enter_from=share_qrcode&hide_nav_bar=1&iid=MS4wLjABAAAAMBKji6p88_6A9AkMHMCHOLnturxSxzM4KRNKmyV9ngHjn5qvCnauXD2ozOKKrq6A&page_type=rule_explain&schema_type=11&timestamp=1773213833&u_code=42limiab882a&did=MS4wLjABAAAASx3x5XHIbJ__xzBuyA6UO1qvpfa1wwaXFsiQWeJVkq2tIOXzjk7Lv0YIA9nPb6il&ug_share_id=6f968de2110ea_1773213834354",
+      "severity": "high",
+      "tags": ["sexual_content"],
+      "keywords": ["色情", "招嫖", "性服务", "走光", "抖胸", "两性技巧"],
+      "regex_patterns": ["乳头|乳晕|生殖器", "性暗示", "敏感部位"],
+      "metadata": {
+        "source_type": "platform_rule_explain",
+        "source_category": "色情低俗",
+        "commerce_id": "aJ9HAuU78pDB",
+        "overview": "禁止发布会引发色情联想、裸露敏感部位或招嫖引流的内容。",
+        "sections": [
+          {
+            "title": "淫秽色情",
+            "examples": ["展示性行为或详细描述性行为", "索取或传播色情资源", "发布招嫖和性服务引流信息"]
+          },
+          {
+            "title": "低俗行为",
+            "examples": ["性诱惑和性暗示动作", "走光、抖胸、敏感部位特写", "低俗话术导流交友软件"]
+          },
+          {
+            "title": "着装暴露与两性相关",
+            "examples": ["大面积暴露胸臀下体", "介绍两性技巧时带有低俗暗示", "利用私密场景制造低俗联想"]
+          }
+        ]
+      }
+    },
+    {
+      "platform": "douyin",
+      "rule_id": "DY-CAT-002",
+      "title": "违法违规",
+      "content": "禁止传播扰乱市场秩序、妨碍社会管理秩序、侵害他人权益和危害公共安全的违法内容。",
+      "source_url": "https://aweme.snssdk.com/falcon/fe_douyin_security_react/rule/platform_norm/?enter_from=share_qrcode&hide_nav_bar=1&iid=MS4wLjABAAAAMBKji6p88_6A9AkMHMCHOLnturxSxzM4KRNKmyV9ngHjn5qvCnauXD2ozOKKrq6A&page_type=rule_explain&schema_type=11&timestamp=1773213833&u_code=42limiab882a&did=MS4wLjABAAAASx3x5XHIbJ__xzBuyA6UO1qvpfa1wwaXFsiQWeJVkq2tIOXzjk7Lv0YIA9nPb6il&ug_share_id=6f968de2110ea_1773213834354",
+      "severity": "high",
+      "tags": ["illegal_activity"],
+      "keywords": ["高收入兼职", "征信修复", "赌博", "假证", "管制刀具", "枪支"],
+      "regex_patterns": ["兼职.*日结", "征信修复|洗白征信", "赌博|博彩|彩票群"],
+      "metadata": {
+        "source_type": "platform_rule_explain",
+        "source_category": "违法违规",
+        "commerce_id": "aJ9HZBDW5Dkb",
+        "overview": "禁止发布兼职骗局、赌博博彩、假证制作、危险物品售卖等违法违规信息。",
+        "sections": [
+          {
+            "title": "扰乱市场秩序",
+            "examples": ["高收入兼职招募", "宠物盲盒和无资质婚介", "烟酒回收、小产权房和学科培训广告"]
+          },
+          {
+            "title": "妨碍社会管理秩序",
+            "examples": ["假证件与非法贷款", "无资质荐股、博彩、非法彩票", "恶意程序、窃听设备和非法 VPN"]
+          },
+          {
+            "title": "危害公共安全",
+            "examples": ["展示销售管制刀具和枪支弹药", "煽动实施暴力", "教授解除车辆限速或非法改装"]
+          }
+        ]
+      }
+    },
+    {
+      "platform": "douyin",
+      "rule_id": "DY-CAT-003",
+      "title": "引人不适",
+      "content": "限制血腥暴力、惊悚恐怖和强烈感官刺激内容，严肃科普和灾难历史场景以平台规则为准。",
+      "source_url": "https://aweme.snssdk.com/falcon/fe_douyin_security_react/rule/platform_norm/?enter_from=share_qrcode&hide_nav_bar=1&iid=MS4wLjABAAAAMBKji6p88_6A9AkMHMCHOLnturxSxzM4KRNKmyV9ngHjn5qvCnauXD2ozOKKrq6A&page_type=rule_explain&schema_type=11&timestamp=1773213833&u_code=42limiab882a&did=MS4wLjABAAAASx3x5XHIbJ__xzBuyA6UO1qvpfa1wwaXFsiQWeJVkq2tIOXzjk7Lv0YIA9nPb6il&ug_share_id=6f968de2110ea_1773213834354",
+      "severity": "medium",
+      "tags": ["disturbing_content"],
+      "keywords": ["血腥", "遗体", "自杀", "排泄物", "鬼脸", "蜈蚣"],
+      "regex_patterns": ["断肢|器官|巨人观", "自残|轻生|不想活了", "密集.*蜘蛛|密集.*蜈蚣"],
+      "metadata": {
+        "source_type": "platform_rule_explain",
+        "source_category": "引人不适",
+        "commerce_id": "aJ9SAzPycZAr",
+        "overview": "限制大面积血液、死亡元素、身体损伤和恐怖惊悚画面。",
+        "sections": [
+          {
+            "title": "血腥与死亡元素",
+            "examples": ["大面积血液、器官和断肢", "非必要展示遗体", "自杀倾向和事故致死过程"]
+          },
+          {
+            "title": "恐怖与感官不适",
+            "examples": ["鬼脸、诅咒和惊吓镜头", "排泄物和分泌物展示", "密集昆虫、蛇蛆蜈蚣蜘蛛等画面"]
+          }
+        ]
+      }
+    },
+    {
+      "platform": "douyin",
+      "rule_id": "DY-CAT-004",
+      "title": "营销行为",
+      "content": "反对垃圾营销、夸大误导、虚假宣传和损伤消费体验的内容，推广应优先使用平台合作渠道。",
+      "source_url": "https://aweme.snssdk.com/falcon/fe_douyin_security_react/rule/platform_norm/?enter_from=share_qrcode&hide_nav_bar=1&iid=MS4wLjABAAAAMBKji6p88_6A9AkMHMCHOLnturxSxzM4KRNKmyV9ngHjn5qvCnauXD2ozOKKrq6A&page_type=rule_explain&schema_type=11&timestamp=1773213833&u_code=42limiab882a&did=MS4wLjABAAAASx3x5XHIbJ__xzBuyA6UO1qvpfa1wwaXFsiQWeJVkq2tIOXzjk7Lv0YIA9nPb6il&ug_share_id=6f968de2110ea_1773213834354",
+      "severity": "medium",
+      "tags": ["marketing_violation", "traffic_inducement"],
+      "keywords": ["合作推广", "全网最低", "0元抢", "地板价", "第三方交易", "热点营销"],
+      "regex_patterns": ["全网第?一|全网最低", "0元抢|免费领", "原价\\d+现价\\d+"],
+      "metadata": {
+        "source_type": "platform_rule_explain",
+        "source_category": "营销行为",
+        "commerce_id": "aJ9SAzPyce3L",
+        "overview": "禁止未走平台合作推广渠道的营销，以及夸张功效、价格和身份背书的误导宣传。",
+        "sections": [
+          {
+            "title": "推广渠道与商品宣传",
+            "examples": ["未使用平台合作推广渠道发布营销内容", "夸张宣传商品功效、价格和核心要素", "宣传信息与购买页面不一致"]
+          },
+          {
+            "title": "误导营销",
+            "examples": ["利用医护、专家或热点背景误导用户", "含有易误导用户的营销话术", "损伤用户消费体验的不正当竞争"]
+          }
+        ]
+      }
+    },
+    {
+      "platform": "douyin",
+      "rule_id": "DY-CAT-005",
+      "title": "未成年人",
+      "content": "禁止危害未成年人身心健康、安全和价值观的内容，包括低俗、违法、危险行为和不当引导。",
+      "source_url": "https://aweme.snssdk.com/falcon/fe_douyin_security_react/rule/platform_norm/?enter_from=share_qrcode&hide_nav_bar=1&iid=MS4wLjABAAAAMBKji6p88_6A9AkMHMCHOLnturxSxzM4KRNKmyV9ngHjn5qvCnauXD2ozOKKrq6A&page_type=rule_explain&schema_type=11&timestamp=1773213833&u_code=42limiab882a&did=MS4wLjABAAAASx3x5XHIbJ__xzBuyA6UO1qvpfa1wwaXFsiQWeJVkq2tIOXzjk7Lv0YIA9nPb6il&ug_share_id=6f968de2110ea_1773213834354",
+      "severity": "high",
+      "tags": ["minor_protection", "sexual_content", "unsafe_behavior"],
+      "keywords": ["未成年人", "校园霸凌", "童工", "抽烟", "喝酒", "辍学"],
+      "regex_patterns": ["未成年.*(抽烟|喝酒|性行为)", "校园霸凌|欺凌同学", "童工|童模"],
+      "metadata": {
+        "source_type": "platform_rule_explain",
+        "source_category": "未成年人",
+        "commerce_id": "aJ9TY6wQNpFA",
+        "overview": "重点限制未成年人低俗、危险、违法和价值观失范内容。",
+        "sections": [
+          {
+            "title": "未成年人低俗与危险行为",
+            "examples": ["未成年人性暗示或衣着暴露", "吞灯泡、点燃酒精等危险行为", "未成年人直播或成人化表演"]
+          },
+          {
+            "title": "违法与价值观问题",
+            "examples": ["校园霸凌、虐待儿童、童工", "教唆未成年人违法", "辍学无用论、炫富攀比、离家出走"]
+          }
+        ]
+      }
+    },
+    {
+      "platform": "douyin",
+      "rule_id": "DY-CAT-006",
+      "title": "公序良俗",
+      "content": "除明确违法内容外，也禁止明显违反公序良俗、伤害人格尊严和传递不良价值导向的作品。",
+      "source_url": "https://aweme.snssdk.com/falcon/fe_douyin_security_react/rule/platform_norm/?enter_from=share_qrcode&hide_nav_bar=1&iid=MS4wLjABAAAAMBKji6p88_6A9AkMHMCHOLnturxSxzM4KRNKmyV9ngHjn5qvCnauXD2ozOKKrq6A&page_type=rule_explain&schema_type=11&timestamp=1773213833&u_code=42limiab882a&did=MS4wLjABAAAASx3x5XHIbJ__xzBuyA6UO1qvpfa1wwaXFsiQWeJVkq2tIOXzjk7Lv0YIA9nPb6il&ug_share_id=6f968de2110ea_1773213834354",
+      "severity": "medium",
+      "tags": ["public_ethics"],
+      "keywords": ["炫富", "卖惨", "婚闹", "地域歧视", "辱骂", "一夜情"],
+      "regex_patterns": ["种族歧视|地域歧视|性别歧视", "恶俗婚闹|拜金", "乱伦|一夜情|情感操控"],
+      "metadata": {
+        "source_type": "platform_rule_explain",
+        "source_category": "公序良俗",
+        "commerce_id": "aJ9SAzPyciup",
+        "overview": "限制猎奇吃播、炫富拜金、道德绑架、歧视辱骂和不当婚恋观等内容。",
+        "sections": [
+          {
+            "title": "不良生活示范与博关注",
+            "examples": ["猎奇吃播和炫富拜金", "卖惨和道德绑架", "热点恶搞与恶俗婚闹"]
+          },
+          {
+            "title": "人格尊严与价值导向",
+            "examples": ["种族、宗教、地域、性别歧视", "严重脏话辱骂", "美化犯罪、情感操控和非主流婚恋观"]
+          }
+        ]
+      }
+    },
+    {
+      "platform": "douyin",
+      "rule_id": "DY-CAT-007",
+      "title": "危险行为",
+      "content": "禁止展示容易导致人身伤害的危险行为、危险驾驶和缺乏安全提示的高风险专业行为。",
+      "source_url": "https://aweme.snssdk.com/falcon/fe_douyin_security_react/rule/platform_norm/?enter_from=share_qrcode&hide_nav_bar=1&iid=MS4wLjABAAAAMBKji6p88_6A9AkMHMCHOLnturxSxzM4KRNKmyV9ngHjn5qvCnauXD2ozOKKrq6A&page_type=rule_explain&schema_type=11&timestamp=1773213833&u_code=42limiab882a&did=MS4wLjABAAAASx3x5XHIbJ__xzBuyA6UO1qvpfa1wwaXFsiQWeJVkq2tIOXzjk7Lv0YIA9nPb6il&ug_share_id=6f968de2110ea_1773213834354",
+      "severity": "high",
+      "tags": ["unsafe_behavior"],
+      "keywords": ["飙车", "闯红灯", "烧胎", "跳楼", "割腕", "玩火"],
+      "regex_patterns": ["双手离把|超速|闯红灯", "割腕|服毒|自残", "高空.*摆拍|冰面.*游泳"],
+      "metadata": {
+        "source_type": "platform_rule_explain",
+        "source_category": "危险行为",
+        "commerce_id": "aJ9TY6wQNyz8",
+        "overview": "重点限制高空、涉火、涉电、危险驾驶、自残自杀和无安全提示的专业高危行为。",
+        "sections": [
+          {
+            "title": "易导致人身伤害",
+            "examples": ["高处摆拍、冰面游泳、湿手摸插座", "超速、闯红灯、车道摆拍和玩手机驾驶", "玩火、自残、自杀任务诱导"]
+          },
+          {
+            "title": "高危专业行为",
+            "examples": ["翼装飞行和高空走钢丝", "专业赛车和猛兽饲养", "缺少危险提示的杂技表演"]
+          }
+        ]
+      }
+    },
+    {
+      "platform": "douyin",
+      "rule_id": "DY-CAT-008",
+      "title": "诱导互动",
+      "content": "禁止通过欺骗、强迫、道德绑架、承诺收益或误导操作等方式诱导点赞、评论、关注和完整观看。",
+      "source_url": "https://aweme.snssdk.com/falcon/fe_douyin_security_react/rule/platform_norm/?enter_from=share_qrcode&hide_nav_bar=1&iid=MS4wLjABAAAAMBKji6p88_6A9AkMHMCHOLnturxSxzM4KRNKmyV9ngHjn5qvCnauXD2ozOKKrq6A&page_type=rule_explain&schema_type=11&timestamp=1773213833&u_code=42limiab882a&did=MS4wLjABAAAASx3x5XHIbJ__xzBuyA6UO1qvpfa1wwaXFsiQWeJVkq2tIOXzjk7Lv0YIA9nPb6il&ug_share_id=6f968de2110ea_1773213834354",
+      "severity": "medium",
+      "tags": ["interaction_manipulation"],
+      "keywords": ["扣1", "评论666", "互粉互赞", "点赞关注", "许愿", "不转"],
+      "regex_patterns": ["评论区.*扣1", "不转.*(倒霉|不是中国人)", "互粉|互赞|有求必应"],
+      "metadata": {
+        "source_type": "platform_rule_explain",
+        "source_category": "诱导互动",
+        "commerce_id": "aJ9TGBjxFXK7",
+        "overview": "互动应出于真实意愿，禁止伪装系统界面、诅咒威胁、许诺利益和循环骗完播。",
+        "sections": [
+          {
+            "title": "误导和骗取互动",
+            "examples": ["仿制系统弹窗或青少年模式骗点击", "虚构点赞关注后才可使用的功能", "首尾循环骗取完整观看"]
+          },
+          {
+            "title": "威胁与利益诱导",
+            "examples": ["不转发会倒霉", "不转不是中国人", "评论 666、扣 1、互粉互赞", "许愿有求必应"]
+          }
+        ]
+      }
+    },
+    {
+      "platform": "douyin",
+      "rule_id": "DY-CAT-009",
+      "title": "原创内容",
+      "content": "鼓励原创，禁止直接搬运、简单加工他人素材以及多账号重复发布同一作品。",
+      "source_url": "https://aweme.snssdk.com/falcon/fe_douyin_security_react/rule/platform_norm/?enter_from=share_qrcode&hide_nav_bar=1&iid=MS4wLjABAAAAMBKji6p88_6A9AkMHMCHOLnturxSxzM4KRNKmyV9ngHjn5qvCnauXD2ozOKKrq6A&page_type=rule_explain&schema_type=11&timestamp=1773213833&u_code=42limiab882a&did=MS4wLjABAAAASx3x5XHIbJ__xzBuyA6UO1qvpfa1wwaXFsiQWeJVkq2tIOXzjk7Lv0YIA9nPb6il&ug_share_id=6f968de2110ea_1773213834354",
+      "severity": "medium",
+      "tags": ["originality_violation"],
+      "keywords": ["搬运", "抄袭", "转载", "洗稿", "站外素材", "去水印"],
+      "regex_patterns": ["未经授权.*(搬运|转载)", "多账号.*重复发布", "去水印|二次剪辑"],
+      "metadata": {
+        "source_type": "platform_rule_explain",
+        "source_category": "原创内容",
+        "commerce_id": "aJ9TY6wQP4rc",
+        "overview": "禁止站内外搬运、简单拼接和多账号发布同一原创素材。",
+        "sections": [
+          {
+            "title": "站内外搬运",
+            "examples": ["直接使用站内他人原创素材", "将站外非本人素材直接发布", "简单加工后再次发布"]
+          },
+          {
+            "title": "多账号重复发布",
+            "examples": ["同一作者在多个抖音账号分发同一内容", "使用去水印后二次上传", "借用他人作品模板伪装原创"]
+          }
+        ]
+      }
+    },
+    {
+      "platform": "douyin",
+      "rule_id": "DY-CAT-010",
+      "title": "侵犯权益",
+      "content": "平台会处理侵犯知识产权、人身权益、企业权益和未成年人权益的内容。",
+      "source_url": "https://aweme.snssdk.com/falcon/fe_douyin_security_react/rule/platform_norm/?enter_from=share_qrcode&hide_nav_bar=1&iid=MS4wLjABAAAAMBKji6p88_6A9AkMHMCHOLnturxSxzM4KRNKmyV9ngHjn5qvCnauXD2ozOKKrq6A&page_type=rule_explain&schema_type=11&timestamp=1773213833&u_code=42limiab882a&did=MS4wLjABAAAASx3x5XHIbJ__xzBuyA6UO1qvpfa1wwaXFsiQWeJVkq2tIOXzjk7Lv0YIA9nPb6il&ug_share_id=6f968de2110ea_1773213834354",
+      "severity": "high",
+      "tags": ["rights_infringement", "copyright_violation"],
+      "keywords": ["身份证", "家庭住址", "聊天记录", "AI换脸", "冒充企业", "网暴"],
+      "regex_patterns": ["身份证号|手机号|家庭住址", "AI合成|换脸|肖像", "冒充.*(企业|员工|公章)"],
+      "metadata": {
+        "source_type": "platform_rule_explain",
+        "source_category": "侵犯权益",
+        "commerce_id": "aJ9SAzPyd9GE",
+        "overview": "限制侮辱诽谤、泄露隐私、盗用肖像、商业诋毁和侵害未成年人权益的内容。",
+        "sections": [
+          {
+            "title": "人身与企业权益",
+            "examples": ["侮辱、诽谤、谣言和失实新闻", "暴露住址、电话、身份证和聊天记录", "冒充企业、员工和伪造公章"]
+          },
+          {
+            "title": "知识产权与未成年人权益",
+            "examples": ["未授权使用肖像或 AI 合成肖像", "恶意评论和网暴未成年人", "泄露未成年人信息和隐私"]
+          }
+        ]
+      }
+    },
+    {
+      "platform": "douyin",
+      "rule_id": "DY-CAT-011",
+      "title": "抖音医疗健康内容",
+      "content": "医疗健康属于专业领域，涉及诊疗建议、医疗理论和疗效判断的内容应符合平台资质和科学表达要求。",
+      "source_url": "https://aweme.snssdk.com/falcon/fe_douyin_security_react/rule/platform_norm/?enter_from=share_qrcode&hide_nav_bar=1&iid=MS4wLjABAAAAMBKji6p88_6A9AkMHMCHOLnturxSxzM4KRNKmyV9ngHjn5qvCnauXD2ozOKKrq6A&page_type=rule_explain&schema_type=11&timestamp=1773213833&u_code=42limiab882a&did=MS4wLjABAAAASx3x5XHIbJ__xzBuyA6UO1qvpfa1wwaXFsiQWeJVkq2tIOXzjk7Lv0YIA9nPb6il&ug_share_id=6f968de2110ea_1773213834354",
+      "severity": "high",
+      "tags": ["medical_content"],
+      "keywords": ["诊疗建议", "推荐药物", "针灸", "刮痧", "胃炎", "痛风", "高血压"],
+      "regex_patterns": ["永不复发|一定有效", "推荐.*(药物|手术)", "养生|食疗.*治"],
+      "metadata": {
+        "source_type": "platform_rule_explain",
+        "source_category": "抖音医疗健康内容",
+        "commerce_id": "aJ8ts4fXqwj5",
+        "overview": "未获得相应资质前，不应发布诊疗建议、存在争议的养生结论和绝对化疗效表达。",
+        "sections": [
+          {
+            "title": "诊疗与理论内容",
+            "examples": ["推荐药物、手术或康复方案", "针灸、正骨、刮痧等专业诊疗建议", "未经认证讲解病因和分类"]
+          },
+          {
+            "title": "疗效与养生表述",
+            "examples": ["永不复发、一定有效果", "食疗和养生包治包好", "医疗基础理论表述不准确"]
+          }
+        ]
+      }
+    },
+    {
+      "platform": "douyin",
+      "rule_id": "DY-CAT-012",
+      "title": "同质化（集体发布）",
+      "content": "平台治理网络水军式同质化发布，限制雷同脚本、模板化文案和批量分发的非原创内容。",
+      "source_url": "https://aweme.snssdk.com/falcon/fe_douyin_security_react/rule/platform_norm/?enter_from=share_qrcode&hide_nav_bar=1&iid=MS4wLjABAAAAMBKji6p88_6A9AkMHMCHOLnturxSxzM4KRNKmyV9ngHjn5qvCnauXD2ozOKKrq6A&page_type=rule_explain&schema_type=11&timestamp=1773213833&u_code=42limiab882a&did=MS4wLjABAAAASx3x5XHIbJ__xzBuyA6UO1qvpfa1wwaXFsiQWeJVkq2tIOXzjk7Lv0YIA9nPb6il&ug_share_id=6f968de2110ea_1773213834354",
+      "severity": "medium",
+      "tags": ["duplicate_content", "originality_violation", "interaction_manipulation"],
+      "keywords": ["在线等", "属鸡的人有福了", "雷同文案", "模板文案", "集体发布"],
+      "regex_patterns": ["怎么办.*在线等", "属(鸡|狗|猴|马)的人有福了", "同款文案|批量发布"],
+      "metadata": {
+        "source_type": "platform_rule_explain",
+        "source_category": "同质化（集体发布）",
+        "commerce_id": "aJBccNzBPuRG",
+        "overview": "平台反对集体发布诱导互动和模板化商品推广内容。",
+        "sections": [
+          {
+            "title": "雷同互动与文案",
+            "examples": ["怎么办 在线等类求助文案", "属鸡的人有福了等模板话术", "星座、姓氏和怪象类雷同文案"]
+          },
+          {
+            "title": "批量拼接素材",
+            "examples": ["简单拼接影视或小游戏素材", "批量转发手工和网络小说音频", "AI 批量生成相似推广内容"]
+          }
+        ]
+      }
+    },
+    {
+      "platform": "douyin",
+      "rule_id": "DY-CAT-013",
+      "title": "中长视频营销-植入体验要求",
+      "content": "为保证中长视频观看体验，营销植入不应打断剧情、制作生硬或占比过高。",
+      "source_url": "https://aweme.snssdk.com/falcon/fe_douyin_security_react/rule/platform_norm/?enter_from=share_qrcode&hide_nav_bar=1&iid=MS4wLjABAAAAMBKji6p88_6A9AkMHMCHOLnturxSxzM4KRNKmyV9ngHjn5qvCnauXD2ozOKKrq6A&page_type=rule_explain&schema_type=11&timestamp=1773213833&u_code=42limiab882a&did=MS4wLjABAAAASx3x5XHIbJ__xzBuyA6UO1qvpfa1wwaXFsiQWeJVkq2tIOXzjk7Lv0YIA9nPb6il&ug_share_id=6f968de2110ea_1773213834354",
+      "severity": "low",
+      "tags": ["mid_long_video_marketing", "marketing_violation"],
+      "keywords": ["营销素材", "打断剧情", "生硬口播", "超过40秒", "植入次数"],
+      "regex_patterns": ["连续超过10秒", "超过20秒|超过40秒", "植入次数.*大于3次"],
+      "metadata": {
+        "source_type": "platform_rule_explain",
+        "source_category": "中长视频营销-植入体验要求",
+        "commerce_id": "aJEg7gAYxaij",
+        "overview": "营销植入需兼顾情节连贯性和观看体验，避免连续过长口播和过密插入。",
+        "sections": [
+          {
+            "title": "破坏连贯性",
+            "examples": ["营销素材直接打断剧情", "缺少前置铺垫", "场景差异过大或遮挡主体"]
+          },
+          {
+            "title": "浓度过高",
+            "examples": ["连续超过 10 秒生硬口播", "单段植入连续超过 20 秒", "整体营销素材超过 40 秒或植入次数超过 3 次"]
+          }
+        ]
+      }
+    },
+    {
+      "platform": "douyin",
+      "rule_id": "DY-CAT-014",
+      "title": "版权内容",
+      "content": "平台保护版权，限制搬运、拍屏、盗录、拆条以及未授权使用影视、音乐、图片、字体和文案的行为。",
+      "source_url": "https://aweme.snssdk.com/falcon/fe_douyin_security_react/rule/platform_norm/?enter_from=share_qrcode&hide_nav_bar=1&iid=MS4wLjABAAAAMBKji6p88_6A9AkMHMCHOLnturxSxzM4KRNKmyV9ngHjn5qvCnauXD2ozOKKrq6A&page_type=rule_explain&schema_type=11&timestamp=1773213833&u_code=42limiab882a&did=MS4wLjABAAAASx3x5XHIbJ__xzBuyA6UO1qvpfa1wwaXFsiQWeJVkq2tIOXzjk7Lv0YIA9nPb6il&ug_share_id=6f968de2110ea_1773213834354",
+      "severity": "high",
+      "tags": ["copyright_violation", "originality_violation"],
+      "keywords": ["版权", "盗录", "拍屏", "拆条", "未授权", "合作片单"],
+      "regex_patterns": ["拍屏|盗摄|盗录", "未经授权.*(音乐|影视|字体|图片)", "拆条|搬运"],
+      "metadata": {
+        "source_type": "platform_rule_explain",
+        "source_category": "版权内容",
+        "commerce_id": "aJHc9JjqAhGV",
+        "overview": "常见侵权包括影视音乐搬运、字体图片文案侵权，以及超出授权范围的二创发布。",
+        "sections": [
+          {
+            "title": "常见侵权行为",
+            "examples": ["搬运、拍屏、盗录和拆条", "未授权背景音乐", "未授权使用字体、图片和文案"]
+          },
+          {
+            "title": "申诉与授权",
+            "examples": ["版权侵权提醒后的处理路径", "申诉所需版权材料", "合作片单和二创授权边界"]
+          }
+        ]
+      }
+    },
+    {
+      "platform": "douyin",
+      "rule_id": "DY-CAT-015",
+      "title": "短剧宣传推广内容规范",
+      "content": "短剧宣传推广应避免盗版、虚假承诺、不良导向和站外引流，并符合平台短剧推广规范。",
+      "source_url": "https://aweme.snssdk.com/falcon/fe_douyin_security_react/rule/platform_norm/?enter_from=share_qrcode&hide_nav_bar=1&iid=MS4wLjABAAAAMBKji6p88_6A9AkMHMCHOLnturxSxzM4KRNKmyV9ngHjn5qvCnauXD2ozOKKrq6A&page_type=rule_explain&schema_type=11&timestamp=1773213833&u_code=42limiab882a&did=MS4wLjABAAAASx3x5XHIbJ__xzBuyA6UO1qvpfa1wwaXFsiQWeJVkq2tIOXzjk7Lv0YIA9nPb6il&ug_share_id=6f968de2110ea_1773213834354",
+      "severity": "high",
+      "tags": ["short_drama_promotion", "marketing_violation"],
+      "keywords": ["短剧锚点", "免费看全集", "第三方平台", "盗版短剧", "虚假续集", "迷信"],
+      "regex_patterns": ["免费看.*全集", "引导.*第三方.*观看", "未挂载.*短剧锚点"],
+      "metadata": {
+        "source_type": "platform_rule_explain",
+        "source_category": "短剧宣传推广内容规范",
+        "commerce_id": "aJZtnSdEB5Xj",
+        "overview": "平台鼓励价值正向、专业和文化类短剧推广，限制盗版、虚假推广和不良导向。",
+        "sections": [
+          {
+            "title": "经营推广不规范",
+            "examples": ["未挂载短剧锚点", "引导去未授权第三方平台观看或付费", "免费看全集、必看、全网第一等绝对化承诺"]
+          },
+          {
+            "title": "内容导向有偏差",
+            "examples": ["迷信伪科学和超自然力量宣传", "未成年人不良行为宣传", "低俗色情、拜金炫富、制造家庭撕裂或血腥惊恐推广"]
+          }
+        ]
+      }
+    },
+    {
+      "platform": "douyin",
+      "rule_id": "DY-CAT-016",
+      "title": "直播相关视频规则解读",
+      "content": "直播相关视频重点整治恶俗 PK、诱导消费、低俗擦边、主播纠纷和破坏平台秩序的内容。",
+      "source_url": "https://aweme.snssdk.com/falcon/fe_douyin_security_react/rule/platform_norm/?enter_from=share_qrcode&hide_nav_bar=1&iid=MS4wLjABAAAAMBKji6p88_6A9AkMHMCHOLnturxSxzM4KRNKmyV9ngHjn5qvCnauXD2ozOKKrq6A&page_type=rule_explain&schema_type=11&timestamp=1773213833&u_code=42limiab882a&did=MS4wLjABAAAASx3x5XHIbJ__xzBuyA6UO1qvpfa1wwaXFsiQWeJVkq2tIOXzjk7Lv0YIA9nPb6il&ug_share_id=6f968de2110ea_1773213834354",
+      "severity": "high",
+      "tags": ["live_stream_related", "interaction_manipulation", "sexual_content"],
+      "keywords": ["PK惩罚", "黑暗料理", "刷礼物", "返利", "陪聊", "低俗擦边"],
+      "regex_patterns": ["刷礼物|打赏", "PK.*惩罚", "私下交易|返现"],
+      "metadata": {
+        "source_type": "platform_rule_explain",
+        "source_category": "直播相关视频规则解读",
+        "commerce_id": "aJaNbe72rerh",
+        "overview": "重点打击恶俗 PK、礼物诱导、低俗擦边、主播纠纷和作弊牟利。",
+        "sections": [
+          {
+            "title": "恶俗 PK 与诱导消费",
+            "examples": ["黑暗料理、体罚和恶意捉弄类 PK 惩罚", "陪聊和交友情感话术", "道德绑架用户刷礼物和高额返现"]
+          },
+          {
+            "title": "低俗擦边与平台秩序",
+            "examples": ["着装暴露和性暗示动作", "公开辱骂、拉踩引战", "宣传作弊方法、散播主播八卦和私下交易"]
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,236 @@
+{
+  "rules": [
+    {
+      "platform": "xiaohongshu",
+      "rule_id": "XHS-CAT-001",
+      "title": "真诚分享：虚假人设与虚构经历",
+      "content": "内容应基于真实身份、真实经历和真实表达，禁止编造财富、职业、学历、情感和成长故事误导用户。",
+      "source_url": "https://finance.sina.com.cn/tech/2026-01-19/doc-inhhvmxz9883989.shtml",
+      "severity": "high",
+      "tags": ["persona_fabrication"],
+      "keywords": ["虚假人设", "逆袭故事", "编造经历", "名校毕业", "年入百万", "宝妈创业"],
+      "regex_patterns": ["(月入|年入)\\d+(万|w|百万)", "前(大厂|投行|名企).*创业", "编造.*(学历|职业|经历)"],
+      "metadata": {
+        "source_type": "public_report_of_official_update",
+        "pillar": "真诚分享",
+        "source_urls": [
+          "https://finance.sina.com.cn/tech/2026-01-19/doc-inhhvmxz9883989.shtml",
+          "https://huacheng.gz-cmc.com/pages/2026/01/20/5b9629a5d7334c4cbcba77db98424444.html"
+        ],
+        "examples": ["编造财富自由和创业逆袭故事", "虚构学历、职业身份吸引关注", "伪造亲身经历包装内容可信度"]
+      }
+    },
+    {
+      "platform": "xiaohongshu",
+      "rule_id": "XHS-CAT-002",
+      "title": "真诚分享：AI 生成与深度合成标识",
+      "content": "使用 AI 生成、深度合成或会显著影响真实性判断的内容，应明确标识，不得利用 AI 伪造证据、形象或身份。",
+      "source_url": "https://finance.sina.com.cn/tech/2026-01-19/doc-inhhvmxz9883989.shtml",
+      "severity": "medium",
+      "tags": ["ai_generated_content", "rights_infringement"],
+      "keywords": ["AI生成", "AIGC", "深度合成", "AI换脸", "数字人", "AI配音"],
+      "regex_patterns": ["AI(生成|合成|换脸)", "深度合成", "数字人.*口播"],
+      "metadata": {
+        "source_type": "public_report_of_official_update",
+        "pillar": "真诚分享",
+        "source_urls": [
+          "https://finance.sina.com.cn/tech/2026-01-19/doc-inhhvmxz9883989.shtml",
+          "https://huacheng.gz-cmc.com/pages/2026/01/20/5b9629a5d7334c4cbcba77db98424444.html"
+        ],
+        "examples": ["AI 换脸伪装真人分享", "未标识 AI 生成图片或视频", "利用深度合成伪造聊天或证据"]
+      }
+    },
+    {
+      "platform": "xiaohongshu",
+      "rule_id": "XHS-CAT-003",
+      "title": "真诚分享：标题党与夸张误导",
+      "content": "禁止使用夸张标题、虚假封面、过度修饰和误导性表述骗取点击或制造错误预期。",
+      "source_url": "https://huacheng.gz-cmc.com/pages/2026/01/20/5b9629a5d7334c4cbcba77db98424444.html",
+      "severity": "medium",
+      "tags": ["clickbait_content"],
+      "keywords": ["震惊", "一定要看完", "最后一条", "99%的人不知道", "封面即真相", "看完沉默"],
+      "regex_patterns": ["\\d+%的人都不知道", "一定要看完", "最后一条.*颠覆认知"],
+      "metadata": {
+        "source_type": "public_report_of_official_update",
+        "pillar": "真诚分享",
+        "source_urls": [
+          "https://huacheng.gz-cmc.com/pages/2026/01/20/5b9629a5d7334c4cbcba77db98424444.html"
+        ],
+        "examples": ["封面和正文不一致", "用极端词汇制造猎奇点击", "夸张收益和效果引导点击"]
+      }
+    },
+    {
+      "platform": "xiaohongshu",
+      "rule_id": "XHS-CAT-004",
+      "title": "真诚分享：高风险专业领域不实建议",
+      "content": "医疗、医美、投资等高风险专业领域内容不得无资质发布诊疗、功效或收益承诺，不得误导用户替代专业判断。",
+      "source_url": "https://huacheng.gz-cmc.com/pages/2026/01/20/5b9629a5d7334c4cbcba77db98424444.html",
+      "severity": "high",
+      "tags": ["medical_content", "medical_claim", "financial_promise"],
+      "keywords": ["医美避坑", "诊疗方案", "投资秘籍", "稳赚", "根治", "无痛变美"],
+      "regex_patterns": ["(根治|治愈|永不复发)", "(稳赚|保本|翻倍收益)", "推荐.*(药物|手术|医美项目)"],
+      "metadata": {
+        "source_type": "public_report_of_official_update",
+        "pillar": "真诚分享",
+        "source_urls": [
+          "https://huacheng.gz-cmc.com/pages/2026/01/20/5b9629a5d7334c4cbcba77db98424444.html"
+        ],
+        "examples": ["无资质推荐医疗或医美方案", "宣称投资稳赚不赔", "以个人经验替代专业建议"]
+      }
+    },
+    {
+      "platform": "xiaohongshu",
+      "rule_id": "XHS-CAT-005",
+      "title": "友好互动：网暴挂人与隐私泄露",
+      "content": "禁止开盒、人肉、挂人、恶意曝光隐私、无证据指控和组织化网暴，避免伤害他人人格与安全。",
+      "source_url": "https://finance.sina.com.cn/tech/2026-01-19/doc-inhhvmxz9883989.shtml",
+      "severity": "high",
+      "tags": ["rights_infringement"],
+      "keywords": ["挂人", "开盒", "网暴", "身份证", "手机号", "家庭住址"],
+      "regex_patterns": ["身份证号|手机号|家庭住址", "(挂人|开盒|网暴)", "曝光.*(聊天记录|隐私)"],
+      "metadata": {
+        "source_type": "public_report_of_official_update",
+        "pillar": "友好互动",
+        "source_urls": [
+          "https://finance.sina.com.cn/tech/2026-01-19/doc-inhhvmxz9883989.shtml",
+          "https://huacheng.gz-cmc.com/pages/2026/01/20/5b9629a5d7334c4cbcba77db98424444.html"
+        ],
+        "examples": ["公开他人手机号和住址", "发布聊天记录进行挂人", "煽动他人围攻账号或当事人"]
+      }
+    },
+    {
+      "platform": "xiaohongshu",
+      "rule_id": "XHS-CAT-006",
+      "title": "友好互动：未成年人保护",
+      "content": "禁止危害未成年人身心健康、安全和价值观的内容，包括校园霸凌、离家出走、美化辍学和不当成人化表达。",
+      "source_url": "https://finance.sina.com.cn/tech/2026-01-19/doc-inhhvmxz9883989.shtml",
+      "severity": "high",
+      "tags": ["minor_protection"],
+      "keywords": ["未成年人", "校园霸凌", "辍学", "离家出走", "童工", "早恋怀孕"],
+      "regex_patterns": ["校园霸凌|欺凌同学", "辍学.*(有用|自由)", "未成年.*(抽烟|喝酒|性行为)"],
+      "metadata": {
+        "source_type": "public_report_of_official_update",
+        "pillar": "友好互动",
+        "source_urls": [
+          "https://finance.sina.com.cn/tech/2026-01-19/doc-inhhvmxz9883989.shtml"
+        ],
+        "examples": ["传播辍学无用论", "煽动未成年人离家出走", "展示未成年人危险或成人化行为"]
+      }
+    },
+    {
+      "platform": "xiaohongshu",
+      "rule_id": "XHS-CAT-007",
+      "title": "友好互动：色情低俗与擦边暗示",
+      "content": "禁止色情、低俗擦边和利用私密场景、姿态、话术制造性暗示或引流。",
+      "source_url": "https://huacheng.gz-cmc.com/pages/2026/01/20/5b9629a5d7334c4cbcba77db98424444.html",
+      "severity": "high",
+      "tags": ["sexual_content"],
+      "keywords": ["擦边", "走光", "抖胸", "私密照", "性暗示", "招嫖"],
+      "regex_patterns": ["性暗示|敏感部位", "乳头|乳晕|生殖器", "招嫖|性服务"],
+      "metadata": {
+        "source_type": "public_report_of_official_update",
+        "pillar": "友好互动",
+        "source_urls": [
+          "https://huacheng.gz-cmc.com/pages/2026/01/20/5b9629a5d7334c4cbcba77db98424444.html"
+        ],
+        "examples": ["低俗姿态制造暧昧联想", "利用私密场景擦边引流", "传播色情资源或服务信息"]
+      }
+    },
+    {
+      "platform": "xiaohongshu",
+      "rule_id": "XHS-CAT-008",
+      "title": "友好互动：炫富拜金与制造焦虑",
+      "content": "禁止通过炫富、拜金、卖惨、过度攀比等内容制造焦虑，传递失衡价值导向。",
+      "source_url": "https://huacheng.gz-cmc.com/pages/2026/01/20/5b9629a5d7334c4cbcba77db98424444.html",
+      "severity": "medium",
+      "tags": ["public_ethics"],
+      "keywords": ["炫富", "拜金", "卖惨", "穷人思维", "月薪三千", "阶层跃迁"],
+      "regex_patterns": ["炫富|拜金|卖惨", "(穷人|底层).*思维", "不买就落后"],
+      "metadata": {
+        "source_type": "public_report_of_official_update",
+        "pillar": "友好互动",
+        "source_urls": [
+          "https://huacheng.gz-cmc.com/pages/2026/01/20/5b9629a5d7334c4cbcba77db98424444.html"
+        ],
+        "examples": ["以奢侈消费制造焦虑", "把消费能力当作价值判断", "卖惨博同情变相营销"]
+      }
+    },
+    {
+      "platform": "xiaohongshu",
+      "rule_id": "XHS-CAT-009",
+      "title": "有序经营：站外导流与私下交易",
+      "content": "禁止通过微信、群聊、外链、二维码等方式导流站外成交，规避平台保障和交易链路。",
+      "source_url": "https://finance.sina.com.cn/tech/digi/2025-03-11/doc-inephwwi2474943.shtml",
+      "severity": "high",
+      "tags": ["traffic_inducement", "marketing_violation"],
+      "keywords": ["加微信", "私下交易", "站外", "进群", "小窗联系", "二维码"],
+      "regex_patterns": ["(微信|vx|v信|二维码).*下单", "私下交易|站外交易", "进群.*购买"],
+      "metadata": {
+        "source_type": "public_report_of_official_governance",
+        "pillar": "有序经营",
+        "source_urls": [
+          "https://finance.sina.com.cn/tech/digi/2025-03-11/doc-inephwwi2474943.shtml"
+        ],
+        "examples": ["让用户加微信购买", "评论区放二维码导流", "引导跳转群聊或外链完成交易"]
+      }
+    },
+    {
+      "platform": "xiaohongshu",
+      "rule_id": "XHS-CAT-010",
+      "title": "有序经营：商业合作与身份披露",
+      "content": "涉及合作推广、商单发布、经营引流的内容，应亮明合作关系和经营身份，不得伪装普通分享。",
+      "source_url": "https://xue1.xiaohongshu.com/p/t_pc/course_pc_detail/video/v_655e051ee4b023c044fec8d0",
+      "severity": "medium",
+      "tags": ["commercial_disclosure", "marketing_violation"],
+      "keywords": ["合作", "商单", "广告", "赞助", "品牌合作", "报备"],
+      "regex_patterns": ["(品牌|店铺).*合作", "商务合作|商单", "广告.*未标识"],
+      "metadata": {
+        "source_type": "official_course_entry",
+        "pillar": "有序经营",
+        "source_urls": [
+          "https://xue1.xiaohongshu.com/p/t_pc/course_pc_detail/video/v_655e051ee4b023c044fec8d0"
+        ],
+        "examples": ["商单内容伪装成自发分享", "商业身份未披露", "广告合作未做显著标识"]
+      }
+    },
+    {
+      "platform": "xiaohongshu",
+      "rule_id": "XHS-CAT-011",
+      "title": "有序经营：虚假营销、伪装素人与假测评",
+      "content": "禁止伪装素人、编造自用体验、虚假测评、假种草、刷量刷评和夸大产品效果的营销内容。",
+      "source_url": "https://finance.sina.com.cn/tech/digi/2025-02-19/doc-inekzcyc2957764.shtml",
+      "severity": "high",
+      "tags": ["false_review", "marketing_violation"],
+      "keywords": ["无广", "亲测有效", "自用推荐", "真实测评", "回购十次", "素人种草"],
+      "regex_patterns": ["(无广|自用).*推荐", "亲测.*有效", "素人.*种草|真实测评"],
+      "metadata": {
+        "source_type": "public_report_of_official_governance",
+        "pillar": "有序经营",
+        "source_urls": [
+          "https://finance.sina.com.cn/tech/digi/2025-02-19/doc-inekzcyc2957764.shtml",
+          "https://huacheng.gz-cmc.com/pages/2026/01/20/5b9629a5d7334c4cbcba77db98424444.html"
+        ],
+        "examples": ["伪装真实用户发广告", "虚构长期自用体验", "假测评和刷量刷评带货"]
+      }
+    },
+    {
+      "platform": "xiaohongshu",
+      "rule_id": "XHS-CAT-012",
+      "title": "有序经营：恶意竞争与黑灰产矩阵",
+      "content": "禁止批量养号、矩阵分发、恶意拉踩竞品、虚假投诉和其他破坏平台秩序的黑灰产经营行为。",
+      "source_url": "https://finance.sina.com.cn/tech/digi/2025-02-19/doc-inekzcyc2957764.shtml",
+      "severity": "medium",
+      "tags": ["duplicate_content", "marketing_violation", "rights_infringement"],
+      "keywords": ["矩阵号", "批量发布", "拉踩", "恶意举报", "黑灰产", "同款脚本"],
+      "regex_patterns": ["矩阵号|批量发布", "拉踩.*竞品|诋毁.*品牌", "恶意举报|虚假投诉"],
+      "metadata": {
+        "source_type": "public_report_of_official_governance",
+        "pillar": "有序经营",
+        "source_urls": [
+          "https://finance.sina.com.cn/tech/digi/2025-02-19/doc-inekzcyc2957764.shtml"
+        ],
+        "examples": ["多账号批量分发同款脚本", "组织化拉踩竞品", "黑灰产账号养号引流"]
+      }
+    }
+  ]
+}
