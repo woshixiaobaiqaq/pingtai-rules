@@ -96,9 +96,9 @@
       "content": "反对垃圾营销、夸大误导、虚假宣传和损伤消费体验的内容，推广应优先使用平台合作渠道。",
       "source_url": "https://aweme.snssdk.com/falcon/fe_douyin_security_react/rule/platform_norm/?enter_from=share_qrcode&hide_nav_bar=1&iid=MS4wLjABAAAAMBKji6p88_6A9AkMHMCHOLnturxSxzM4KRNKmyV9ngHjn5qvCnauXD2ozOKKrq6A&page_type=rule_explain&schema_type=11&timestamp=1773213833&u_code=42limiab882a&did=MS4wLjABAAAASx3x5XHIbJ__xzBuyA6UO1qvpfa1wwaXFsiQWeJVkq2tIOXzjk7Lv0YIA9nPb6il&ug_share_id=6f968de2110ea_1773213834354",
       "severity": "medium",
-      "tags": ["marketing_violation", "traffic_inducement"],
-      "keywords": ["合作推广", "全网最低", "0元抢", "地板价", "第三方交易", "热点营销"],
-      "regex_patterns": ["全网第?一|全网最低", "0元抢|免费领", "原价\\d+现价\\d+"],
+      "tags": ["marketing_violation", "traffic_inducement", "financial_promise", "absolute_guarantee"],
+      "keywords": ["合作推广", "全网最低", "0元抢", "地板价", "第三方交易", "热点营销", "回本", "保证", "领取资料"],
+      "regex_patterns": ["全网第?一|全网最低", "0元抢|免费领", "原价\\d+现价\\d+", "\\d+天回本", "评论区.*领取"],
       "metadata": {
         "source_type": "platform_rule_explain",
         "source_category": "营销行为",

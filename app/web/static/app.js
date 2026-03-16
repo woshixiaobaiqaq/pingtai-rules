@@ -57,13 +57,17 @@ submitButton.addEventListener("click", async () => {
 
     const payload = await response.json();
     if (!response.ok) {
-      const detail = payload?.detail ?? "检测失败。";
+      const detail = payload && payload.detail ? payload.detail : "检测失败。";
       throw new Error(typeof detail === "string" ? detail : JSON.stringify(detail));
     }
 
     renderPlatformResults(payload.report.platform_results);
+    setTimeout(() => {
+      results.scrollIntoView({ behavior: "smooth", block: "start" });
+    }, 100);
   } catch (error) {
     renderError(error.message || "请求失败，请检查服务状态。");
+    alert("出错了: " + error.message);
   } finally {
     setLoading(false);
   }
@@ -139,12 +143,11 @@ function buildPlatformCard(item, index) {
   const ruleList = fragment.querySelector(".rule-list");
   if (rules.length === 0) {
     ruleList.appendChild(buildEmptyState("当前平台未命中规则。"));
-    return fragment;
+  } else {
+    rules.forEach((rule) => {
+      ruleList.appendChild(buildRuleCard(rule));
+    });
   }
-
-  rules.forEach((rule) => {
-    ruleList.appendChild(buildRuleCard(rule));
-  });
 
   return fragment;
 }
@@ -152,6 +155,18 @@ function buildPlatformCard(item, index) {
 function buildRuleCard(rule) {
   const element = document.createElement("article");
   element.className = "rule-card";
+  
+  let matchesHtml = "";
+  const allMatches = [...(rule.matched_keywords || []), ...(rule.matched_regex || [])];
+  if (allMatches.length > 0) {
+    matchesHtml = `
+      <div class="rule-card__matches">
+        <strong>命中关键词/正则：</strong>
+        ${allMatches.map(m => `<span class="match-chip">${escapeHtml(m)}</span>`).join("")}
+      </div>
+    `;
+  }
+  
   element.innerHTML = `
     <div class="rule-card__meta">
       <span class="rule-card__id">${escapeHtml(rule.rule_id)}</span>
@@ -161,7 +176,8 @@ function buildRuleCard(rule) {
     </div>
     <h4>${escapeHtml(rule.title)}</h4>
     <p>${escapeHtml(rule.reason)}</p>
-    <p>${escapeHtml(rule.quote)}</p>
+    <p class="rule-card__quote"><em>摘录：${escapeHtml(rule.quote)}</em></p>
+    ${matchesHtml}
   `;
   return element;
 }

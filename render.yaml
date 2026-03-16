@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: platform-content-audit
+    name: woshixiaobaiqaq-pingtai-rules
     runtime: python
     plan: free
     buildCommand: pip install -e .

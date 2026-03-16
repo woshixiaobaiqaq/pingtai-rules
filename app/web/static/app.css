@@ -367,6 +367,34 @@ h3 {
   color: var(--muted);
 }
 
+.rule-card__quote {
+  font-size: 0.85rem;
+  border-left: 2px solid rgba(102, 124, 149, 0.3);
+  padding-left: 10px;
+  margin-top: 10px;
+  color: #7b8ea3;
+}
+
+.rule-card__matches {
+  margin-top: 12px;
+  font-size: 0.85rem;
+  color: var(--ink);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+}
+
+.match-chip {
+  background: rgba(214, 79, 101, 0.1);
+  color: var(--danger);
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  border: 1px solid rgba(214, 79, 101, 0.2);
+}
+
 .risk-high {
   background: rgba(214, 79, 101, 0.12);
   color: var(--danger);
