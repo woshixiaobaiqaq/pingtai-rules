@@ -8,6 +8,8 @@ def test_web_homepage_is_available(client) -> None:
     assert "全平台规则库" in response.text
     assert "Platform Content Audit" in response.text
     assert "小红书" in response.text
+    assert "上传文档" in response.text
+    assert "document-input" in response.text
 
 
 def test_audit_api_returns_structured_json(client) -> None:

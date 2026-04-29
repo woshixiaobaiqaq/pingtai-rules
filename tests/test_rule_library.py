@@ -89,3 +89,25 @@ def test_video_channel_operation_standards_rules_are_merged_without_reference_st
     ]
     assert "应以显著方式予以标识" in ai_rule["content"]
     assert "未成年人厌学弃学" in minor_rule["content"]
+
+
+def test_video_channel_rules_have_contextual_keyword_coverage() -> None:
+    bundle_path = PROJECT_ROOT / "data/rule_library/video_channel/rules.json"
+    bundle = json.loads(bundle_path.read_text(encoding="utf-8"))
+    rules = bundle["rules"]
+
+    financial_rule = next(item for item in rules if item["rule_id"] == "VC-5-2-3")
+    traffic_rule = next(item for item in rules if item["rule_id"] == "VC-4-12-2")
+    medical_rule = next(item for item in rules if item["rule_id"] == "VC-4-10")
+
+    assert "financial_promise" in financial_rule["tags"]
+    assert "回本" in financial_rule["keywords"]
+    assert any("回本" in pattern for pattern in financial_rule["regex_patterns"])
+
+    assert "traffic_inducement" in traffic_rule["tags"]
+    assert "加微信" in traffic_rule["keywords"]
+    assert any("微信" in pattern for pattern in traffic_rule["regex_patterns"])
+
+    assert "medical_claim" in medical_rule["tags"]
+    assert "关注" not in medical_rule["keywords"]
+    assert all("点赞|评论|关注|分享" not in item["regex_patterns"] for item in rules)

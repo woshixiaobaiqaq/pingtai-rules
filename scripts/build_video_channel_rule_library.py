@@ -11,7 +11,7 @@ from urllib.parse import urlparse
 
 import httpx
 
-ROOT = Path("/Users/m/亿一的AI小助理/open-codex/platform-content-audit")
+ROOT = Path(__file__).resolve().parents[1]
 RULE_DIR = ROOT / "data/rule_library/video_channel"
 RULES_PATH = RULE_DIR / "rules.json"
 CATALOG_PATH = RULE_DIR / "catalog.json"
@@ -74,24 +74,28 @@ ARABIC_TO_CHINESE_SECTION = {value: key for key, value in CHINESE_SECTION_NUMBER
 
 TAG_HEURISTICS: list[tuple[tuple[str, ...], tuple[str, ...], tuple[str, ...]]] = [
     (
-        ("医疗", "医美", "药品", "医疗器械", "保健", "诊疗", "中医"),
+        ("医疗", "医美", "药品", "医疗器械", "保健", "保健品", "诊疗", "中医", "疗效", "功效"),
         ("medical_content", "medical_claim"),
-        (r"治愈|功效",),
+        (r"治愈|根治|疗效|功效|医疗器械|保健品|处方药",),
     ),
     (
-        ("理财", "投资", "财经", "股票", "基金", "金融", "荐股", "期货"),
+        ("理财", "投资", "财经", "股票", "基金", "金融", "荐股", "期货", "证券", "收益", "保本"),
         ("financial_promise",),
-        (r"高收益|短期|保本",),
+        (r"高收益|高回报|短期收益|保本|回本|稳赚|零风险|保证收益",),
     ),
     (("未成年人", "抽烟", "喝酒", "纹身", "校园暴力", "厌学", "弃学"), ("minor_protection",), (r"未成年",)),
     (("搬运", "抄袭", "洗稿", "著作权", "版权", "知识产权"), ("originality_violation", "copyright_violation"), ()),
     (("低俗", "裸体", "性暗示", "色情", "隐私部位", "性器官"), ("sexual_content",), (r"性暗示|裸体",)),
-    (("赌博", "传销", "外挂", "房卡", "诈骗", "钓鱼网站"), ("illegal_activity",), (r"赌博|传销|外挂|诈骗",)),
+    (
+        ("赌博", "博彩", "传销", "外挂", "房卡", "诈骗", "钓鱼网站", "跑分", "洗钱", "枪支", "管制刀具"),
+        ("illegal_activity",),
+        (r"赌博|博彩|传销|外挂|诈骗|跑分|洗钱|枪支|管制刀具",),
+    ),
     (("冒充", "姓名权", "肖像权", "名誉", "隐私", "商业秘密", "商标"), ("rights_infringement",), ()),
     (
-        ("联系方式", "二维码", "引流", "导流", "私信", "链接", "域名"),
+        ("联系方式", "二维码", "引流", "导流", "私信", "域名", "非官方渠道", "站外", "外平台", "私域"),
         ("traffic_inducement",),
-        (r"二维码|联系方式|引流",),
+        (r"微信|vx|v信|QQ|二维码|扫码|联系方式|私信|私域|外链|站外|引流|导流",),
     ),
     (
         ("虚假", "夸大", "误导", "新闻体", "难辨真伪", "标题", "不实信息"),
@@ -104,11 +108,19 @@ TAG_HEURISTICS: list[tuple[tuple[str, ...], tuple[str, ...], tuple[str, ...]]] =
         (r"刷量|刷粉|造假",),
     ),
     (("辱骂", "歧视", "婚闹", "出轨", "虐待", "炫富", "卖惨"), ("public_ethics",), (r"歧视|婚闹|虐待|卖惨",)),
-    (("黑边", "花屏", "卡顿", "口型", "字幕", "低质", "画质模糊"), ("content_quality_issue",), (r"花屏|卡顿|字幕",)),
     (
-        ("点赞", "评论", "关注", "分享", "集赞", "抽奖机会", "诱导用户"),
+        ("黑边", "花屏", "卡顿", "口型", "字幕", "低质", "画质模糊", "音画不同步", "字幕遮挡"),
+        ("content_quality_issue",),
+        (r"花屏|卡顿|黑边|画质模糊|音画不同步|字幕",),
+    ),
+    (
+        ("诱导性质内容", "转发、点赞、评论或关注", "集赞", "抽奖机会", "索要互动", "互动指引", "诱导用户", "虚假数据", "刷粉", "刷量"),
         ("interaction_manipulation",),
-        (r"点赞|评论|关注|分享",),
+        (
+            r"(点赞|评论|关注|转发|分享|集赞|助力).{0,12}(福利|红包|抽奖|领取|返现|资料|继续看|下集|解锁)",
+            r"(福利|红包|抽奖|领取|返现|资料|继续看|下集|解锁).{0,12}(点赞|评论|关注|转发|分享|集赞|助力)",
+            r"评论区.{0,12}(扣1|留言|领取|抽奖|开奖|领资料)",
+        ),
     ),
     (
         ("深度学习", "虚拟现实", "生成式人工智能", "AI", "合成", "虚假摆拍", "非真实音视频"),
@@ -386,14 +398,36 @@ def infer_keywords(section_title: str, rule_title: str, body_parts: list[str]) -
         "抽烟",
         "喝酒",
         "赌博",
+        "博彩",
         "传销",
+        "诈骗",
+        "跑分",
+        "洗钱",
         "外挂",
         "二维码",
         "引流",
+        "导流",
+        "私信",
+        "联系方式",
+        "非官方渠道",
+        "站外",
+        "私域",
         "医美",
         "医疗",
+        "保健品",
+        "医疗器械",
+        "功效",
+        "疗效",
+        "治愈",
         "理财",
         "股票",
+        "基金",
+        "期货",
+        "证券",
+        "收益",
+        "保本",
+        "回本",
+        "高收益",
         "夸大",
         "虚假",
         "版权",
@@ -404,20 +438,23 @@ def infer_keywords(section_title: str, rule_title: str, body_parts: list[str]) -
         "卡顿",
         "口型",
         "字幕",
+        "画质模糊",
+        "音画不同步",
         "婚闹",
         "歧视",
         "辱骂",
         "虐待",
+        "出轨",
+        "封建迷信",
         "作弊",
         "刷量",
+        "刷粉",
         "账号买卖",
         "AI",
         "生成式人工智能",
         "深度学习",
         "集赞",
-        "点赞",
-        "评论",
-        "关注",
+        "互动",
     ):
         if phrase in source_text:
             candidates.append(phrase)
@@ -586,7 +623,7 @@ def build_rule_payload(spec: SourceSpec, rule: RuleItem) -> dict[str, object]:
         "content": content,
         "source_url": build_source_url(spec, rule),
         "severity": spec.section_severity.get(rule.section_code, "medium"),
-        "tags": tags,
+        "tags": dedupe_preserve([*tags, *inferred_tags]),
         "keywords": keywords,
         "regex_patterns": regex_patterns,
         "metadata": {

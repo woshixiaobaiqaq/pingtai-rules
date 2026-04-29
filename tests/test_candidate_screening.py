@@ -77,3 +77,18 @@ def test_candidate_screening_detects_fuzzy_keyword_hits() -> None:
     assert fuzzy_hit.trigger_value == "点赞关注"
     assert "点赞" in (fuzzy_hit.matched_text or "")
     assert "关注" in (fuzzy_hit.matched_text or "")
+
+
+def test_candidate_screening_detects_video_channel_specific_terms() -> None:
+    processor = TextProcessor()
+    screening_service = CandidateScreeningService()
+    content = "加微信进群领取资料，保证7天回本；这款保健品根治高血压，视频画面花屏卡顿。"
+
+    segments = processor.split_sentences(content)
+    hits = screening_service.screen(segments)
+    tags = {hit.tag for hit in hits}
+
+    assert "traffic_inducement" in tags
+    assert "financial_promise" in tags
+    assert "medical_claim" in tags
+    assert "content_quality_issue" in tags

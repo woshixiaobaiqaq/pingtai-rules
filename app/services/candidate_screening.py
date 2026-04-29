@@ -19,15 +19,32 @@ DEFAULT_TAG_PATTERNS: dict[str, TagPattern] = {
         regex_patterns=(r"百分之百", r"包过", r"包成功"),
     ),
     "medical_claim": TagPattern(
-        keywords=("根治", "治愈", "药到病除", "逆转病情", "消炎止痛"),
-        regex_patterns=(r"\d+天治好", r"包治"),
+        keywords=("根治", "治愈", "药到病除", "逆转病情", "消炎止痛", "疗效", "功效", "降糖", "降压"),
+        regex_patterns=(r"\d+天治好", r"包治", r"瘦\d+斤", r"永不复发"),
     ),
     "financial_promise": TagPattern(
-        keywords=("稳赚", "暴富", "保本", "翻倍收益", "回本"),
-        regex_patterns=(r"\d+天回本", r"零风险"),
+        keywords=("稳赚", "暴富", "保本", "翻倍收益", "回本", "高收益", "短期收益", "保证收益", "带单"),
+        regex_patterns=(r"\d+天回本", r"零风险", r"收益翻倍", r"稳赚不赔", r"保本保息"),
     ),
     "traffic_inducement": TagPattern(
-        keywords=("私信", "加微信", "vx", "v信", "扫码", "领取", "进群", "小窗联系"),
+        keywords=(
+            "私信",
+            "加微信",
+            "微信号",
+            "vx",
+            "v信",
+            "QQ",
+            "扫码",
+            "二维码",
+            "领取",
+            "进群",
+            "小窗联系",
+            "站外",
+            "外链",
+            "私域",
+            "留联系方式",
+            "私下交易",
+        ),
         regex_patterns=(r"评论区.*领取", r"私信.*资料", r"(微信|vx|v信|二维码).*下单", r"私下交易|站外交易"),
     ),
     "scarcity_urgency": TagPattern(
@@ -35,16 +52,16 @@ DEFAULT_TAG_PATTERNS: dict[str, TagPattern] = {
         regex_patterns=(r"最后\d+个名额", r"\d+分钟内"),
     ),
     "sexual_content": TagPattern(
-        keywords=("色情", "淫秽", "招嫖", "性服务", "走光", "抖胸", "两性技巧"),
-        regex_patterns=(r"乳头|乳晕|生殖器", r"性暗示", r"敏感部位"),
+        keywords=("色情", "淫秽", "招嫖", "性服务", "走光", "抖胸", "两性技巧", "低俗擦边", "裸体"),
+        regex_patterns=(r"乳头|乳晕|生殖器", r"性暗示", r"敏感部位", r"私密部位|隐私部位"),
     ),
     "illegal_activity": TagPattern(
-        keywords=("高收入兼职", "征信修复", "赌博", "假证", "管制刀具", "枪支"),
-        regex_patterns=(r"兼职.*日结", r"征信修复|洗白征信", r"赌博|博彩|彩票群"),
+        keywords=("高收入兼职", "征信修复", "赌博", "博彩", "传销", "诈骗", "假证", "管制刀具", "枪支", "外挂", "跑分"),
+        regex_patterns=(r"兼职.*日结", r"征信修复|洗白征信", r"赌博|博彩|彩票群", r"棋牌.*房卡", r"洗钱|跑分"),
     ),
     "disturbing_content": TagPattern(
-        keywords=("血腥", "遗体", "自杀", "排泄物", "鬼脸", "蜈蚣"),
-        regex_patterns=(r"断肢|器官|巨人观", r"自残|轻生|不想活了", r"密集.*蜘蛛|密集.*蜈蚣"),
+        keywords=("血腥", "遗体", "自杀", "排泄物", "鬼脸", "蜈蚣", "暴力", "恐怖", "手术特写"),
+        regex_patterns=(r"断肢|器官|巨人观", r"自残|轻生|不想活了", r"密集.*蜘蛛|密集.*蜈蚣", r"虐杀|恐怖吓人"),
     ),
     "marketing_violation": TagPattern(
         keywords=("合作推广", "全网最低", "0元抢", "地板价", "第三方交易", "热点营销", "拉踩", "恶意举报"),
@@ -61,8 +78,8 @@ DEFAULT_TAG_PATTERNS: dict[str, TagPattern] = {
         regex_patterns=(r"未成年.*(抽烟|喝酒|性行为)", r"校园霸凌|欺凌同学", r"童工|童模"),
     ),
     "public_ethics": TagPattern(
-        keywords=("炫富", "卖惨", "婚闹", "地域歧视", "辱骂", "一夜情"),
-        regex_patterns=(r"种族歧视|地域歧视|性别歧视", r"恶俗婚闹|拜金", r"乱伦|一夜情|情感操控"),
+        keywords=("炫富", "卖惨", "婚闹", "地域歧视", "辱骂", "一夜情", "出轨", "婚外恋", "封建迷信"),
+        regex_patterns=(r"种族歧视|地域歧视|性别歧视", r"恶俗婚闹|拜金", r"乱伦|一夜情|情感操控", r"童养媳|封建迷信"),
     ),
     "unsafe_behavior": TagPattern(
         keywords=("飙车", "闯红灯", "烧胎", "跳楼", "割腕", "玩火"),
@@ -77,8 +94,8 @@ DEFAULT_TAG_PATTERNS: dict[str, TagPattern] = {
         regex_patterns=(r"未经授权.*(搬运|转载)", r"多账号.*重复发布", r"去水印|二次剪辑"),
     ),
     "rights_infringement": TagPattern(
-        keywords=("身份证", "家庭住址", "聊天记录", "AI换脸", "冒充企业", "网暴"),
-        regex_patterns=(r"身份证号|手机号|家庭住址", r"AI合成|换脸|肖像", r"冒充.*(企业|员工|公章)"),
+        keywords=("身份证", "手机号", "家庭住址", "聊天记录", "AI换脸", "冒充企业", "网暴", "肖像权", "姓名权", "隐私权"),
+        regex_patterns=(r"身份证号|手机号|家庭住址", r"AI合成|换脸|肖像", r"冒充.*(企业|员工|公章)", r"人肉|泄露.*隐私"),
     ),
     "persona_fabrication": TagPattern(
         keywords=("虚假人设", "逆袭故事", "编造经历", "名校毕业", "年入百万", "宝妈创业"),
@@ -107,6 +124,10 @@ DEFAULT_TAG_PATTERNS: dict[str, TagPattern] = {
     "duplicate_content": TagPattern(
         keywords=("在线等", "属鸡的人有福了", "雷同文案", "模板文案", "集体发布"),
         regex_patterns=(r"怎么办.*在线等", r"属(鸡|狗|猴|马)的人有福了", r"同款文案|批量发布"),
+    ),
+    "content_quality_issue": TagPattern(
+        keywords=("黑边", "花屏", "卡顿", "口型", "字幕遮挡", "画质模糊", "音画不同步", "低质"),
+        regex_patterns=(r"花屏|卡顿|黑边", r"口型.*不(同步|一致)|音画不同步", r"字幕.*(遮挡|错误)"),
     ),
     "mid_long_video_marketing": TagPattern(
         keywords=("营销素材", "打断剧情", "生硬口播", "超过40秒", "植入次数"),

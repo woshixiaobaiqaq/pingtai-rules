@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Platform Content Audit</title>
-    <link rel="stylesheet" href="/static/app.css?v=20260316-10" />
+    <link rel="stylesheet" href="/static/app.css?v=20260429-dedupe" />
   </head>
   <body>
     <main class="page-shell">
@@ -46,13 +46,23 @@
               </label>
             </div>
 
-            <button id="submit-button" type="button" class="primary-button">开始检测</button>
+            <div class="composer-buttons">
+              <input
+                id="document-input"
+                class="sr-only"
+                type="file"
+                accept=".txt,.md,.markdown,.csv,.json,.log,.srt,.vtt,text/plain,text/markdown,text/csv,application/json"
+              />
+              <button id="document-button" type="button" class="secondary-button">上传文档</button>
+              <button id="submit-button" type="button" class="primary-button">开始检测</button>
+            </div>
           </div>
 
           <div class="library-status">
             <strong id="rule-library-total">加载中...</strong>
             <span id="platform-library-summary">抖音 / 小红书 / 视频号</span>
           </div>
+          <p id="document-status" class="document-status" hidden></p>
 
           <p id="form-error" class="form-error" hidden></p>
         </section>
@@ -66,20 +76,6 @@
       </section>
     </main>
 
-    <template id="platform-result-template">
-      <article class="platform-card">
-        <div class="platform-card__header">
-          <div>
-            <p class="platform-card__name"></p>
-            <h3 class="platform-card__title"></h3>
-          </div>
-          <span class="platform-card__count"></span>
-        </div>
-
-        <div class="rule-list"></div>
-      </article>
-    </template>
-
-    <script src="/static/app.js?v=20260316-10" defer></script>
+    <script src="/static/app.js?v=20260429-dedupe" defer></script>
   </body>
 </html>
