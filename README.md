@@ -13,7 +13,7 @@
 
 ## 技术栈
 
-- Python 3.11
+- Python 3.11 或 3.12
 - FastAPI
 - PostgreSQL
 - pgvector
@@ -75,10 +75,10 @@ cd /Users/m/亿一的AI小助理/open-codex/platform-content-audit
 docker compose up -d
 ```
 
-### 2. 创建 Python 3.11 环境并安装依赖
+### 2. 创建 Python 3.11/3.12 环境并安装依赖
 
 ```bash
-python3.11 -m venv .venv
+python3 -m venv .venv
 source .venv/bin/activate
 pip install -e ".[dev]"
 ```
